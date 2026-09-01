@@ -5,6 +5,21 @@ __pycache__/
 
 # Generated data — regenerate by running the pipeline, don't commit large binaries
 data/raw_video.mp4
+
+# Private media — never commit images or videos from data/
+data/**/*.bmp
+data/**/*.gif
+data/**/*.jpeg
+data/**/*.jpg
+data/**/*.mov
+data/**/*.mp4
+data/**/*.mpeg
+data/**/*.mpg
+data/**/*.png
+data/**/*.webm
+data/**/*.webp
+data/**/*.avi
+
 data/frames/*
 !data/frames/.gitkeep
 data/map/*
