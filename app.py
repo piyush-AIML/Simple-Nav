@@ -142,6 +142,7 @@ def live_mode_tab(config, place_index, graph, place_names):
         "for real continuous tracking on your own machine, use "
         "`python live_navigate.py --destination \"...\"` instead.)"
     )
+    st.info("Use the camera switch button in the preview to select the rear camera if the front camera opens.")
 
     all_names = [place_names[str(pid)] for pid in sorted(graph.nodes)]
     destination_name = st.selectbox("Destination", all_names, key="live_dest")

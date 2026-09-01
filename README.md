@@ -139,6 +139,12 @@ whenever your tracked place changes, recomputes and reprints the route.
 Low-confidence frames hold your last known position instead of causing the
 route to jump around.
 
+The desktop live mode defaults to camera index `1`, which is commonly the rear
+camera when both front and rear cameras are available. Use
+`--camera-index 0` (or another index) if your system assigns cameras
+differently. In the Streamlit browser Live Mode, use the camera-switch button
+in the preview to select the rear camera.
+
 **Interactive demo (browser):**
 ```bash
 streamlit run app.py

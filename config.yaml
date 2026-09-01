@@ -53,4 +53,6 @@ navigation:
 live:
   # how often (seconds) live_navigate.py grabs a new frame from the webcam
   capture_interval_seconds: 1.5
-  camera_index: 0
+  # On systems with front + rear cameras, index 1 is typically the rear camera.
+  # Override with --camera-index if your operating system assigns another index.
+  camera_index: 1
