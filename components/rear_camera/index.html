@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body { margin: 0; font-family: sans-serif; }
-      video { width: 100%; max-height: 480px; object-fit: contain; background: #111; border-radius: 6px; }
-      button { margin-top: 8px; padding: 8px 14px; cursor: pointer; }
+      video { display: block; width: 100%; min-height: 300px; max-height: 720px; object-fit: cover; background: #111; border-radius: 6px; }
+      button { margin-top: 12px; padding: 12px 20px; cursor: pointer; font-size: 16px; font-weight: 600; }
+      label { display: block; margin-top: 12px; font-size: 14px; }
       #status { margin: 8px 0; color: #666; }
       #error { color: #b00020; }
     </style>
@@ -15,6 +16,7 @@
     <div id="status">Requesting rear camera…</div>
     <video id="preview" autoplay playsinline></video>
     <button id="capture" type="button" disabled>Take Photo</button>
+    <label><input id="auto" type="checkbox" checked /> Auto-capture every 2 seconds</label>
     <div id="error"></div>
     <canvas id="canvas" hidden></canvas>
 
@@ -24,7 +26,9 @@
       const status = document.getElementById("status");
       const error = document.getElementById("error");
       const canvas = document.getElementById("canvas");
+      const auto = document.getElementById("auto");
       let stream;
+      let autoTimer;
 
       // Keep the component self-contained. This avoids relying on a CDN that
       // may be blocked when the Streamlit app is opened on a phone/network.
@@ -53,7 +57,15 @@
       };
 
       function resize() {
-        component.setFrameHeight(document.body.scrollHeight);
+        component.setFrameHeight(Math.max(document.body.scrollHeight, 430));
+      }
+
+      function capturePhoto() {
+        if (!video.videoWidth || !video.videoHeight) return;
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext("2d").drawImage(video, 0, 0);
+        component.setComponentValue(canvas.toDataURL("image/jpeg", 0.9));
       }
 
       async function startCamera() {
@@ -69,6 +81,10 @@
           video.srcObject = stream;
           capture.disabled = false;
           status.textContent = "Rear camera ready";
+          video.addEventListener("loadedmetadata", resize, { once: true });
+          autoTimer = window.setInterval(() => {
+            if (auto.checked) capturePhoto();
+          }, 2000);
           resize();
         } catch (err) {
           status.textContent = "Rear camera unavailable";
@@ -78,15 +94,12 @@
       }
 
       capture.addEventListener("click", () => {
-        if (!video.videoWidth || !video.videoHeight) return;
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        canvas.getContext("2d").drawImage(video, 0, 0);
-        component.setComponentValue(canvas.toDataURL("image/jpeg", 0.95));
+        capturePhoto();
       });
 
       window.addEventListener("beforeunload", () => {
         if (stream) stream.getTracks().forEach((track) => track.stop());
+        if (autoTimer) window.clearInterval(autoTimer);
       });
 
       component.setComponentReady();
