@@ -19,7 +19,11 @@ from __future__ import annotations
 import matplotlib.pyplot as plt
 import networkx as nx
 import streamlit as st
+import streamlit.components.v1 as components
 from PIL import Image
+import base64
+import io
+from pathlib import Path
 
 from src.embedder import embed_image
 from src.floor_plan import draw_route_on_floor_plan, is_available as floor_plan_available, load_coords
@@ -27,6 +31,12 @@ from src.live_tracker import LiveTracker
 from src.localize import PlaceIndex
 from src.navigate import format_directions, get_route, load_graph, load_place_names, name_to_id_map
 from src.utils import load_config, resolve_path
+
+
+rear_camera = components.declare_component(
+    "rear_camera",
+    path=str(Path(__file__).parent / "components" / "rear_camera"),
+)
 
 
 @st.cache_resource
@@ -142,7 +152,7 @@ def live_mode_tab(config, place_index, graph, place_names):
         "for real continuous tracking on your own machine, use "
         "`python live_navigate.py --destination \"...\"` instead.)"
     )
-    st.info("Use the camera switch button in the preview to select the rear camera if the front camera opens.")
+    st.info("Live Mode uses the rear camera. Allow camera access when your browser asks.")
 
     all_names = [place_names[str(pid)] for pid in sorted(graph.nodes)]
     destination_name = st.selectbox("Destination", all_names, key="live_dest")
@@ -164,11 +174,12 @@ def live_mode_tab(config, place_index, graph, place_names):
         st.session_state.live_tracker = tracker
         st.session_state.live_dest_name = destination_name
 
-    photo = st.camera_input("Take a photo of where you are now", key="live_camera")
+    photo_data = rear_camera(key="live_rear_camera", default=None)
 
     route = None
-    if photo is not None:
-        image = Image.open(photo)
+    if photo_data:
+        _, encoded_image = photo_data.split(",", 1)
+        image = Image.open(io.BytesIO(base64.b64decode(encoded_image)))
         embedding = embed_image(image)
         status = st.session_state.live_tracker.process_frame(embedding)
         route = status["route"]

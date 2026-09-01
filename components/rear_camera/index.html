@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/streamlit-component-lib@2.0.0/dist/streamlit-component-lib.js"></script>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      video { width: 100%; max-height: 480px; object-fit: contain; background: #111; border-radius: 6px; }
+      button { margin-top: 8px; padding: 8px 14px; cursor: pointer; }
+      #status { margin: 8px 0; color: #666; }
+      #error { color: #b00020; }
+    </style>
+  </head>
+  <body>
+    <div id="status">Requesting rear camera…</div>
+    <video id="preview" autoplay playsinline></video>
+    <button id="capture" type="button" disabled>Take Photo</button>
+    <div id="error"></div>
+    <canvas id="canvas" hidden></canvas>
+
+    <script>
+      const video = document.getElementById("preview");
+      const capture = document.getElementById("capture");
+      const status = document.getElementById("status");
+      const error = document.getElementById("error");
+      const canvas = document.getElementById("canvas");
+      let stream;
+
+      function resize() {
+        Streamlit.setFrameHeight(document.body.scrollHeight);
+      }
+
+      async function startCamera() {
+        try {
+          // exact prevents silently falling back to the front camera.
+          stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: { exact: "environment" } },
+            audio: false,
+          });
+          video.srcObject = stream;
+          capture.disabled = false;
+          status.textContent = "Rear camera ready";
+          resize();
+        } catch (err) {
+          status.textContent = "Rear camera unavailable";
+          error.textContent = "Allow camera access and make sure this device has a rear camera. " + err.message;
+          resize();
+        }
+      }
+
+      capture.addEventListener("click", () => {
+        if (!video.videoWidth || !video.videoHeight) return;
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext("2d").drawImage(video, 0, 0);
+        Streamlit.setComponentValue(canvas.toDataURL("image/jpeg", 0.95));
+      });
+
+      window.addEventListener("beforeunload", () => {
+        if (stream) stream.getTracks().forEach((track) => track.stop());
+      });
+
+      Streamlit.setComponentReady();
+      Streamlit.events.addEventListener(Streamlit.RENDER_EVENT, resize);
+      startCamera();
+    </script>
+  </body>
+</html>

@@ -157,6 +157,9 @@ Has two tabs:
   changes. (Browser cameras give one photo per click, not continuous video —
   for genuinely continuous tracking, use `live_navigate.py` above instead.)
 
+The Streamlit Live Mode requests the rear camera directly. Grant camera
+permission when prompted; browser camera access requires `localhost` or HTTPS.
+
 ## Optional: floor-plan route overlay
 
 By default, routes are drawn on an abstract graph layout. If you'd rather
