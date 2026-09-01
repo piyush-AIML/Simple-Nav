@@ -22,8 +22,6 @@ data/**/*.avi
 
 data/frames/*
 !data/frames/.gitkeep
-data/map/*
-!data/map/.gitkeep
 data/test_labels.json
 
 # Environments
