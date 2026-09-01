@@ -1,0 +1,11 @@
+opencv-python
+numpy
+scikit-learn
+torch
+torchvision
+faiss-cpu
+networkx
+matplotlib
+streamlit
+PyYAML
+pyttsx3

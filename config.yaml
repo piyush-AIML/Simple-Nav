@@ -1,0 +1,56 @@
+# SimpleNav configuration
+# Every tunable value the pipeline uses lives here so scripts don't hardcode paths/params.
+
+paths:
+  video: "data/College_env.mp4"
+  frames_dir: "data/frames"
+  map_dir: "data/map"
+  embeddings_file: "data/map/embeddings.npy"
+  frame_names_file: "data/map/frame_names.json"
+  place_assignments_file: "data/map/place_assignments.json"
+  # Each place is represented by one or more exemplar vectors rather than a
+  # single averaged centroid (see clustering.max_exemplars_per_place below).
+  place_exemplars_file: "data/map/place_exemplars.npy"
+  exemplar_place_ids_file: "data/map/exemplar_place_ids.npy"
+  place_names_file: "data/map/place_names.json"
+  graph_file: "data/map/graph.pkl"
+  test_labels_file: "data/test_labels.json"
+  # Optional: a floor-plan image + hand-placed place coordinates on it.
+  # If either file is missing, the app just falls back to the abstract graph view.
+  floor_plan_image: "data/map/floor_plan.png"
+  floor_plan_coords_file: "data/map/floor_plan_coords.json"
+
+extraction:
+  # save 1 out of every N frames from the source video
+  sample_every_n_frames: 15
+
+embedding:
+  model: "resnet18" # torchvision model used as a frozen feature extractor
+  image_size: 224
+
+clustering:
+  # KMeans k is not fixed by hand — we sweep this range and pick the k with the
+  # best silhouette score instead of guessing a number.
+  k_min: 3
+  k_max: 12
+  # Each place can be represented by more than one exemplar vector (found via
+  # a small secondary KMeans within that place's own frames), so a place that
+  # looks different from two angles/lighting conditions isn't forced into a
+  # single blurry average.
+  max_exemplars_per_place: 3
+
+navigation:
+  # number of recent predictions to majority-vote over when localizing from a
+  # live/sequential stream (reduces single-frame flicker).
+  smoothing_window: 5
+  # If the best matching similarity score is below this, the system reports
+  # "not confidently recognized" instead of forcing a guess.
+  confidence_threshold: 0.40
+  # Route by strongest-observed connections (favor edges with more recorded
+  # transitions) rather than plain fewest-hops.
+  use_weighted_routing: true
+
+live:
+  # how often (seconds) live_navigate.py grabs a new frame from the webcam
+  capture_interval_seconds: 1.5
+  camera_index: 0

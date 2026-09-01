@@ -1,0 +1,22 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated data — regenerate by running the pipeline, don't commit large binaries
+data/raw_video.mp4
+data/frames/*
+!data/frames/.gitkeep
+data/map/*
+!data/map/.gitkeep
+data/test_labels.json
+
+# Environments
+venv/
+.venv/
+*.egg-info/
+
+# OS/editor cruft
+.DS_Store
+.idea/
+.vscode/
