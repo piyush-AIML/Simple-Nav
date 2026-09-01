@@ -2,9 +2,22 @@
 # Every tunable value the pipeline uses lives here so scripts don't hardcode paths/params.
 
 paths:
+  # NOTE: data/College_env.mp4 is currently MISSING from the repo. The 301
+  # frames in data/frames/ (extracted from it earlier) are the PROVISIONAL
+  # dataset until a real walkthrough video is provided. See the executor
+  # document, Appendix B.
   video: "data/College_env.mp4"
   frames_dir: "data/frames"
   map_dir: "data/map"
+  observations_dir: "data/observations"
+  evaluation_dir: "data/evaluation"
+
+map:
+  # Versioned map identity (Stage 14) — bump map_id when the building/floor
+  # or the mapping pipeline changes; each build writes data/map/<map_id>/.
+  map_id: "college_env_v1"
+  building_id: "college"
+  floor_id: "floor_1"
   embeddings_file: "data/map/embeddings.npy"
   frame_names_file: "data/map/frame_names.json"
   place_assignments_file: "data/map/place_assignments.json"
@@ -21,12 +34,42 @@ paths:
   floor_plan_coords_file: "data/map/floor_plan_coords.json"
 
 extraction:
-  # save 1 out of every N frames from the source video
+  # save 1 out of every N frames from the source video (legacy baseline path,
+  # used by extract_frames.py --baseline)
   sample_every_n_frames: 15
+
+sampling:
+  # Smart frame sampling (default extract_frames.py path). Thresholds tuned
+  # for indoor walkthroughs; re-check on real videos when they arrive.
+  min_interval_seconds: 0.5     # min seconds between accepted frames
+  novelty_threshold: 0.15       # 32x32 descriptor cosine distance; below = redundant
+  transition_threshold: 0.4     # sustained-change trigger (all window frames above this)
+  transition_window: 5          # consecutive frames needed to call a change "sustained"
+  transition_keep_after: 2      # extra frames kept after a sustained change
+  blur_threshold: 40.0          # Laplacian variance below this = blurry
+  dark_threshold: 20.0          # mean grayscale below this = unusably dark
 
 embedding:
   model: "resnet18" # torchvision model used as a frozen feature extractor
   image_size: 224
+
+perception:
+  # Object detection (Stage 06). YOLOv8n detects COCO classes only — doors,
+  # stairs, signs are covered by the VLM layer (Stage 07). The detector is
+  # EVIDENCE, never ground truth for topology/coordinates.
+  detector_enabled: true
+  detector_model: "yolov8n.pt"
+  detector_confidence: 0.35
+  # VLM scene/landmark tagging (Stage 07). The interface + schema validation
+  # + stub are complete; the Qwen2.5-VL-3B 4-bit backend produced incoherent
+  # output on this GPU (debugging parked 2026-09-02 — see executor Stage 07).
+  # DISABLED for now: the pipeline runs on the deterministic stub. The VLM is
+  # EVIDENCE only — its output can never define coordinates, topology, or the
+  # final localization (fixed JSON schema).
+  vlm_enabled: false
+  vlm_model: "Qwen/Qwen2.5-VL-3B-Instruct"
+  vlm_quantization: "4bit"
+  vlm_max_tokens: 256
 
 clustering:
   # KMeans k is not fixed by hand — we sweep this range and pick the k with the
@@ -38,6 +81,83 @@ clustering:
   # looks different from two angles/lighting conditions isn't forced into a
   # single blurry average.
   max_exemplars_per_place: 3
+
+mapping:
+  # Stage 08 — temporal segmentation of observations.
+  # segment_distance_threshold: null = adaptive (mean + 2.5*std of change
+  # scores, clamped [0.08, 0.5]) — the fixed 0.35 threshold found no
+  # boundaries on smooth ResNet18 walkthrough embeddings.
+  segment_distance_threshold: null
+  segment_change_window: 2
+  segment_min_length: 3
+  # Stage 09 — place formation + exemplar selection (§11 methods A/B/C)
+  exemplar_method: "temporal_diversity"   # kmeans | diversity | temporal_diversity
+  max_exemplars_per_place: 3
+  # Stage 10 — place reconciliation: multi-signal merge (§12)
+  merge_visual_threshold: 0.75
+  # both places lack landmarks -> merge only when near-identical (0.92;
+  # same-building cross-area ResNet18 similarity is ~0.87)
+  merge_visual_extra_threshold: 0.92
+  merge_landmark_threshold: 0.5
+  merge_scene_required: true
+  # Stage 11 — transition extraction: debouncing + minimum support (§13).
+  # minimum_edge_support: 1 — with a single walkthrough each boundary is
+  # crossed exactly once; the persistence gate (3) already filters noise, and
+  # repeat evidence raises confidence when more walkthroughs are added.
+  transition_persistence: 3
+  minimum_edge_support: 1
+  # Stage 12 — graph builder: edge gates + junction detection (§14/§15)
+  edge_confidence_threshold: 0.6
+  junction_min_degree: 3
+  # Stage 13 — graph validation (§16)
+  weak_edge_threshold: 0.4
+  min_observations_per_place: 3
+  high_variance_threshold: 0.35
+  duplicate_similarity_threshold: 0.9
+
+localization:
+  # Stage 15 — candidate retrieval (§18): FAISS proposes, reasoning decides
+  top_k: 10
+  exemplar_search_factor: 4
+  # Stage 16 — candidate scoring: interpretable normalized terms (§19)
+  w_visual: 0.5
+  w_semantic: 0.25
+  w_temporal: 0.15
+  w_graph: 0.1
+  # Stage 17 — graph-constrained filtering: soft penalties (§20)
+  graph_radius: 2
+  graph_penalty_strength: 0.5
+  local_weak_threshold: 0.35
+  # Stage 18 — probabilistic state estimator (Bayes filter, §21)
+  self_transition_prior: 0.7
+  far_transition_prior: 0.05
+  likelihood_temperature: 0.1
+  # Stage 19 — state machine thresholds (§22)
+  tracking_threshold: 0.5
+  tracking_entropy: 0.6
+  uncertain_floor: 0.2
+  lost_after: 3
+  lost_threshold: 0.2
+  # LOST also fires when the belief mass is mostly unknown (weak evidence
+  # never pushes posterior below lost_threshold because temporal/graph terms
+  # floor the candidate totals — §Rule 4)
+  lost_unknown_mass: 0.6
+  reacquired_threshold: 0.5
+  arrived_threshold: 0.6
+  arrived_confirmations: 2
+  # Stage 20 — transition stabilization: K consecutive or high posterior (§23)
+  transition_confirmation_count: 3
+  transition_threshold: 0.65
+  # Stage 21 — global reacquisition (§24)
+  global_reacquisition_after: 3
+  recovery_threshold: 0.45
+  # Stage 22 — confidence calibration (§25)
+  high_score: 0.6
+  high_margin: 0.15
+  high_entropy: 0.4
+  low_score: 0.3
+  low_margin: 0.02
+  unknown_high_mass: 0.4
 
 navigation:
   # number of recent predictions to majority-vote over when localizing from a

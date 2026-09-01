@@ -1,0 +1,37 @@
+{
+  "dataset": "provisional",
+  "provisional_note": "Built from 301 pre-extracted frames (source video missing). Held-out labels are executor-generated coarse area labels. Re-run with real mapping+evaluation walkthroughs before research conclusions.",
+  "timestamp": "2026-09-02T00:33:36",
+  "split": {
+    "total_frames": 301,
+    "train_frames": 240,
+    "heldout_frames": 61,
+    "fraction_train": 0.8
+  },
+  "params": {
+    "embedding": "resnet18_512d",
+    "k_min": 3,
+    "k_max": 12,
+    "max_exemplars_per_place": 3,
+    "smoothing_window": 5,
+    "place_index": "faiss_flat_inner_product",
+    "graph": "transition_count_undirected"
+  },
+  "graph": {
+    "node_count": 12,
+    "edge_count": 13,
+    "chosen_k": 12,
+    "exemplar_count": 36
+  },
+  "metrics": {
+    "top1_accuracy_self_consistency": 0.8852,
+    "top3_accuracy_self_consistency": 0.918,
+    "false_jump_rate_self_consistency": 0.1698,
+    "transition_detection_recall_self_consistency": 1.0,
+    "transition_detection_precision_self_consistency": 0.8571,
+    "pseudo_cluster_count": 11,
+    "latency_mean_ms": 22.21,
+    "latency_p95_ms": 25.63
+  },
+  "pseudo_label_method": "full-data KMeans (k=11, silhouette-selected) as pseudo ground truth; train places mapped to pseudo-clusters by majority vote; metrics measure map generalization to unseen frames, not physical accuracy"
+}

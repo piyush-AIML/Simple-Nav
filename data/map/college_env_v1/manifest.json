@@ -1,0 +1,13 @@
+{
+  "map_id": "college_env_v1",
+  "building_id": "college",
+  "floor_id": "floor_1",
+  "encoder": "resnet18",
+  "encoder_version": "torchvision_imagenet",
+  "embedding_dimension": 512,
+  "observation_count": 301,
+  "place_count": 7,
+  "edge_count": 6,
+  "created_at": "2026-09-02T01:30:35",
+  "hash": "82e50b12c5c7f9c9"
+}

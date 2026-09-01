@@ -1,0 +1,27 @@
+{
+  "dataset": "provisional",
+  "provisional_note": "Built from 301 pre-extracted frames (source video missing). Held-out labels are executor-generated coarse area labels. Re-run with real mapping+evaluation walkthroughs before research conclusions.",
+  "timestamp": "2026-09-02T00:31:56",
+  "split": {
+    "total_frames": 301,
+    "train_frames": 240,
+    "heldout_frames": 61,
+    "fraction_train": 0.8
+  },
+  "params": {
+    "embedding": "resnet18_512d",
+    "k_min": 3,
+    "k_max": 12,
+    "max_exemplars_per_place": 3,
+    "smoothing_window": 5,
+    "place_index": "faiss_flat_inner_product",
+    "graph": "transition_count_undirected"
+  },
+  "graph": {
+    "node_count": 12,
+    "edge_count": 13,
+    "chosen_k": 12,
+    "exemplar_count": 36
+  },
+  "metrics": {}
+}

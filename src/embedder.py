@@ -1,8 +1,13 @@
-"""Shared image embedding utility.
+"""Shared image embedding utility — COMPATIBILITY WRAPPER.
 
 Every stage that needs to turn an image into a vector (map building,
 localization, evaluation, the demo app) goes through this one module so
 there's exactly one definition of "how we embed an image."
+
+Since Stage 04, the actual encoding lives behind the VisualEncoder interface
+(src/embeddings/encoder.py); this module keeps the legacy names
+(load_model, TRANSFORM, IMAGE_SIZE, embed_image) so existing callers work
+unchanged. New code should use `get_encoder(config)` instead.
 
 Uses a pretrained ResNet18 as a frozen feature extractor: we drop the final
 classification layer and keep the 512-d pooled features. No fine-tuning —
@@ -17,7 +22,6 @@ from typing import Union
 import numpy as np
 import torch
 import torch.nn as nn
-from PIL import Image
 from torchvision import models, transforms
 
 from src.utils import setup_logger
@@ -83,23 +87,8 @@ def embed_image(image: Union[str, "Image.Image", np.ndarray]) -> np.ndarray:
     """Embed a single image (file path, PIL Image, or HxWx3 numpy array).
 
     Returns an L2-normalized 512-d float32 vector, so cosine similarity is
-    just a dot product.
+    just a dot product. Delegates to the VisualEncoder abstraction (Stage 04).
     """
-    model = load_model()
+    from src.embeddings.encoder import ResNet18Encoder
 
-    if isinstance(image, str):
-        img = Image.open(image).convert("RGB")
-    elif isinstance(image, np.ndarray):
-        img = Image.fromarray(image).convert("RGB")
-    else:
-        img = image.convert("RGB")
-
-    tensor = TRANSFORM(img).unsqueeze(0).to(_DEVICE)
-    with torch.no_grad():
-        features = model(tensor)
-
-    vec = features.squeeze(0).cpu().numpy().astype("float32")
-    norm = np.linalg.norm(vec)
-    if norm > 0:
-        vec = vec / norm
-    return vec
+    return ResNet18Encoder().encode(image)

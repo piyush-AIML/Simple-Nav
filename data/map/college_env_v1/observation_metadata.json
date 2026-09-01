@@ -1,0 +1,4057 @@
+[
+  {
+    "id": "obs_000000",
+    "timestamp": 0.0,
+    "frame_path": "data/frames/frame_00000.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000001",
+    "timestamp": 1.0,
+    "frame_path": "data/frames/frame_00001.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000002",
+    "timestamp": 2.0,
+    "frame_path": "data/frames/frame_00002.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000003",
+    "timestamp": 3.0,
+    "frame_path": "data/frames/frame_00003.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000004",
+    "timestamp": 4.0,
+    "frame_path": "data/frames/frame_00004.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.4241,
+        "bbox": [
+          0.5001,
+          0.4381,
+          0.5479,
+          0.5352
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000005",
+    "timestamp": 5.0,
+    "frame_path": "data/frames/frame_00005.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.4103,
+        "bbox": [
+          0.4947,
+          0.4513,
+          0.5399,
+          0.5474
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000006",
+    "timestamp": 6.0,
+    "frame_path": "data/frames/frame_00006.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000007",
+    "timestamp": 7.0,
+    "frame_path": "data/frames/frame_00007.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000008",
+    "timestamp": 8.0,
+    "frame_path": "data/frames/frame_00008.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.3779,
+        "bbox": [
+          0.5084,
+          0.4352,
+          0.5591,
+          0.5401
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000009",
+    "timestamp": 9.0,
+    "frame_path": "data/frames/frame_00009.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.4265,
+        "bbox": [
+          0.5164,
+          0.4109,
+          0.5697,
+          0.5261
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000010",
+    "timestamp": 10.0,
+    "frame_path": "data/frames/frame_00010.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000011",
+    "timestamp": 11.0,
+    "frame_path": "data/frames/frame_00011.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000012",
+    "timestamp": 12.0,
+    "frame_path": "data/frames/frame_00012.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000013",
+    "timestamp": 13.0,
+    "frame_path": "data/frames/frame_00013.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000014",
+    "timestamp": 14.0,
+    "frame_path": "data/frames/frame_00014.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.3808,
+        "bbox": [
+          0.5181,
+          0.451,
+          0.5858,
+          0.5678
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000015",
+    "timestamp": 15.0,
+    "frame_path": "data/frames/frame_00015.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000016",
+    "timestamp": 16.0,
+    "frame_path": "data/frames/frame_00016.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.4293,
+        "bbox": [
+          0.6446,
+          0.1673,
+          0.7012,
+          0.4996
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000017",
+    "timestamp": 17.0,
+    "frame_path": "data/frames/frame_00017.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.3802,
+        "bbox": [
+          0.6683,
+          0.1539,
+          0.7304,
+          0.5138
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000018",
+    "timestamp": 18.0,
+    "frame_path": "data/frames/frame_00018.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000019",
+    "timestamp": 19.0,
+    "frame_path": "data/frames/frame_00019.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000020",
+    "timestamp": 20.0,
+    "frame_path": "data/frames/frame_00020.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.5991,
+        "bbox": [
+          0.5548,
+          0.401,
+          0.6603,
+          0.634
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000021",
+    "timestamp": 21.0,
+    "frame_path": "data/frames/frame_00021.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.5143,
+        "bbox": [
+          0.5592,
+          0.4053,
+          0.674,
+          0.6129
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000022",
+    "timestamp": 22.0,
+    "frame_path": "data/frames/frame_00022.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.6572,
+        "bbox": [
+          0.5666,
+          0.4234,
+          0.6937,
+          0.6835
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000023",
+    "timestamp": 23.0,
+    "frame_path": "data/frames/frame_00023.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.5689,
+        "bbox": [
+          0.5838,
+          0.4178,
+          0.725,
+          0.6949
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000024",
+    "timestamp": 24.0,
+    "frame_path": "data/frames/frame_00024.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.7098,
+        "bbox": [
+          0.5846,
+          0.4302,
+          0.7428,
+          0.7443
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000025",
+    "timestamp": 25.0,
+    "frame_path": "data/frames/frame_00025.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.6693,
+        "bbox": [
+          0.5699,
+          0.4242,
+          0.7428,
+          0.7671
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000026",
+    "timestamp": 26.0,
+    "frame_path": "data/frames/frame_00026.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.829,
+        "bbox": [
+          0.5757,
+          0.4404,
+          0.7654,
+          0.825
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000027",
+    "timestamp": 27.0,
+    "frame_path": "data/frames/frame_00027.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.7038,
+        "bbox": [
+          0.5554,
+          0.4671,
+          0.7639,
+          0.8822
+        ]
+      },
+      {
+        "class": "chair",
+        "confidence": 0.3623,
+        "bbox": [
+          0.642,
+          0.5446,
+          0.763,
+          0.8851
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000028",
+    "timestamp": 28.0,
+    "frame_path": "data/frames/frame_00028.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.8502,
+        "bbox": [
+          0.5605,
+          0.4792,
+          0.8007,
+          0.9469
+        ]
+      },
+      {
+        "class": "tv",
+        "confidence": 0.4326,
+        "bbox": [
+          0.0001,
+          0.0886,
+          0.1135,
+          0.6057
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000029",
+    "timestamp": 29.0,
+    "frame_path": "data/frames/frame_00029.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.9018,
+        "bbox": [
+          0.5882,
+          0.4774,
+          0.8692,
+          0.9944
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000030",
+    "timestamp": 30.0,
+    "frame_path": "data/frames/frame_00030.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.8703,
+        "bbox": [
+          0.6198,
+          0.482,
+          0.9582,
+          0.9907
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000031",
+    "timestamp": 31.0,
+    "frame_path": "data/frames/frame_00031.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.8976,
+        "bbox": [
+          0.6167,
+          0.5146,
+          0.9991,
+          0.9894
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000032",
+    "timestamp": 32.0,
+    "frame_path": "data/frames/frame_00032.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.9223,
+        "bbox": [
+          0.6158,
+          0.5106,
+          0.9991,
+          0.9903
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000033",
+    "timestamp": 33.0,
+    "frame_path": "data/frames/frame_00033.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.9173,
+        "bbox": [
+          0.6362,
+          0.507,
+          0.9994,
+          0.9901
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000034",
+    "timestamp": 34.0,
+    "frame_path": "data/frames/frame_00034.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.5981,
+        "bbox": [
+          0.6405,
+          0.5072,
+          0.9993,
+          0.9905
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000035",
+    "timestamp": 35.0,
+    "frame_path": "data/frames/frame_00035.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.8487,
+        "bbox": [
+          0.689,
+          0.5171,
+          0.9991,
+          0.9901
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000036",
+    "timestamp": 36.0,
+    "frame_path": "data/frames/frame_00036.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.8135,
+        "bbox": [
+          0.7302,
+          0.5532,
+          0.9992,
+          0.9916
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000037",
+    "timestamp": 37.0,
+    "frame_path": "data/frames/frame_00037.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.7945,
+        "bbox": [
+          0.7143,
+          0.5835,
+          0.9991,
+          0.9907
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000038",
+    "timestamp": 38.0,
+    "frame_path": "data/frames/frame_00038.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.7843,
+        "bbox": [
+          0.7278,
+          0.5866,
+          0.9992,
+          0.9915
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000039",
+    "timestamp": 39.0,
+    "frame_path": "data/frames/frame_00039.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.6874,
+        "bbox": [
+          0.7408,
+          0.5947,
+          0.9989,
+          0.9904
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000040",
+    "timestamp": 40.0,
+    "frame_path": "data/frames/frame_00040.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.5727,
+        "bbox": [
+          0.7061,
+          0.6348,
+          0.9993,
+          0.9912
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000041",
+    "timestamp": 41.0,
+    "frame_path": "data/frames/frame_00041.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000042",
+    "timestamp": 42.0,
+    "frame_path": "data/frames/frame_00042.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000043",
+    "timestamp": 43.0,
+    "frame_path": "data/frames/frame_00043.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000044",
+    "timestamp": 44.0,
+    "frame_path": "data/frames/frame_00044.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000045",
+    "timestamp": 45.0,
+    "frame_path": "data/frames/frame_00045.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000046",
+    "timestamp": 46.0,
+    "frame_path": "data/frames/frame_00046.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.359,
+        "bbox": [
+          0.0916,
+          0.1251,
+          0.2217,
+          0.5187
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000047",
+    "timestamp": 47.0,
+    "frame_path": "data/frames/frame_00047.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.414,
+        "bbox": [
+          0.1449,
+          0.0683,
+          0.2781,
+          0.4681
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000048",
+    "timestamp": 48.0,
+    "frame_path": "data/frames/frame_00048.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5754,
+        "bbox": [
+          0.0955,
+          0.0329,
+          0.2639,
+          0.4943
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000049",
+    "timestamp": 49.0,
+    "frame_path": "data/frames/frame_00049.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000050",
+    "timestamp": 50.0,
+    "frame_path": "data/frames/frame_00050.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000051",
+    "timestamp": 51.0,
+    "frame_path": "data/frames/frame_00051.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000052",
+    "timestamp": 52.0,
+    "frame_path": "data/frames/frame_00052.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000053",
+    "timestamp": 53.0,
+    "frame_path": "data/frames/frame_00053.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.7057,
+        "bbox": [
+          0.0001,
+          0.0376,
+          0.1331,
+          0.6504
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000054",
+    "timestamp": 54.0,
+    "frame_path": "data/frames/frame_00054.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000055",
+    "timestamp": 55.0,
+    "frame_path": "data/frames/frame_00055.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000056",
+    "timestamp": 56.0,
+    "frame_path": "data/frames/frame_00056.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000057",
+    "timestamp": 57.0,
+    "frame_path": "data/frames/frame_00057.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000058",
+    "timestamp": 58.0,
+    "frame_path": "data/frames/frame_00058.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000059",
+    "timestamp": 59.0,
+    "frame_path": "data/frames/frame_00059.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5123,
+        "bbox": [
+          0.2917,
+          0.1921,
+          0.3574,
+          0.4343
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000060",
+    "timestamp": 60.0,
+    "frame_path": "data/frames/frame_00060.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.6412,
+        "bbox": [
+          0.2702,
+          0.1817,
+          0.3455,
+          0.4446
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000061",
+    "timestamp": 61.0,
+    "frame_path": "data/frames/frame_00061.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5636,
+        "bbox": [
+          0.2682,
+          0.1654,
+          0.3537,
+          0.4506
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000062",
+    "timestamp": 62.0,
+    "frame_path": "data/frames/frame_00062.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4461,
+        "bbox": [
+          0.2396,
+          0.1628,
+          0.3352,
+          0.4756
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000063",
+    "timestamp": 63.0,
+    "frame_path": "data/frames/frame_00063.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.6872,
+        "bbox": [
+          0.1989,
+          0.1196,
+          0.3157,
+          0.4683
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000064",
+    "timestamp": 64.0,
+    "frame_path": "data/frames/frame_00064.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.6524,
+        "bbox": [
+          0.1663,
+          0.0942,
+          0.3095,
+          0.4887
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000065",
+    "timestamp": 65.0,
+    "frame_path": "data/frames/frame_00065.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.728,
+        "bbox": [
+          0.1132,
+          0.0893,
+          0.2828,
+          0.5397
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000066",
+    "timestamp": 66.0,
+    "frame_path": "data/frames/frame_00066.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.7976,
+        "bbox": [
+          0.0228,
+          0.0305,
+          0.2502,
+          0.5731
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000067",
+    "timestamp": 67.0,
+    "frame_path": "data/frames/frame_00067.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000068",
+    "timestamp": 68.0,
+    "frame_path": "data/frames/frame_00068.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000069",
+    "timestamp": 69.0,
+    "frame_path": "data/frames/frame_00069.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000070",
+    "timestamp": 70.0,
+    "frame_path": "data/frames/frame_00070.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.8518,
+        "bbox": [
+          0.0,
+          0.0588,
+          0.3149,
+          0.7934
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000071",
+    "timestamp": 71.0,
+    "frame_path": "data/frames/frame_00071.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.9202,
+        "bbox": [
+          0.0005,
+          0.0738,
+          0.4335,
+          0.9381
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000072",
+    "timestamp": 72.0,
+    "frame_path": "data/frames/frame_00072.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.9257,
+        "bbox": [
+          0.0004,
+          0.0917,
+          0.4528,
+          0.9631
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000073",
+    "timestamp": 73.0,
+    "frame_path": "data/frames/frame_00073.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.9246,
+        "bbox": [
+          0.0003,
+          0.0671,
+          0.429,
+          0.9419
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000074",
+    "timestamp": 74.0,
+    "frame_path": "data/frames/frame_00074.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000075",
+    "timestamp": 75.0,
+    "frame_path": "data/frames/frame_00075.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000076",
+    "timestamp": 76.0,
+    "frame_path": "data/frames/frame_00076.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000077",
+    "timestamp": 77.0,
+    "frame_path": "data/frames/frame_00077.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000078",
+    "timestamp": 78.0,
+    "frame_path": "data/frames/frame_00078.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000079",
+    "timestamp": 79.0,
+    "frame_path": "data/frames/frame_00079.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000080",
+    "timestamp": 80.0,
+    "frame_path": "data/frames/frame_00080.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000081",
+    "timestamp": 81.0,
+    "frame_path": "data/frames/frame_00081.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000082",
+    "timestamp": 82.0,
+    "frame_path": "data/frames/frame_00082.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000083",
+    "timestamp": 83.0,
+    "frame_path": "data/frames/frame_00083.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000084",
+    "timestamp": 84.0,
+    "frame_path": "data/frames/frame_00084.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000085",
+    "timestamp": 85.0,
+    "frame_path": "data/frames/frame_00085.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000086",
+    "timestamp": 86.0,
+    "frame_path": "data/frames/frame_00086.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000087",
+    "timestamp": 87.0,
+    "frame_path": "data/frames/frame_00087.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000088",
+    "timestamp": 88.0,
+    "frame_path": "data/frames/frame_00088.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000089",
+    "timestamp": 89.0,
+    "frame_path": "data/frames/frame_00089.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000090",
+    "timestamp": 90.0,
+    "frame_path": "data/frames/frame_00090.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000091",
+    "timestamp": 91.0,
+    "frame_path": "data/frames/frame_00091.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000092",
+    "timestamp": 92.0,
+    "frame_path": "data/frames/frame_00092.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000093",
+    "timestamp": 93.0,
+    "frame_path": "data/frames/frame_00093.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000094",
+    "timestamp": 94.0,
+    "frame_path": "data/frames/frame_00094.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000095",
+    "timestamp": 95.0,
+    "frame_path": "data/frames/frame_00095.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000096",
+    "timestamp": 96.0,
+    "frame_path": "data/frames/frame_00096.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000097",
+    "timestamp": 97.0,
+    "frame_path": "data/frames/frame_00097.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000098",
+    "timestamp": 98.0,
+    "frame_path": "data/frames/frame_00098.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000099",
+    "timestamp": 99.0,
+    "frame_path": "data/frames/frame_00099.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000100",
+    "timestamp": 100.0,
+    "frame_path": "data/frames/frame_00100.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.4256,
+        "bbox": [
+          0.703,
+          0.2235,
+          0.7643,
+          0.4911
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000101",
+    "timestamp": 101.0,
+    "frame_path": "data/frames/frame_00101.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000102",
+    "timestamp": 102.0,
+    "frame_path": "data/frames/frame_00102.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000103",
+    "timestamp": 103.0,
+    "frame_path": "data/frames/frame_00103.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000104",
+    "timestamp": 104.0,
+    "frame_path": "data/frames/frame_00104.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000105",
+    "timestamp": 105.0,
+    "frame_path": "data/frames/frame_00105.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000106",
+    "timestamp": 106.0,
+    "frame_path": "data/frames/frame_00106.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000107",
+    "timestamp": 107.0,
+    "frame_path": "data/frames/frame_00107.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000108",
+    "timestamp": 108.0,
+    "frame_path": "data/frames/frame_00108.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000109",
+    "timestamp": 109.0,
+    "frame_path": "data/frames/frame_00109.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000110",
+    "timestamp": 110.0,
+    "frame_path": "data/frames/frame_00110.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000111",
+    "timestamp": 111.0,
+    "frame_path": "data/frames/frame_00111.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000112",
+    "timestamp": 112.0,
+    "frame_path": "data/frames/frame_00112.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.362,
+        "bbox": [
+          0.4894,
+          0.2908,
+          0.6241,
+          0.6843
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000113",
+    "timestamp": 113.0,
+    "frame_path": "data/frames/frame_00113.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000114",
+    "timestamp": 114.0,
+    "frame_path": "data/frames/frame_00114.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000115",
+    "timestamp": 115.0,
+    "frame_path": "data/frames/frame_00115.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000116",
+    "timestamp": 116.0,
+    "frame_path": "data/frames/frame_00116.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000117",
+    "timestamp": 117.0,
+    "frame_path": "data/frames/frame_00117.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000118",
+    "timestamp": 118.0,
+    "frame_path": "data/frames/frame_00118.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000119",
+    "timestamp": 119.0,
+    "frame_path": "data/frames/frame_00119.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000120",
+    "timestamp": 120.0,
+    "frame_path": "data/frames/frame_00120.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000121",
+    "timestamp": 121.0,
+    "frame_path": "data/frames/frame_00121.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000122",
+    "timestamp": 122.0,
+    "frame_path": "data/frames/frame_00122.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000123",
+    "timestamp": 123.0,
+    "frame_path": "data/frames/frame_00123.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000124",
+    "timestamp": 124.0,
+    "frame_path": "data/frames/frame_00124.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000125",
+    "timestamp": 125.0,
+    "frame_path": "data/frames/frame_00125.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000126",
+    "timestamp": 126.0,
+    "frame_path": "data/frames/frame_00126.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000127",
+    "timestamp": 127.0,
+    "frame_path": "data/frames/frame_00127.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000128",
+    "timestamp": 128.0,
+    "frame_path": "data/frames/frame_00128.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000129",
+    "timestamp": 129.0,
+    "frame_path": "data/frames/frame_00129.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000130",
+    "timestamp": 130.0,
+    "frame_path": "data/frames/frame_00130.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000131",
+    "timestamp": 131.0,
+    "frame_path": "data/frames/frame_00131.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000132",
+    "timestamp": 132.0,
+    "frame_path": "data/frames/frame_00132.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000133",
+    "timestamp": 133.0,
+    "frame_path": "data/frames/frame_00133.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000134",
+    "timestamp": 134.0,
+    "frame_path": "data/frames/frame_00134.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000135",
+    "timestamp": 135.0,
+    "frame_path": "data/frames/frame_00135.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000136",
+    "timestamp": 136.0,
+    "frame_path": "data/frames/frame_00136.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000137",
+    "timestamp": 137.0,
+    "frame_path": "data/frames/frame_00137.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000138",
+    "timestamp": 138.0,
+    "frame_path": "data/frames/frame_00138.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000139",
+    "timestamp": 139.0,
+    "frame_path": "data/frames/frame_00139.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000140",
+    "timestamp": 140.0,
+    "frame_path": "data/frames/frame_00140.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000141",
+    "timestamp": 141.0,
+    "frame_path": "data/frames/frame_00141.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000142",
+    "timestamp": 142.0,
+    "frame_path": "data/frames/frame_00142.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000143",
+    "timestamp": 143.0,
+    "frame_path": "data/frames/frame_00143.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000144",
+    "timestamp": 144.0,
+    "frame_path": "data/frames/frame_00144.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000145",
+    "timestamp": 145.0,
+    "frame_path": "data/frames/frame_00145.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.8496,
+        "bbox": [
+          0.2162,
+          0.1732,
+          0.4268,
+          0.8878
+        ]
+      },
+      {
+        "class": "refrigerator",
+        "confidence": 0.4401,
+        "bbox": [
+          0.42,
+          0.0075,
+          0.9704,
+          0.9908
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000146",
+    "timestamp": 146.0,
+    "frame_path": "data/frames/frame_00146.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.3674,
+        "bbox": [
+          0.224,
+          0.0075,
+          0.9944,
+          0.9834
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000147",
+    "timestamp": 147.0,
+    "frame_path": "data/frames/frame_00147.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000148",
+    "timestamp": 148.0,
+    "frame_path": "data/frames/frame_00148.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000149",
+    "timestamp": 149.0,
+    "frame_path": "data/frames/frame_00149.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "book",
+        "confidence": 0.4732,
+        "bbox": [
+          0.5633,
+          0.4419,
+          0.7355,
+          0.8108
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000150",
+    "timestamp": 150.0,
+    "frame_path": "data/frames/frame_00150.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000151",
+    "timestamp": 151.0,
+    "frame_path": "data/frames/frame_00151.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000152",
+    "timestamp": 152.0,
+    "frame_path": "data/frames/frame_00152.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000153",
+    "timestamp": 153.0,
+    "frame_path": "data/frames/frame_00153.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000154",
+    "timestamp": 154.0,
+    "frame_path": "data/frames/frame_00154.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000155",
+    "timestamp": 155.0,
+    "frame_path": "data/frames/frame_00155.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000156",
+    "timestamp": 156.0,
+    "frame_path": "data/frames/frame_00156.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000157",
+    "timestamp": 157.0,
+    "frame_path": "data/frames/frame_00157.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000158",
+    "timestamp": 158.0,
+    "frame_path": "data/frames/frame_00158.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000159",
+    "timestamp": 159.0,
+    "frame_path": "data/frames/frame_00159.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000160",
+    "timestamp": 160.0,
+    "frame_path": "data/frames/frame_00160.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000161",
+    "timestamp": 161.0,
+    "frame_path": "data/frames/frame_00161.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000162",
+    "timestamp": 162.0,
+    "frame_path": "data/frames/frame_00162.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000163",
+    "timestamp": 163.0,
+    "frame_path": "data/frames/frame_00163.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000164",
+    "timestamp": 164.0,
+    "frame_path": "data/frames/frame_00164.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000165",
+    "timestamp": 165.0,
+    "frame_path": "data/frames/frame_00165.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000166",
+    "timestamp": 166.0,
+    "frame_path": "data/frames/frame_00166.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000167",
+    "timestamp": 167.0,
+    "frame_path": "data/frames/frame_00167.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000168",
+    "timestamp": 168.0,
+    "frame_path": "data/frames/frame_00168.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4955,
+        "bbox": [
+          0.2593,
+          0.0641,
+          0.3601,
+          0.203
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000169",
+    "timestamp": 169.0,
+    "frame_path": "data/frames/frame_00169.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000170",
+    "timestamp": 170.0,
+    "frame_path": "data/frames/frame_00170.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000171",
+    "timestamp": 171.0,
+    "frame_path": "data/frames/frame_00171.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000172",
+    "timestamp": 172.0,
+    "frame_path": "data/frames/frame_00172.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000173",
+    "timestamp": 173.0,
+    "frame_path": "data/frames/frame_00173.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000174",
+    "timestamp": 174.0,
+    "frame_path": "data/frames/frame_00174.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000175",
+    "timestamp": 175.0,
+    "frame_path": "data/frames/frame_00175.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000176",
+    "timestamp": 176.0,
+    "frame_path": "data/frames/frame_00176.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000177",
+    "timestamp": 177.0,
+    "frame_path": "data/frames/frame_00177.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000178",
+    "timestamp": 178.0,
+    "frame_path": "data/frames/frame_00178.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000179",
+    "timestamp": 179.0,
+    "frame_path": "data/frames/frame_00179.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000180",
+    "timestamp": 180.0,
+    "frame_path": "data/frames/frame_00180.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000181",
+    "timestamp": 181.0,
+    "frame_path": "data/frames/frame_00181.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000182",
+    "timestamp": 182.0,
+    "frame_path": "data/frames/frame_00182.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000183",
+    "timestamp": 183.0,
+    "frame_path": "data/frames/frame_00183.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000184",
+    "timestamp": 184.0,
+    "frame_path": "data/frames/frame_00184.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000185",
+    "timestamp": 185.0,
+    "frame_path": "data/frames/frame_00185.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000186",
+    "timestamp": 186.0,
+    "frame_path": "data/frames/frame_00186.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000187",
+    "timestamp": 187.0,
+    "frame_path": "data/frames/frame_00187.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000188",
+    "timestamp": 188.0,
+    "frame_path": "data/frames/frame_00188.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000189",
+    "timestamp": 189.0,
+    "frame_path": "data/frames/frame_00189.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000190",
+    "timestamp": 190.0,
+    "frame_path": "data/frames/frame_00190.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000191",
+    "timestamp": 191.0,
+    "frame_path": "data/frames/frame_00191.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000192",
+    "timestamp": 192.0,
+    "frame_path": "data/frames/frame_00192.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000193",
+    "timestamp": 193.0,
+    "frame_path": "data/frames/frame_00193.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000194",
+    "timestamp": 194.0,
+    "frame_path": "data/frames/frame_00194.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000195",
+    "timestamp": 195.0,
+    "frame_path": "data/frames/frame_00195.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000196",
+    "timestamp": 196.0,
+    "frame_path": "data/frames/frame_00196.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000197",
+    "timestamp": 197.0,
+    "frame_path": "data/frames/frame_00197.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000198",
+    "timestamp": 198.0,
+    "frame_path": "data/frames/frame_00198.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000199",
+    "timestamp": 199.0,
+    "frame_path": "data/frames/frame_00199.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000200",
+    "timestamp": 200.0,
+    "frame_path": "data/frames/frame_00200.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000201",
+    "timestamp": 201.0,
+    "frame_path": "data/frames/frame_00201.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.3636,
+        "bbox": [
+          0.0,
+          0.1945,
+          0.1598,
+          0.5479
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000202",
+    "timestamp": 202.0,
+    "frame_path": "data/frames/frame_00202.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4018,
+        "bbox": [
+          0.0001,
+          0.1601,
+          0.1548,
+          0.5375
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000203",
+    "timestamp": 203.0,
+    "frame_path": "data/frames/frame_00203.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000204",
+    "timestamp": 204.0,
+    "frame_path": "data/frames/frame_00204.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000205",
+    "timestamp": 205.0,
+    "frame_path": "data/frames/frame_00205.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000206",
+    "timestamp": 206.0,
+    "frame_path": "data/frames/frame_00206.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.3614,
+        "bbox": [
+          0.0002,
+          0.1118,
+          0.0693,
+          0.5546
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000207",
+    "timestamp": 207.0,
+    "frame_path": "data/frames/frame_00207.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000208",
+    "timestamp": 208.0,
+    "frame_path": "data/frames/frame_00208.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000209",
+    "timestamp": 209.0,
+    "frame_path": "data/frames/frame_00209.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000210",
+    "timestamp": 210.0,
+    "frame_path": "data/frames/frame_00210.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000211",
+    "timestamp": 211.0,
+    "frame_path": "data/frames/frame_00211.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000212",
+    "timestamp": 212.0,
+    "frame_path": "data/frames/frame_00212.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000213",
+    "timestamp": 213.0,
+    "frame_path": "data/frames/frame_00213.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000214",
+    "timestamp": 214.0,
+    "frame_path": "data/frames/frame_00214.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000215",
+    "timestamp": 215.0,
+    "frame_path": "data/frames/frame_00215.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000216",
+    "timestamp": 216.0,
+    "frame_path": "data/frames/frame_00216.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000217",
+    "timestamp": 217.0,
+    "frame_path": "data/frames/frame_00217.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000218",
+    "timestamp": 218.0,
+    "frame_path": "data/frames/frame_00218.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000219",
+    "timestamp": 219.0,
+    "frame_path": "data/frames/frame_00219.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000220",
+    "timestamp": 220.0,
+    "frame_path": "data/frames/frame_00220.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000221",
+    "timestamp": 221.0,
+    "frame_path": "data/frames/frame_00221.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000222",
+    "timestamp": 222.0,
+    "frame_path": "data/frames/frame_00222.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000223",
+    "timestamp": 223.0,
+    "frame_path": "data/frames/frame_00223.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5231,
+        "bbox": [
+          0.2476,
+          0.3488,
+          0.2819,
+          0.5231
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000224",
+    "timestamp": 224.0,
+    "frame_path": "data/frames/frame_00224.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5254,
+        "bbox": [
+          0.2341,
+          0.341,
+          0.2757,
+          0.5234
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000225",
+    "timestamp": 225.0,
+    "frame_path": "data/frames/frame_00225.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5427,
+        "bbox": [
+          0.2353,
+          0.3332,
+          0.2825,
+          0.5318
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000226",
+    "timestamp": 226.0,
+    "frame_path": "data/frames/frame_00226.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.388,
+        "bbox": [
+          0.2477,
+          0.3106,
+          0.2997,
+          0.5142
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000227",
+    "timestamp": 227.0,
+    "frame_path": "data/frames/frame_00227.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.603,
+        "bbox": [
+          0.261,
+          0.3259,
+          0.3191,
+          0.535
+        ]
+      },
+      {
+        "class": "clock",
+        "confidence": 0.3863,
+        "bbox": [
+          0.0851,
+          0.0825,
+          0.1325,
+          0.2676
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000228",
+    "timestamp": 228.0,
+    "frame_path": "data/frames/frame_00228.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.7003,
+        "bbox": [
+          0.2019,
+          0.2945,
+          0.2728,
+          0.5243
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000229",
+    "timestamp": 229.0,
+    "frame_path": "data/frames/frame_00229.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5505,
+        "bbox": [
+          0.1557,
+          0.2772,
+          0.2338,
+          0.5241
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000230",
+    "timestamp": 230.0,
+    "frame_path": "data/frames/frame_00230.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000231",
+    "timestamp": 231.0,
+    "frame_path": "data/frames/frame_00231.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000232",
+    "timestamp": 232.0,
+    "frame_path": "data/frames/frame_00232.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000233",
+    "timestamp": 233.0,
+    "frame_path": "data/frames/frame_00233.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4762,
+        "bbox": [
+          0.1681,
+          0.2093,
+          0.2645,
+          0.5003
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000234",
+    "timestamp": 234.0,
+    "frame_path": "data/frames/frame_00234.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000235",
+    "timestamp": 235.0,
+    "frame_path": "data/frames/frame_00235.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "person",
+        "confidence": 0.5004,
+        "bbox": [
+          0.0003,
+          0.3315,
+          0.275,
+          0.9878
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000236",
+    "timestamp": 236.0,
+    "frame_path": "data/frames/frame_00236.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "person",
+        "confidence": 0.6192,
+        "bbox": [
+          0.0015,
+          0.3374,
+          0.4354,
+          0.99
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000237",
+    "timestamp": 237.0,
+    "frame_path": "data/frames/frame_00237.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000238",
+    "timestamp": 238.0,
+    "frame_path": "data/frames/frame_00238.jpg",
+    "quality_score": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4285,
+        "bbox": [
+          0.2179,
+          0.1218,
+          0.3218,
+          0.417
+        ]
+      }
+    ],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000239",
+    "timestamp": 239.0,
+    "frame_path": "data/frames/frame_00239.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000240",
+    "timestamp": 240.0,
+    "frame_path": "data/frames/frame_00240.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000241",
+    "timestamp": 241.0,
+    "frame_path": "data/frames/frame_00241.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000242",
+    "timestamp": 242.0,
+    "frame_path": "data/frames/frame_00242.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000243",
+    "timestamp": 243.0,
+    "frame_path": "data/frames/frame_00243.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000244",
+    "timestamp": 244.0,
+    "frame_path": "data/frames/frame_00244.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000245",
+    "timestamp": 245.0,
+    "frame_path": "data/frames/frame_00245.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000246",
+    "timestamp": 246.0,
+    "frame_path": "data/frames/frame_00246.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000247",
+    "timestamp": 247.0,
+    "frame_path": "data/frames/frame_00247.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000248",
+    "timestamp": 248.0,
+    "frame_path": "data/frames/frame_00248.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000249",
+    "timestamp": 249.0,
+    "frame_path": "data/frames/frame_00249.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000250",
+    "timestamp": 250.0,
+    "frame_path": "data/frames/frame_00250.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000251",
+    "timestamp": 251.0,
+    "frame_path": "data/frames/frame_00251.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000252",
+    "timestamp": 252.0,
+    "frame_path": "data/frames/frame_00252.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000253",
+    "timestamp": 253.0,
+    "frame_path": "data/frames/frame_00253.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000254",
+    "timestamp": 254.0,
+    "frame_path": "data/frames/frame_00254.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000255",
+    "timestamp": 255.0,
+    "frame_path": "data/frames/frame_00255.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000256",
+    "timestamp": 256.0,
+    "frame_path": "data/frames/frame_00256.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000257",
+    "timestamp": 257.0,
+    "frame_path": "data/frames/frame_00257.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000258",
+    "timestamp": 258.0,
+    "frame_path": "data/frames/frame_00258.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000259",
+    "timestamp": 259.0,
+    "frame_path": "data/frames/frame_00259.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000260",
+    "timestamp": 260.0,
+    "frame_path": "data/frames/frame_00260.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000261",
+    "timestamp": 261.0,
+    "frame_path": "data/frames/frame_00261.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000262",
+    "timestamp": 262.0,
+    "frame_path": "data/frames/frame_00262.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000263",
+    "timestamp": 263.0,
+    "frame_path": "data/frames/frame_00263.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000264",
+    "timestamp": 264.0,
+    "frame_path": "data/frames/frame_00264.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000265",
+    "timestamp": 265.0,
+    "frame_path": "data/frames/frame_00265.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000266",
+    "timestamp": 266.0,
+    "frame_path": "data/frames/frame_00266.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000267",
+    "timestamp": 267.0,
+    "frame_path": "data/frames/frame_00267.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000268",
+    "timestamp": 268.0,
+    "frame_path": "data/frames/frame_00268.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000269",
+    "timestamp": 269.0,
+    "frame_path": "data/frames/frame_00269.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000270",
+    "timestamp": 270.0,
+    "frame_path": "data/frames/frame_00270.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000271",
+    "timestamp": 271.0,
+    "frame_path": "data/frames/frame_00271.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000272",
+    "timestamp": 272.0,
+    "frame_path": "data/frames/frame_00272.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000273",
+    "timestamp": 273.0,
+    "frame_path": "data/frames/frame_00273.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000274",
+    "timestamp": 274.0,
+    "frame_path": "data/frames/frame_00274.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000275",
+    "timestamp": 275.0,
+    "frame_path": "data/frames/frame_00275.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000276",
+    "timestamp": 276.0,
+    "frame_path": "data/frames/frame_00276.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000277",
+    "timestamp": 277.0,
+    "frame_path": "data/frames/frame_00277.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000278",
+    "timestamp": 278.0,
+    "frame_path": "data/frames/frame_00278.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000279",
+    "timestamp": 279.0,
+    "frame_path": "data/frames/frame_00279.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000280",
+    "timestamp": 280.0,
+    "frame_path": "data/frames/frame_00280.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000281",
+    "timestamp": 281.0,
+    "frame_path": "data/frames/frame_00281.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000282",
+    "timestamp": 282.0,
+    "frame_path": "data/frames/frame_00282.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000283",
+    "timestamp": 283.0,
+    "frame_path": "data/frames/frame_00283.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000284",
+    "timestamp": 284.0,
+    "frame_path": "data/frames/frame_00284.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000285",
+    "timestamp": 285.0,
+    "frame_path": "data/frames/frame_00285.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000286",
+    "timestamp": 286.0,
+    "frame_path": "data/frames/frame_00286.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000287",
+    "timestamp": 287.0,
+    "frame_path": "data/frames/frame_00287.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000288",
+    "timestamp": 288.0,
+    "frame_path": "data/frames/frame_00288.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000289",
+    "timestamp": 289.0,
+    "frame_path": "data/frames/frame_00289.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000290",
+    "timestamp": 290.0,
+    "frame_path": "data/frames/frame_00290.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000291",
+    "timestamp": 291.0,
+    "frame_path": "data/frames/frame_00291.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000292",
+    "timestamp": 292.0,
+    "frame_path": "data/frames/frame_00292.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000293",
+    "timestamp": 293.0,
+    "frame_path": "data/frames/frame_00293.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000294",
+    "timestamp": 294.0,
+    "frame_path": "data/frames/frame_00294.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000295",
+    "timestamp": 295.0,
+    "frame_path": "data/frames/frame_00295.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000296",
+    "timestamp": 296.0,
+    "frame_path": "data/frames/frame_00296.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000297",
+    "timestamp": 297.0,
+    "frame_path": "data/frames/frame_00297.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000298",
+    "timestamp": 298.0,
+    "frame_path": "data/frames/frame_00298.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000299",
+    "timestamp": 299.0,
+    "frame_path": "data/frames/frame_00299.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  },
+  {
+    "id": "obs_000300",
+    "timestamp": 300.0,
+    "frame_path": "data/frames/frame_00300.jpg",
+    "quality_score": null,
+    "objects": [],
+    "scene_tags": null,
+    "landmarks": [],
+    "segment_id": null,
+    "place_id": null
+  }
+]

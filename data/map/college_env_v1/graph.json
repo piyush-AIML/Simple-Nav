@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "node_type": "unknown",
+      "observation_count": 93
+    },
+    {
+      "id": 1,
+      "node_type": "unknown",
+      "observation_count": 4
+    },
+    {
+      "id": 2,
+      "node_type": "unknown",
+      "observation_count": 55
+    },
+    {
+      "id": 3,
+      "node_type": "unknown",
+      "observation_count": 36
+    },
+    {
+      "id": 4,
+      "node_type": "unknown",
+      "observation_count": 101
+    },
+    {
+      "id": 6,
+      "node_type": "unknown",
+      "observation_count": 5
+    },
+    {
+      "id": 7,
+      "node_type": "unknown",
+      "observation_count": 7
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 97,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 59,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 91,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 137,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 106,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 12,
+      "mean_visual_strength": 0.0
+    }
+  ]
+}
