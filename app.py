@@ -96,6 +96,23 @@ def speak_button(text: str, key: str) -> None:
             st.info("Text-to-speech isn't available in this environment — see the terminal log for details.")
 
 
+def decode_camera_photo(photo_data) -> Image.Image | None:
+    """Decode camera component values from Streamlit's JSON or string form."""
+    if isinstance(photo_data, dict):
+        photo_data = photo_data.get("value")
+        if isinstance(photo_data, dict):
+            photo_data = photo_data.get("value")
+
+    if not isinstance(photo_data, str) or "," not in photo_data:
+        return None
+
+    _, encoded_image = photo_data.split(",", 1)
+    try:
+        return Image.open(io.BytesIO(base64.b64decode(encoded_image)))
+    except Exception:
+        return None
+
+
 def single_photo_tab(config, place_index, graph, place_names):
     threshold = config["navigation"]["confidence_threshold"]
     use_weighted = config["navigation"].get("use_weighted_routing", True)
@@ -178,26 +195,28 @@ def live_mode_tab(config, place_index, graph, place_names):
 
     route = None
     if photo_data:
-        _, encoded_image = photo_data.split(",", 1)
-        image = Image.open(io.BytesIO(base64.b64decode(encoded_image)))
-        embedding = embed_image(image)
-        status = st.session_state.live_tracker.process_frame(embedding)
-        route = status["route"]
-
-        if status["low_confidence"]:
-            st.warning(f"Location unclear (confidence {status['confidence']:.2f}) — holding last known position.")
+        image = decode_camera_photo(photo_data)
+        if image is None:
+            st.error("The camera returned an invalid image. Please reload the page and try again.")
         else:
-            st.success(f"You are at: **{status['place_name']}** (confidence {status['confidence']:.2f})")
+            embedding = embed_image(image)
+            status = st.session_state.live_tracker.process_frame(embedding)
+            route = status["route"]
 
-        if status["arrived"]:
-            st.balloons()
-            st.success("You have arrived at your destination!")
-        elif status["directions"]:
-            label = "Position updated — new route:" if status["changed"] else "Route:"
-            st.info(f"{label} {status['directions']}")
-            speak_button(status["directions"], key="live_speak")
-        elif status["place_id"] is not None:
-            st.warning("No known path to the destination from here yet.")
+            if status["low_confidence"]:
+                st.warning(f"Location unclear (confidence {status['confidence']:.2f}) — holding last known position.")
+            else:
+                st.success(f"You are at: **{status['place_name']}** (confidence {status['confidence']:.2f})")
+
+            if status["arrived"]:
+                st.balloons()
+                st.success("You have arrived at your destination!")
+            elif status["directions"]:
+                label = "Position updated — new route:" if status["changed"] else "Route:"
+                st.info(f"{label} {status['directions']}")
+                speak_button(status["directions"], key="live_speak")
+            elif status["place_id"] is not None:
+                st.warning("No known path to the destination from here yet.")
 
     st.pyplot(draw_map_view(config, graph, place_names, route))
 
