@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://unpkg.com/streamlit-component-lib@2.0.0/dist/streamlit-component-lib.js"></script>
     <style>
       body { margin: 0; font-family: sans-serif; }
       video { width: 100%; max-height: 480px; object-fit: contain; background: #111; border-radius: 6px; }
@@ -27,13 +26,42 @@
       const canvas = document.getElementById("canvas");
       let stream;
 
+      // Keep the component self-contained. This avoids relying on a CDN that
+      // may be blocked when the Streamlit app is opened on a phone/network.
+      const component = {
+        setComponentReady() {
+          window.parent.postMessage({
+            isStreamlitMessage: true,
+            type: "streamlit:componentReady",
+            apiVersion: 1,
+          }, "*");
+        },
+        setFrameHeight(height) {
+          window.parent.postMessage({
+            isStreamlitMessage: true,
+            type: "streamlit:setFrameHeight",
+            height,
+          }, "*");
+        },
+        setComponentValue(value) {
+          window.parent.postMessage({
+            isStreamlitMessage: true,
+            type: "streamlit:setComponentValue",
+            value: { type: "json", value: JSON.stringify(value) },
+          }, "*");
+        },
+      };
+
       function resize() {
-        Streamlit.setFrameHeight(document.body.scrollHeight);
+        component.setFrameHeight(document.body.scrollHeight);
       }
 
       async function startCamera() {
         try {
           // exact prevents silently falling back to the front camera.
+          if (!window.isSecureContext || !navigator.mediaDevices?.getUserMedia) {
+            throw new Error("Camera access requires HTTPS (or localhost). Open the app using https:// or localhost.");
+          }
           stream = await navigator.mediaDevices.getUserMedia({
             video: { facingMode: { exact: "environment" } },
             audio: false,
@@ -44,7 +72,7 @@
           resize();
         } catch (err) {
           status.textContent = "Rear camera unavailable";
-          error.textContent = "Allow camera access and make sure this device has a rear camera. " + err.message;
+          error.textContent = "Allow camera access, use HTTPS/localhost, and make sure this device has a rear camera. " + err.message;
           resize();
         }
       }
@@ -54,15 +82,14 @@
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
         canvas.getContext("2d").drawImage(video, 0, 0);
-        Streamlit.setComponentValue(canvas.toDataURL("image/jpeg", 0.95));
+        component.setComponentValue(canvas.toDataURL("image/jpeg", 0.95));
       });
 
       window.addEventListener("beforeunload", () => {
         if (stream) stream.getTracks().forEach((track) => track.stop());
       });
 
-      Streamlit.setComponentReady();
-      Streamlit.events.addEventListener(Streamlit.RENDER_EVENT, resize);
+      component.setComponentReady();
       startCamera();
     </script>
   </body>
