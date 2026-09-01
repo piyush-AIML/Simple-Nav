@@ -16,6 +16,7 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -48,11 +49,10 @@ class Detector(ABC):
 
 
 class YoloDetector(Detector):
-    """Ultralytics YOLOv8n on COCO classes (default model for Stage 06)."""
+    """Ultralytics YOLO nano on COCO classes (default model yolo26n, planner
+    v2 §5.1). The name reflects the loaded weights file, not a hardcoded id."""
 
-    name = "yolov8n"
-
-    def __init__(self, model_path: str = "yolov8n.pt", confidence: float = 0.35):
+    def __init__(self, model_path: str = "yolo26n.pt", confidence: float = 0.35):
         self.model_path = model_path
         self.confidence = confidence
         try:
@@ -64,6 +64,10 @@ class YoloDetector(Detector):
         self._model = YOLO(model_path)
         logger.info(f"YOLO model loaded: {model_path}")
 
+    @property
+    def name(self) -> str:
+        return Path(self.model_path).stem
+
     def detect(self, image: Any) -> list[DetectedObject]:
         try:
             results = self._model.predict(
@@ -72,21 +76,36 @@ class YoloDetector(Detector):
         except Exception as e:
             logger.warning(f"YOLO detection failed ({e}) — returning no objects")
             return []
+        return [obj for result in results for obj in self._extract(result)]
+
+    def detect_batch(self, images: list) -> list[list[DetectedObject]]:
+        """Batched detection for the offline mapping pass (Stage 24, planner
+        v2 §7) — Ultralytics predicts over a list in one internal batch.
+        Falls back to per-image detection on any failure."""
+        try:
+            results = self._model.predict(
+                source=list(images), conf=self.confidence, verbose=False
+            )
+            return [self._extract(result) for result in results]
+        except Exception as e:
+            logger.warning(f"Batched YOLO detection failed ({e}) — falling back to per-image")
+            return [self.detect(img) for img in images]
+
+    def _extract(self, result) -> list[DetectedObject]:
         objects: list[DetectedObject] = []
-        for result in results:
-            names = result.names
-            for box in result.boxes:
-                x1, y1, x2, y2 = [float(v) for v in box.xyxy[0].tolist()]
-                conf = float(box.conf[0])
-                cls_id = int(box.cls[0])
-                h, w = result.orig_shape
-                objects.append(
-                    DetectedObject(
-                        class_name=names.get(cls_id, f"cls_{cls_id}"),
-                        confidence=conf,
-                        bbox=(x1 / w, y1 / h, x2 / w, y2 / h),
-                    )
+        names = result.names
+        h, w = result.orig_shape
+        for box in result.boxes:
+            x1, y1, x2, y2 = [float(v) for v in box.xyxy[0].tolist()]
+            conf = float(box.conf[0])
+            cls_id = int(box.cls[0])
+            objects.append(
+                DetectedObject(
+                    class_name=names.get(cls_id, f"cls_{cls_id}"),
+                    confidence=conf,
+                    bbox=(x1 / w, y1 / h, x2 / w, y2 / h),
                 )
+            )
         return objects
 
     def classes(self) -> list[str]:

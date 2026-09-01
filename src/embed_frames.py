@@ -19,6 +19,7 @@ import numpy as np
 from src.embedder import embed_image
 from src.mapping.observation_store import ObservationStore
 from src.mapping.observations import Observation
+from src.perception import backend_banner
 from src.utils import load_config, project_root, resolve_path, setup_logger
 
 logger = setup_logger("embed_frames")
@@ -79,9 +80,37 @@ def save_observations_dir(
     logger.info(f"Saved {len(observations)} observations to {observations_dir}")
 
 
+def _smooth_scene_types(observations: list[Observation],
+                        window: int = 2) -> list[Observation]:
+    """Temporal debounce of per-frame VLM scene types (window ±2 = 5 frames).
+
+    Per-frame VLM output flickers — measured 72 scene-type flips over the
+    301-frame pass, with 138 'unknown'. A place must be described by the
+    consensus scene of its neighborhood, not by whichever single frame the
+    tagger happened to see (same debounce philosophy as Stage 11's
+    transitions). Only scene_type is smoothed; landmarks are untouched."""
+    from collections import Counter
+
+    scenes = [
+        (obs.scene_tags or {}).get("scene_type", "unknown") for obs in observations
+    ]
+    for i, obs in enumerate(observations):
+        lo, hi = max(0, i - window), min(len(scenes), i + window + 1)
+        consensus = Counter(scenes[lo:hi]).most_common(1)[0][0]
+        if obs.scene_tags is not None and consensus != obs.scene_tags.get("scene_type"):
+            obs.scene_tags = {**obs.scene_tags, "scene_type": consensus}
+    return observations
+
+
+def _batch_size(config: dict, key: str, default: int) -> int:
+    """Offline mapping-pass batch size (Stage 24); live loop stays 1-at-a-time."""
+    return max(1, int((config.get("runtime", {}) or {}).get(key, default)))
+
+
 def attach_detections(observations: list[Observation], config: dict) -> list[Observation]:
     """Fill Observation.objects from the configured detector (Stage 06).
-    Detector failures never break the pipeline — objects stay [] (§6)."""
+    Detector failures never break the pipeline — objects stay [] (§6).
+    Batched for the offline pass (Stage 24)."""
     perception = config.get("perception", {})
     if not perception.get("detector_enabled", True):
         return observations
@@ -91,15 +120,22 @@ def attach_detections(observations: list[Observation], config: dict) -> list[Obs
     if detector.name == "stub":
         logger.warning("Detector unavailable — observations keep objects=[]")
         return observations
-    for obs in observations:
-        obs.objects = [o.to_dict() for o in detector.detect(obs.frame_path)]
-    logger.info(f"Attached detections to {len(observations)} observations ({detector.name})")
+    batch_size = _batch_size(config, "detector_batch_size", 16)
+    paths = [obs.frame_path for obs in observations]
+    for start in range(0, len(paths), batch_size):
+        chunk = paths[start:start + batch_size]
+        results = detector.detect_batch(chunk)
+        for obs, objs in zip(observations[start:start + batch_size], results):
+            obs.objects = [o.to_dict() for o in objs]
+    logger.info(f"Attached detections to {len(observations)} observations "
+                f"({detector.name}, batch={batch_size})")
     return observations
 
 
 def attach_scene_tags(observations: list[Observation], config: dict) -> list[Observation]:
     """Fill Observation.scene_tags + landmarks from the VLM (Stage 07).
-    Failures degrade to unknown/[] — never crash (§7)."""
+    Failures degrade to unknown/[] — never crash (§7).
+    Batched for the offline pass (Stage 24)."""
     perception = config.get("perception", {})
     if not perception.get("vlm_enabled", True):
         return observations
@@ -109,12 +145,18 @@ def attach_scene_tags(observations: list[Observation], config: dict) -> list[Obs
     if tagger.name() == "stub":
         logger.warning("VLM unavailable — observations keep scene_tags=None")
         return observations
-    for obs in observations:
-        tags = tagger.tag(obs.frame_path, obs.objects)
-        obs.scene_tags = tags.to_dict()
-        obs.landmarks = tags.landmarks
-    logger.info(f"Attached scene tags to {len(observations)} observations ({tagger.name()})")
-    return observations
+    batch_size = _batch_size(config, "vlm_batch_size", 12)
+    paths = [obs.frame_path for obs in observations]
+    for start in range(0, len(paths), batch_size):
+        chunk = paths[start:start + batch_size]
+        objs_lists = [obs.objects for obs in observations[start:start + batch_size]]
+        tags = tagger.tag_batch(chunk, objs_lists)
+        for obs, tags_i in zip(observations[start:start + batch_size], tags):
+            obs.scene_tags = tags_i.to_dict()
+            obs.landmarks = tags_i.landmarks
+    logger.info(f"Attached scene tags to {len(observations)} observations "
+                f"({tagger.name()}, batch={batch_size})")
+    return _smooth_scene_types(observations)
 
 
 def main() -> None:
@@ -123,20 +165,27 @@ def main() -> None:
     args = parser.parse_args()
 
     config = load_config(args.config) if args.config else load_config()
+    logger.info(backend_banner(config))
     frames_dir = resolve_path(config["paths"]["frames_dir"])
-    embeddings_file = resolve_path(config["paths"]["embeddings_file"])
-    frame_names_file = resolve_path(config["paths"]["frame_names_file"])
     observations_dir = resolve_path(config["paths"]["observations_dir"])
 
     embeddings, names = embed_frames(frames_dir)
 
-    embeddings_file.parent.mkdir(parents=True, exist_ok=True)
-    np.save(embeddings_file, embeddings)
-    with open(frame_names_file, "w") as f:
-        json.dump(names, f, indent=2)
-    logger.info(f"Saved {embeddings.shape} embeddings to {embeddings_file}")
+    # Legacy parallel outputs (embeddings.npy + frame_names.json) are only
+    # written when their config keys still exist — the v2 pipeline consumes
+    # ObservationStore, not these files.
+    legacy_keys = ("embeddings_file", "frame_names_file")
+    if all(k in config["paths"] for k in legacy_keys):
+        embeddings_file = resolve_path(config["paths"]["embeddings_file"])
+        frame_names_file = resolve_path(config["paths"]["frame_names_file"])
+        embeddings_file.parent.mkdir(parents=True, exist_ok=True)
+        np.save(embeddings_file, embeddings)
+        with open(frame_names_file, "w") as f:
+            json.dump(names, f, indent=2)
+        logger.info(f"Saved {embeddings.shape} embeddings to {embeddings_file}")
 
-    # Observation records (Stage 02) — legacy outputs above remain untouched.
+    # Observation records (Stage 02) — detections + scene tags attached with
+    # the batched offline pass (Stage 24).
     frame_paths = sorted(frames_dir.glob("*.jpg"))
     observations = build_observations(frame_paths, embeddings)
     observations = attach_detections(observations, config)

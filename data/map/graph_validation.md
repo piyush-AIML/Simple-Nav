@@ -1,3 +1,3 @@
 # Graph Validation Report
 
-No warnings — the graph looks clean.
+- **[WARN]** `suspicious_node` — Place 0 mixes scene types: {'corridor': 37, 'entrance': 1, 'room': 20}

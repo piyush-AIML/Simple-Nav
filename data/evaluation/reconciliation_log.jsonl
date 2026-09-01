@@ -1,47 +1,10 @@
-{"a": 0, "b": 1, "visual_similarity": 0.7915, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 0, "b": 2, "visual_similarity": 0.8929, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 0, "b": 3, "visual_similarity": 0.839, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 0, "b": 4, "visual_similarity": 0.9054, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 0, "b": 5, "visual_similarity": 0.877, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 0, "b": 6, "visual_similarity": 0.6922, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["scene"]}
-{"a": 0, "b": 7, "visual_similarity": 0.8939, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 2, "visual_similarity": 0.8385, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 1, "b": 3, "visual_similarity": 0.7653, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 4, "visual_similarity": 0.7757, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 5, "visual_similarity": 0.8405, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 6, "visual_similarity": 0.8345, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 7, "visual_similarity": 0.8218, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 2, "b": 3, "visual_similarity": 0.8663, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 2, "b": 4, "visual_similarity": 0.8982, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 2, "b": 5, "visual_similarity": 0.8989, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 2, "b": 6, "visual_similarity": 0.7761, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 2, "b": 7, "visual_similarity": 0.893, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 3, "b": 4, "visual_similarity": 0.8523, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 3, "b": 5, "visual_similarity": 0.8476, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 3, "b": 6, "visual_similarity": 0.7495, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["scene"]}
-{"a": 3, "b": 7, "visual_similarity": 0.8543, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 4, "b": 5, "visual_similarity": 0.9403, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": true, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 4, "b": 6, "visual_similarity": 0.8426, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 4, "b": 7, "visual_similarity": 0.8864, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 6, "b": 7, "visual_similarity": 0.7495, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["scene"]}
-{"a": 0, "b": 1, "visual_similarity": 0.7915, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 0, "b": 2, "visual_similarity": 0.8929, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 0, "b": 3, "visual_similarity": 0.839, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 0, "b": 4, "visual_similarity": 0.9054, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 0, "b": 6, "visual_similarity": 0.6922, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["scene"]}
-{"a": 0, "b": 7, "visual_similarity": 0.8939, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 2, "visual_similarity": 0.8385, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 1, "b": 3, "visual_similarity": 0.7653, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 4, "visual_similarity": 0.8405, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 6, "visual_similarity": 0.8345, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 1, "b": 7, "visual_similarity": 0.8218, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 2, "b": 3, "visual_similarity": 0.8663, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 2, "b": 4, "visual_similarity": 0.8989, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 2, "b": 6, "visual_similarity": 0.7761, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 2, "b": 7, "visual_similarity": 0.893, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 3, "b": 4, "visual_similarity": 0.8523, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 3, "b": 6, "visual_similarity": 0.7495, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["scene"]}
-{"a": 3, "b": 7, "visual_similarity": 0.8543, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 4, "b": 6, "visual_similarity": 0.8426, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene"]}
-{"a": 4, "b": 7, "visual_similarity": 0.8864, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "landmarks_neutral", "context", "scene"]}
-{"a": 6, "b": 7, "visual_similarity": 0.7495, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["scene"]}
+{"a": 0, "b": 1, "visual_similarity": 0.8412, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "scene", "landmark_conflict"]}
+{"a": 0, "b": 2, "visual_similarity": 0.8952, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "context", "scene", "landmark_conflict"]}
+{"a": 0, "b": 3, "visual_similarity": 0.7975, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "context", "scene"]}
+{"a": 0, "b": 4, "visual_similarity": 0.8751, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "context", "scene"]}
+{"a": 1, "b": 2, "visual_similarity": 0.9192, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": false, "merged": false, "reasons": ["visual", "scene", "landmark_conflict"]}
+{"a": 1, "b": 3, "visual_similarity": 0.7996, "landmark_jaccard": 0.0, "scene_compatible": false, "context_compatible": true, "merged": false, "reasons": ["visual", "context", "scene_conflict"]}
+{"a": 1, "b": 4, "visual_similarity": 0.8564, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "context", "scene"]}
+{"a": 2, "b": 3, "visual_similarity": 0.8845, "landmark_jaccard": 0.0, "scene_compatible": false, "context_compatible": false, "merged": false, "reasons": ["visual", "scene_conflict"]}
+{"a": 2, "b": 4, "visual_similarity": 0.9309, "landmark_jaccard": 0.0, "scene_compatible": true, "context_compatible": true, "merged": false, "reasons": ["visual", "context", "scene"]}
+{"a": 3, "b": 4, "visual_similarity": 0.8672, "landmark_jaccard": 0.0, "scene_compatible": false, "context_compatible": false, "merged": false, "reasons": ["visual", "landmarks_neutral", "scene_conflict"]}

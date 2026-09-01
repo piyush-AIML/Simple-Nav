@@ -137,3 +137,38 @@ def test_qwen_tagger_real_smoke():
         pytest.skip(f"Qwen2.5-VL unavailable: {e}")
     tags = t.tag("data/frames/frame_00010.jpg")
     assert tags.scene_type in SCENE_TYPES
+
+
+@pytest.mark.slow
+def test_lfm2_tagger_real_smoke():
+    """One real tag on one frame with the default backend (planner v2 §5.2).
+    Skips (rather than fails) when the model can't be loaded."""
+    try:
+        from src.perception.scene_tagger import LFM2VLTagger
+
+        t = LFM2VLTagger(max_new_tokens=64)
+        t._load()
+    except Exception as e:
+        pytest.skip(f"LFM2.5-VL unavailable: {e}")
+    tags = t.tag("data/frames/frame_00010.jpg")
+    assert tags.scene_type in SCENE_TYPES
+
+
+def test_get_scene_tagger_dispatch_lfm2(monkeypatch):
+    """LFM2 model id -> LFM2VLTagger (planner v2 §5.2 dispatch branch),
+    verified without touching the network."""
+    from src.perception import scene_tagger as st
+
+    monkeypatch.setattr(st.LFM2VLTagger, "_load", lambda self: None)
+    t = get_scene_tagger({"perception": {"vlm_enabled": True,
+                                         "vlm_model": "LiquidAI/LFM2.5-VL-450M"}})
+    assert t.name().startswith("lfm2.5vl-450m")
+
+
+def test_get_scene_tagger_dispatch_smolvlm(monkeypatch):
+    from src.perception import scene_tagger as st
+
+    monkeypatch.setattr(st.SmolVLMTagger, "_load", lambda self: None)
+    t = get_scene_tagger({"perception": {"vlm_enabled": True,
+                                         "vlm_model": "HuggingFaceTB/SmolVLM2-500M-Instruct"}})
+    assert t.name().startswith("smolvlm2")

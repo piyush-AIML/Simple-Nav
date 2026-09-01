@@ -4,7 +4,7 @@ methods, and place statistics."""
 import numpy as np
 
 from src.mapping.observations import Observation
-from src.mapping.place_builder import build_places, select_exemplars
+from src.mapping.place_builder import Place, build_places, select_exemplars
 from src.mapping.segmentation import Segment
 
 A = np.array([1.0, 0.0, 0.0, 0.0], dtype="float32")
@@ -51,6 +51,27 @@ def test_place_carries_scene_and_landmark_stats():
     assert place.landmarks == ["desk", "blue sign"]
     assert place.visual_stats["observation_count"] == 3
     assert place.visual_stats["mean_similarity"] > 0.9  # identical vectors
+
+
+def test_place_carries_object_class_stats():
+    """Stage 23: historical COCO class names aggregate into the place."""
+    obs = [make_obs(0, A), make_obs(1, A), make_obs(2, A)]
+    obs[0].objects = [{"class": "chair", "confidence": 0.9, "bbox": [0, 0, 1, 1]}]
+    obs[1].objects = [
+        {"class": "chair", "confidence": 0.8, "bbox": [0, 0, 1, 1]},
+        {"class": "person", "confidence": 0.7, "bbox": [0, 0, 1, 1]},
+    ]
+    segments = [Segment("seg_000", ["obs_0000", "obs_0001", "obs_0002"], 0, 2, "obs_0001")]
+    place = build_places(obs, segments)[0]
+    assert place.object_classes == ["chair", "person"]
+
+
+def test_place_serialization_roundtrip_includes_object_classes():
+    p = build_places([make_obs(0, A)],
+                     [Segment("seg_000", ["obs_0000"], 0, 0, "obs_0000")])[0]
+    p.object_classes = ["door"]
+    p2 = Place.from_dict(p.to_dict())
+    assert p2.object_classes == ["door"]
 
 
 def test_missing_observations_are_skipped():

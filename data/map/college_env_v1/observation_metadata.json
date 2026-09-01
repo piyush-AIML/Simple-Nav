@@ -5,7 +5,12 @@
     "frame_path": "data/frames/frame_00000.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -16,7 +21,12 @@
     "frame_path": "data/frames/frame_00001.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -27,7 +37,12 @@
     "frame_path": "data/frames/frame_00002.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -37,8 +52,24 @@
     "timestamp": 3.0,
     "frame_path": "data/frames/frame_00003.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.3699,
+        "bbox": [
+          0.5225,
+          0.4115,
+          0.5704,
+          0.5099
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -51,16 +82,21 @@
     "objects": [
       {
         "class": "chair",
-        "confidence": 0.4241,
+        "confidence": 0.3534,
         "bbox": [
-          0.5001,
-          0.4381,
-          0.5479,
-          0.5352
+          0.4987,
+          0.4353,
+          0.5445,
+          0.5361
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -73,16 +109,21 @@
     "objects": [
       {
         "class": "chair",
-        "confidence": 0.4103,
+        "confidence": 0.4521,
         "bbox": [
-          0.4947,
-          0.4513,
-          0.5399,
-          0.5474
+          0.4938,
+          0.4412,
+          0.5415,
+          0.5478
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -93,7 +134,12 @@
     "frame_path": "data/frames/frame_00006.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -103,8 +149,24 @@
     "timestamp": 7.0,
     "frame_path": "data/frames/frame_00007.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.3937,
+        "bbox": [
+          0.5071,
+          0.4455,
+          0.5562,
+          0.5451
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and windows on both sides."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -114,19 +176,13 @@
     "timestamp": 8.0,
     "frame_path": "data/frames/frame_00008.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "chair",
-        "confidence": 0.3779,
-        "bbox": [
-          0.5084,
-          0.4352,
-          0.5591,
-          0.5401
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -136,19 +192,13 @@
     "timestamp": 9.0,
     "frame_path": "data/frames/frame_00009.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "chair",
-        "confidence": 0.4265,
-        "bbox": [
-          0.5164,
-          0.4109,
-          0.5697,
-          0.5261
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -158,8 +208,24 @@
     "timestamp": 10.0,
     "frame_path": "data/frames/frame_00010.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.4806,
+        "bbox": [
+          0.5096,
+          0.4132,
+          0.5694,
+          0.5402
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -170,7 +236,12 @@
     "frame_path": "data/frames/frame_00011.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -181,7 +252,12 @@
     "frame_path": "data/frames/frame_00012.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -191,8 +267,24 @@
     "timestamp": 13.0,
     "frame_path": "data/frames/frame_00013.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.3659,
+        "bbox": [
+          0.5181,
+          0.3975,
+          0.5857,
+          0.5564
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -204,17 +296,22 @@
     "quality_score": null,
     "objects": [
       {
-        "class": "bench",
-        "confidence": 0.3808,
+        "class": "chair",
+        "confidence": 0.47,
         "bbox": [
-          0.5181,
-          0.451,
-          0.5858,
-          0.5678
+          0.5209,
+          0.4009,
+          0.589,
+          0.5698
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -224,8 +321,24 @@
     "timestamp": 15.0,
     "frame_path": "data/frames/frame_00015.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.4402,
+        "bbox": [
+          0.5424,
+          0.4018,
+          0.6196,
+          0.5786
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -237,17 +350,22 @@
     "quality_score": null,
     "objects": [
       {
-        "class": "refrigerator",
-        "confidence": 0.4293,
+        "class": "chair",
+        "confidence": 0.5909,
         "bbox": [
-          0.6446,
-          0.1673,
-          0.7012,
-          0.4996
+          0.5513,
+          0.4144,
+          0.6109,
+          0.5932
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -259,17 +377,22 @@
     "quality_score": null,
     "objects": [
       {
-        "class": "refrigerator",
-        "confidence": 0.3802,
+        "class": "chair",
+        "confidence": 0.412,
         "bbox": [
-          0.6683,
-          0.1539,
-          0.7304,
-          0.5138
+          0.5675,
+          0.4459,
+          0.63,
+          0.61
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -279,8 +402,24 @@
     "timestamp": 18.0,
     "frame_path": "data/frames/frame_00018.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.5752,
+        "bbox": [
+          0.5946,
+          0.4249,
+          0.6632,
+          0.6187
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -290,8 +429,24 @@
     "timestamp": 19.0,
     "frame_path": "data/frames/frame_00019.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.6449,
+        "bbox": [
+          0.5822,
+          0.4042,
+          0.6548,
+          0.622
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -303,17 +458,22 @@
     "quality_score": null,
     "objects": [
       {
-        "class": "bench",
-        "confidence": 0.5991,
+        "class": "chair",
+        "confidence": 0.3868,
         "bbox": [
-          0.5548,
-          0.401,
-          0.6603,
-          0.634
+          0.5844,
+          0.4032,
+          0.6605,
+          0.6332
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -325,17 +485,22 @@
     "quality_score": null,
     "objects": [
       {
-        "class": "bench",
-        "confidence": 0.5143,
+        "class": "chair",
+        "confidence": 0.4256,
         "bbox": [
-          0.5592,
-          0.4053,
-          0.674,
-          0.6129
+          0.5682,
+          0.4041,
+          0.6756,
+          0.6516
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -345,19 +510,13 @@
     "timestamp": 22.0,
     "frame_path": "data/frames/frame_00022.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "bench",
-        "confidence": 0.6572,
-        "bbox": [
-          0.5666,
-          0.4234,
-          0.6937,
-          0.6835
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -370,16 +529,31 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.5689,
+        "confidence": 0.5564,
         "bbox": [
-          0.5838,
-          0.4178,
-          0.725,
-          0.6949
+          0.5831,
+          0.4083,
+          0.7266,
+          0.6998
+        ]
+      },
+      {
+        "class": "chair",
+        "confidence": 0.3995,
+        "bbox": [
+          0.6332,
+          0.449,
+          0.7267,
+          0.707
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -392,16 +566,23 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.7098,
+        "confidence": 0.8014,
         "bbox": [
-          0.5846,
-          0.4302,
-          0.7428,
-          0.7443
+          0.5847,
+          0.4226,
+          0.7452,
+          0.7435
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a bench and a sign indicating no entry."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -414,16 +595,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.6693,
+        "confidence": 0.8389,
         "bbox": [
-          0.5699,
-          0.4242,
-          0.7428,
-          0.7671
+          0.5704,
+          0.4204,
+          0.7433,
+          0.7673
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -436,16 +622,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.829,
+        "confidence": 0.8159,
         "bbox": [
-          0.5757,
-          0.4404,
-          0.7654,
-          0.825
+          0.5726,
+          0.4481,
+          0.7651,
+          0.8244
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -458,26 +649,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.7038,
+        "confidence": 0.6898,
         "bbox": [
-          0.5554,
-          0.4671,
-          0.7639,
-          0.8822
-        ]
-      },
-      {
-        "class": "chair",
-        "confidence": 0.3623,
-        "bbox": [
-          0.642,
-          0.5446,
-          0.763,
-          0.8851
+          0.5622,
+          0.4796,
+          0.7638,
+          0.8867
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -490,26 +676,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.8502,
+        "confidence": 0.8605,
         "bbox": [
-          0.5605,
-          0.4792,
-          0.8007,
-          0.9469
-        ]
-      },
-      {
-        "class": "tv",
-        "confidence": 0.4326,
-        "bbox": [
-          0.0001,
-          0.0886,
-          0.1135,
-          0.6057
+          0.5679,
+          0.4766,
+          0.801,
+          0.9476
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -522,16 +703,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.9018,
+        "confidence": 0.6326,
         "bbox": [
-          0.5882,
-          0.4774,
-          0.8692,
-          0.9944
+          0.5935,
+          0.4792,
+          0.8676,
+          0.9856
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -544,16 +730,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.8703,
+        "confidence": 0.5762,
         "bbox": [
-          0.6198,
-          0.482,
-          0.9582,
-          0.9907
+          0.6242,
+          0.4877,
+          0.9556,
+          0.992
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -566,16 +757,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.8976,
+        "confidence": 0.7488,
         "bbox": [
-          0.6167,
-          0.5146,
-          0.9991,
-          0.9894
+          0.6231,
+          0.5135,
+          1.0,
+          0.9915
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -588,16 +784,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.9223,
+        "confidence": 0.597,
         "bbox": [
-          0.6158,
-          0.5106,
-          0.9991,
-          0.9903
+          0.6195,
+          0.5072,
+          1.0,
+          0.9909
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -610,16 +811,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.9173,
+        "confidence": 0.8673,
         "bbox": [
-          0.6362,
-          0.507,
-          0.9994,
-          0.9901
+          0.6377,
+          0.5032,
+          0.9999,
+          0.9926
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -632,16 +838,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.5981,
+        "confidence": 0.6955,
         "bbox": [
-          0.6405,
-          0.5072,
-          0.9993,
-          0.9905
+          0.6402,
+          0.5027,
+          0.9999,
+          0.9909
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -654,16 +865,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.8487,
+        "confidence": 0.6233,
         "bbox": [
-          0.689,
-          0.5171,
-          0.9991,
-          0.9901
+          0.6893,
+          0.5216,
+          0.9995,
+          0.9923
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -676,16 +892,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.8135,
+        "confidence": 0.8444,
         "bbox": [
-          0.7302,
-          0.5532,
-          0.9992,
-          0.9916
+          0.7289,
+          0.5541,
+          0.9996,
+          0.9917
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -698,16 +919,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.7945,
+        "confidence": 0.8222,
         "bbox": [
-          0.7143,
-          0.5835,
-          0.9991,
-          0.9907
+          0.7139,
+          0.5785,
+          0.9998,
+          0.9922
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a bench on the right side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -720,17 +946,30 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.7843,
+        "confidence": 0.7522,
         "bbox": [
-          0.7278,
-          0.5866,
-          0.9992,
-          0.9915
+          0.7267,
+          0.5852,
+          0.9997,
+          0.992
         ]
       }
     ],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "white wall",
+        "white door",
+        "darkened room"
+      ],
+      "navigation_relevance": [],
+      "description": "A long hallway with a white wall and a white door, leading to a darkened room."
+    },
+    "landmarks": [
+      "white wall",
+      "white door",
+      "darkened room"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -742,16 +981,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.6874,
+        "confidence": 0.5819,
         "bbox": [
-          0.7408,
-          0.5947,
-          0.9989,
-          0.9904
+          0.7396,
+          0.5937,
+          0.9997,
+          0.9918
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a bench on the right and windows on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -764,16 +1008,21 @@
     "objects": [
       {
         "class": "bench",
-        "confidence": 0.5727,
+        "confidence": 0.6767,
         "bbox": [
-          0.7061,
-          0.6348,
-          0.9993,
-          0.9912
+          0.7043,
+          0.6339,
+          0.9999,
+          0.9927
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a bench on the right and a door on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -783,8 +1032,24 @@
     "timestamp": 41.0,
     "frame_path": "data/frames/frame_00041.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.675,
+        "bbox": [
+          0.7475,
+          0.6521,
+          0.9998,
+          0.991
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -794,8 +1059,24 @@
     "timestamp": 42.0,
     "frame_path": "data/frames/frame_00042.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "bench",
+        "confidence": 0.6093,
+        "bbox": [
+          0.8021,
+          0.6714,
+          1.0,
+          0.9896
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -805,8 +1086,24 @@
     "timestamp": 43.0,
     "frame_path": "data/frames/frame_00043.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "chair",
+        "confidence": 0.4703,
+        "bbox": [
+          0.8857,
+          0.9035,
+          0.9992,
+          0.9974
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and windows on both sides."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -817,7 +1114,12 @@
     "frame_path": "data/frames/frame_00044.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -828,7 +1130,12 @@
     "frame_path": "data/frames/frame_00045.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -838,19 +1145,13 @@
     "timestamp": 46.0,
     "frame_path": "data/frames/frame_00046.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.359,
-        "bbox": [
-          0.0916,
-          0.1251,
-          0.2217,
-          0.5187
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -860,19 +1161,13 @@
     "timestamp": 47.0,
     "frame_path": "data/frames/frame_00047.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.414,
-        "bbox": [
-          0.1449,
-          0.0683,
-          0.2781,
-          0.4681
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -885,16 +1180,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.5754,
+        "confidence": 0.5331,
         "bbox": [
-          0.0955,
-          0.0329,
-          0.2639,
-          0.4943
+          0.0931,
+          0.0348,
+          0.2655,
+          0.4977
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "Long hallway with multiple doors, likely in a school or office building."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -905,7 +1205,12 @@
     "frame_path": "data/frames/frame_00049.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -916,7 +1221,12 @@
     "frame_path": "data/frames/frame_00050.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -927,7 +1237,12 @@
     "frame_path": "data/frames/frame_00051.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -937,8 +1252,24 @@
     "timestamp": 52.0,
     "frame_path": "data/frames/frame_00052.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.3667,
+        "bbox": [
+          0.0002,
+          0.1248,
+          0.0364,
+          0.5826
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a series of doors and windows."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -951,16 +1282,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.7057,
+        "confidence": 0.7878,
         "bbox": [
-          0.0001,
-          0.0376,
-          0.1331,
-          0.6504
+          0.0002,
+          0.0405,
+          0.1355,
+          0.6254
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a series of doors and windows, leading to a hallway."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -971,7 +1307,12 @@
     "frame_path": "data/frames/frame_00054.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -982,7 +1323,12 @@
     "frame_path": "data/frames/frame_00055.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -992,8 +1338,24 @@
     "timestamp": 56.0,
     "frame_path": "data/frames/frame_00056.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.702,
+        "bbox": [
+          0.3057,
+          0.1928,
+          0.3561,
+          0.3997
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1004,7 +1366,12 @@
     "frame_path": "data/frames/frame_00057.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1014,8 +1381,24 @@
     "timestamp": 58.0,
     "frame_path": "data/frames/frame_00058.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4484,
+        "bbox": [
+          0.3052,
+          0.1563,
+          0.3692,
+          0.3877
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with tall windows and a door leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1028,16 +1411,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.5123,
+        "confidence": 0.4144,
         "bbox": [
-          0.2917,
-          0.1921,
-          0.3574,
-          0.4343
+          0.291,
+          0.1958,
+          0.3557,
+          0.43
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1050,16 +1438,23 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.6412,
+        "confidence": 0.6546,
         "bbox": [
-          0.2702,
-          0.1817,
-          0.3455,
-          0.4446
+          0.2672,
+          0.1819,
+          0.3447,
+          0.4462
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with tall windows and a door leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1072,16 +1467,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.5636,
+        "confidence": 0.6369,
         "bbox": [
-          0.2682,
-          0.1654,
-          0.3537,
-          0.4506
+          0.2696,
+          0.1702,
+          0.3538,
+          0.4499
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a series of doors and windows, leading to a reception area."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1094,16 +1494,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.4461,
+        "confidence": 0.714,
         "bbox": [
-          0.2396,
-          0.1628,
-          0.3352,
-          0.4756
+          0.2397,
+          0.1663,
+          0.335,
+          0.4774
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1116,16 +1521,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.6872,
+        "confidence": 0.8685,
         "bbox": [
-          0.1989,
-          0.1196,
-          0.3157,
-          0.4683
+          0.2005,
+          0.121,
+          0.3163,
+          0.4733
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1138,16 +1548,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.6524,
+        "confidence": 0.6306,
         "bbox": [
-          0.1663,
-          0.0942,
-          0.3095,
-          0.4887
+          0.167,
+          0.0967,
+          0.3086,
+          0.4928
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1160,16 +1575,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.728,
+        "confidence": 0.8597,
         "bbox": [
-          0.1132,
-          0.0893,
-          0.2828,
-          0.5397
+          0.1149,
+          0.0912,
+          0.2809,
+          0.5411
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1182,16 +1602,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.7976,
+        "confidence": 0.7708,
         "bbox": [
-          0.0228,
-          0.0305,
+          0.0262,
+          0.0326,
           0.2502,
-          0.5731
+          0.5686
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a class room on the left and a door on the right."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1202,7 +1627,12 @@
     "frame_path": "data/frames/frame_00067.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1213,7 +1643,12 @@
     "frame_path": "data/frames/frame_00068.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1224,7 +1659,12 @@
     "frame_path": "data/frames/frame_00069.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long hallway with a white wall and a white door, leading to a room with a green door, possibly a reception desk."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1237,16 +1677,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.8518,
+        "confidence": 0.8188,
         "bbox": [
-          0.0,
-          0.0588,
-          0.3149,
-          0.7934
+          0.0005,
+          0.0637,
+          0.3155,
+          0.7625
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1259,16 +1704,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.9202,
+        "confidence": 0.7334,
         "bbox": [
-          0.0005,
-          0.0738,
-          0.4335,
-          0.9381
+          0.0004,
+          0.0789,
+          0.4323,
+          0.9304
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1281,16 +1731,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.9257,
+        "confidence": 0.8741,
         "bbox": [
-          0.0004,
-          0.0917,
-          0.4528,
-          0.9631
+          0.0005,
+          0.0911,
+          0.4529,
+          0.9434
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1303,16 +1758,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.9246,
+        "confidence": 0.7332,
         "bbox": [
-          0.0003,
-          0.0671,
-          0.429,
-          0.9419
+          0.0005,
+          0.0755,
+          0.4301,
+          0.9055
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1322,8 +1782,24 @@
     "timestamp": 74.0,
     "frame_path": "data/frames/frame_00074.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5451,
+        "bbox": [
+          0.0006,
+          0.1043,
+          0.2056,
+          0.8157
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and window, likely leading to an office or reception area."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1334,7 +1810,12 @@
     "frame_path": "data/frames/frame_00075.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1345,7 +1826,12 @@
     "frame_path": "data/frames/frame_00076.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1356,7 +1842,12 @@
     "frame_path": "data/frames/frame_00077.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1367,7 +1858,12 @@
     "frame_path": "data/frames/frame_00078.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1378,7 +1874,12 @@
     "frame_path": "data/frames/frame_00079.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1389,7 +1890,12 @@
     "frame_path": "data/frames/frame_00080.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1400,7 +1906,12 @@
     "frame_path": "data/frames/frame_00081.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1411,7 +1922,12 @@
     "frame_path": "data/frames/frame_00082.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1422,7 +1938,12 @@
     "frame_path": "data/frames/frame_00083.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1433,7 +1954,15 @@
     "frame_path": "data/frames/frame_00084.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "fire_equipment"
+      ],
+      "description": "A long corridor with a door on the right and a fire equipment mounted on the wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1444,7 +1973,15 @@
     "frame_path": "data/frames/frame_00085.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "fire_equipment"
+      ],
+      "description": "A long corridor with a door on the right and a fire extinguisher on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1455,7 +1992,14 @@
     "frame_path": "data/frames/frame_00086.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door on the right and a window on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1466,7 +2010,14 @@
     "frame_path": "data/frames/frame_00087.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long, narrow corridor with two windows on either side and a door on the right."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1477,7 +2028,16 @@
     "frame_path": "data/frames/frame_00088.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "reception",
+        "desk",
+        "fire_equipment"
+      ],
+      "description": "Long, narrow corridor with two windows on either side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1488,7 +2048,14 @@
     "frame_path": "data/frames/frame_00089.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with two windows on either side and a door at the end."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1499,7 +2066,14 @@
     "frame_path": "data/frames/frame_00090.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with two windows on either side and a door at the end."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1510,7 +2084,14 @@
     "frame_path": "data/frames/frame_00091.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with two windows on either side and a door at the end."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1521,7 +2102,14 @@
     "frame_path": "data/frames/frame_00092.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long, narrow corridor with a door and wall on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1532,7 +2120,12 @@
     "frame_path": "data/frames/frame_00093.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a door leading to an unseen area."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1543,7 +2136,17 @@
     "frame_path": "data/frames/frame_00094.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "reception",
+        "sign",
+        "fire_equipment"
+      ],
+      "description": "A pink door with a glass window is the main focus of the image, likely leading to an entrance or reception area."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1554,7 +2157,17 @@
     "frame_path": "data/frames/frame_00095.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "entrance",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign",
+        "reception",
+        "fire_equipment"
+      ],
+      "description": "A pink door with a glass window is the main focus of the image, likely leading to an indoor space."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1565,7 +2178,12 @@
     "frame_path": "data/frames/frame_00096.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1576,7 +2194,12 @@
     "frame_path": "data/frames/frame_00097.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1587,7 +2210,12 @@
     "frame_path": "data/frames/frame_00098.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1598,7 +2226,12 @@
     "frame_path": "data/frames/frame_00099.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1611,16 +2244,21 @@
     "objects": [
       {
         "class": "refrigerator",
-        "confidence": 0.4256,
+        "confidence": 0.5363,
         "bbox": [
-          0.703,
-          0.2235,
-          0.7643,
-          0.4911
+          0.7024,
+          0.2249,
+          0.7669,
+          0.4837
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1630,8 +2268,24 @@
     "timestamp": 101.0,
     "frame_path": "data/frames/frame_00101.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.4145,
+        "bbox": [
+          0.6975,
+          0.2001,
+          0.7703,
+          0.4849
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1642,7 +2296,12 @@
     "frame_path": "data/frames/frame_00102.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1652,8 +2311,24 @@
     "timestamp": 103.0,
     "frame_path": "data/frames/frame_00103.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.5411,
+        "bbox": [
+          0.7082,
+          0.1573,
+          0.8002,
+          0.5923
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and fire equipment."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1663,8 +2338,24 @@
     "timestamp": 104.0,
     "frame_path": "data/frames/frame_00104.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.4977,
+        "bbox": [
+          0.7241,
+          0.1301,
+          0.8278,
+          0.6074
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1674,8 +2365,24 @@
     "timestamp": 105.0,
     "frame_path": "data/frames/frame_00105.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.4356,
+        "bbox": [
+          0.795,
+          0.0884,
+          0.9205,
+          0.6561
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1686,7 +2393,12 @@
     "frame_path": "data/frames/frame_00106.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1697,7 +2409,12 @@
     "frame_path": "data/frames/frame_00107.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1708,7 +2425,12 @@
     "frame_path": "data/frames/frame_00108.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1719,7 +2441,12 @@
     "frame_path": "data/frames/frame_00109.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1730,7 +2457,12 @@
     "frame_path": "data/frames/frame_00110.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1740,8 +2472,24 @@
     "timestamp": 111.0,
     "frame_path": "data/frames/frame_00111.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.4098,
+        "bbox": [
+          0.6493,
+          0.05,
+          0.8369,
+          0.7757
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1753,17 +2501,22 @@
     "quality_score": null,
     "objects": [
       {
-        "class": "tv",
-        "confidence": 0.362,
+        "class": "refrigerator",
+        "confidence": 0.671,
         "bbox": [
-          0.4894,
-          0.2908,
-          0.6241,
-          0.6843
+          0.6917,
+          0.0043,
+          0.9113,
+          0.9875
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1773,8 +2526,24 @@
     "timestamp": 113.0,
     "frame_path": "data/frames/frame_00113.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.5086,
+        "bbox": [
+          0.7528,
+          0.0013,
+          0.9952,
+          0.9792
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1785,7 +2554,12 @@
     "frame_path": "data/frames/frame_00114.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1796,7 +2570,12 @@
     "frame_path": "data/frames/frame_00115.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1807,7 +2586,12 @@
     "frame_path": "data/frames/frame_00116.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1818,7 +2602,12 @@
     "frame_path": "data/frames/frame_00117.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1829,7 +2618,12 @@
     "frame_path": "data/frames/frame_00118.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1840,7 +2634,12 @@
     "frame_path": "data/frames/frame_00119.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1851,7 +2650,12 @@
     "frame_path": "data/frames/frame_00120.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1862,7 +2666,12 @@
     "frame_path": "data/frames/frame_00121.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1873,7 +2682,12 @@
     "frame_path": "data/frames/frame_00122.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1884,7 +2698,12 @@
     "frame_path": "data/frames/frame_00123.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1894,8 +2713,24 @@
     "timestamp": 124.0,
     "frame_path": "data/frames/frame_00124.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.463,
+        "bbox": [
+          0.6622,
+          0.1193,
+          0.7443,
+          0.5433
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1905,8 +2740,34 @@
     "timestamp": 125.0,
     "frame_path": "data/frames/frame_00125.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.5433,
+        "bbox": [
+          0.7026,
+          0.0946,
+          0.7987,
+          0.4662
+        ]
+      },
+      {
+        "class": "refrigerator",
+        "confidence": 0.3551,
+        "bbox": [
+          0.7003,
+          0.0936,
+          0.8003,
+          0.5791
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a tiled floor and a large window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1916,8 +2777,24 @@
     "timestamp": 126.0,
     "frame_path": "data/frames/frame_00126.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "refrigerator",
+        "confidence": 0.6118,
+        "bbox": [
+          0.72,
+          0.0856,
+          0.8342,
+          0.5109
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1928,7 +2805,12 @@
     "frame_path": "data/frames/frame_00127.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1939,7 +2821,12 @@
     "frame_path": "data/frames/frame_00128.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1950,7 +2837,12 @@
     "frame_path": "data/frames/frame_00129.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1961,7 +2853,12 @@
     "frame_path": "data/frames/frame_00130.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1972,7 +2869,12 @@
     "frame_path": "data/frames/frame_00131.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1983,7 +2885,14 @@
     "frame_path": "data/frames/frame_00132.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "An empty room with a door and window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -1994,7 +2903,12 @@
     "frame_path": "data/frames/frame_00133.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2005,7 +2919,12 @@
     "frame_path": "data/frames/frame_00134.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a window and a wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2016,7 +2935,12 @@
     "frame_path": "data/frames/frame_00135.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a large window and a wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2027,7 +2951,12 @@
     "frame_path": "data/frames/frame_00136.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a large window and a white wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2038,7 +2967,14 @@
     "frame_path": "data/frames/frame_00137.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "An indoor room with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2049,7 +2985,12 @@
     "frame_path": "data/frames/frame_00138.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An indoor room with a window and a wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2060,7 +3001,12 @@
     "frame_path": "data/frames/frame_00139.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An indoor room with a window and a wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2071,7 +3017,12 @@
     "frame_path": "data/frames/frame_00140.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a door and tiled floor."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2082,7 +3033,12 @@
     "frame_path": "data/frames/frame_00141.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An indoor room with a door and wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2093,7 +3049,12 @@
     "frame_path": "data/frames/frame_00142.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "Indoor corridor with a central door and signage."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2104,7 +3065,16 @@
     "frame_path": "data/frames/frame_00143.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign",
+        "fire_equipment"
+      ],
+      "description": "A room with a door and a fire extinguisher mounted on the wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2115,7 +3085,15 @@
     "frame_path": "data/frames/frame_00144.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign"
+      ],
+      "description": "Indoor hallway with a door and sign."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2125,29 +3103,16 @@
     "timestamp": 145.0,
     "frame_path": "data/frames/frame_00145.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "refrigerator",
-        "confidence": 0.8496,
-        "bbox": [
-          0.2162,
-          0.1732,
-          0.4268,
-          0.8878
-        ]
-      },
-      {
-        "class": "refrigerator",
-        "confidence": 0.4401,
-        "bbox": [
-          0.42,
-          0.0075,
-          0.9704,
-          0.9908
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign"
+      ],
+      "description": "Indoor hallway with a door and sign."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2157,19 +3122,16 @@
     "timestamp": 146.0,
     "frame_path": "data/frames/frame_00146.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "refrigerator",
-        "confidence": 0.3674,
-        "bbox": [
-          0.224,
-          0.0075,
-          0.9944,
-          0.9834
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign"
+      ],
+      "description": "Indoor hallway with a door and sign."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2180,7 +3142,14 @@
     "frame_path": "data/frames/frame_00147.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A hallway with a digital class room door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2191,7 +3160,14 @@
     "frame_path": "data/frames/frame_00148.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A red fire alarm box mounted on a white wall with a yellow sign above it."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2201,19 +3177,15 @@
     "timestamp": 149.0,
     "frame_path": "data/frames/frame_00149.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "book",
-        "confidence": 0.4732,
-        "bbox": [
-          0.5633,
-          0.4419,
-          0.7355,
-          0.8108
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A hallway with a door and a fire alarm box."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2224,7 +3196,12 @@
     "frame_path": "data/frames/frame_00150.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A hallway with a door and fire equipment."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2235,7 +3212,12 @@
     "frame_path": "data/frames/frame_00151.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A room with a door and a yellow sign on top."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2246,7 +3228,12 @@
     "frame_path": "data/frames/frame_00152.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a wall and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2257,7 +3244,12 @@
     "frame_path": "data/frames/frame_00153.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a door leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2268,7 +3260,14 @@
     "frame_path": "data/frames/frame_00154.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2279,7 +3278,14 @@
     "frame_path": "data/frames/frame_00155.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a central door and a window on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2290,7 +3296,12 @@
     "frame_path": "data/frames/frame_00156.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a ceiling fan and large windows."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2301,7 +3312,14 @@
     "frame_path": "data/frames/frame_00157.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the left side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2312,7 +3330,14 @@
     "frame_path": "data/frames/frame_00158.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2323,7 +3348,14 @@
     "frame_path": "data/frames/frame_00159.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2334,7 +3366,14 @@
     "frame_path": "data/frames/frame_00160.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2345,7 +3384,12 @@
     "frame_path": "data/frames/frame_00161.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2356,7 +3400,14 @@
     "frame_path": "data/frames/frame_00162.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a window and two doors."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2367,7 +3418,14 @@
     "frame_path": "data/frames/frame_00163.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a window and a door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2378,7 +3436,14 @@
     "frame_path": "data/frames/frame_00164.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a window and two doors."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2389,7 +3454,14 @@
     "frame_path": "data/frames/frame_00165.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with two doors and a window on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2400,7 +3472,14 @@
     "frame_path": "data/frames/frame_00166.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with doors and walls."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2411,7 +3490,14 @@
     "frame_path": "data/frames/frame_00167.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with two doors and walls on either side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2421,19 +3507,15 @@
     "timestamp": 168.0,
     "frame_path": "data/frames/frame_00168.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.4955,
-        "bbox": [
-          0.2593,
-          0.0641,
-          0.3601,
-          0.203
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with two doors and a wall on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2444,7 +3526,14 @@
     "frame_path": "data/frames/frame_00169.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long, narrow corridor with a central door and walls on either side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2455,7 +3544,12 @@
     "frame_path": "data/frames/frame_00170.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2466,7 +3560,14 @@
     "frame_path": "data/frames/frame_00171.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A corridor with a central door and walls on either side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2477,7 +3578,14 @@
     "frame_path": "data/frames/frame_00172.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A corridor with a central door and walls on either side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2488,7 +3596,15 @@
     "frame_path": "data/frames/frame_00173.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "door"
+      ],
+      "description": "A corridor with two doors, one on the left and one on the right."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2499,7 +3615,12 @@
     "frame_path": "data/frames/frame_00174.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with two doors visible."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2510,7 +3631,12 @@
     "frame_path": "data/frames/frame_00175.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An indoor hallway with two doors and a sign on the wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2521,7 +3647,15 @@
     "frame_path": "data/frames/frame_00176.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign"
+      ],
+      "description": "Indoor corridor with a sign on the left wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2532,7 +3666,12 @@
     "frame_path": "data/frames/frame_00177.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2543,7 +3682,12 @@
     "frame_path": "data/frames/frame_00178.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "Indoor corridor with two doors and a sign on the wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2554,7 +3698,12 @@
     "frame_path": "data/frames/frame_00179.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "Indoor hallway with two doors and a sign on the wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2565,7 +3714,12 @@
     "frame_path": "data/frames/frame_00180.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2576,8 +3730,21 @@
     "frame_path": "data/frames/frame_00181.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "darkened ceiling",
+        "darkened door",
+        "darkened floor"
+      ],
+      "navigation_relevance": [],
+      "description": "A large room with a darkened ceiling, a darkened door, and a darkened floor."
+    },
+    "landmarks": [
+      "darkened ceiling",
+      "darkened door",
+      "darkened floor"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2587,8 +3754,19 @@
     "frame_path": "data/frames/frame_00182.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "ceiling fan",
+        "door"
+      ],
+      "navigation_relevance": [],
+      "description": "A large room with a ceiling fan, and a door."
+    },
+    "landmarks": [
+      "ceiling fan",
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2598,7 +3776,12 @@
     "frame_path": "data/frames/frame_00183.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2608,8 +3791,24 @@
     "timestamp": 184.0,
     "frame_path": "data/frames/frame_00184.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4531,
+        "bbox": [
+          0.5598,
+          0.2471,
+          0.7075,
+          0.4932
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "unknown"
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2619,8 +3818,24 @@
     "timestamp": 185.0,
     "frame_path": "data/frames/frame_00185.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4309,
+        "bbox": [
+          0.471,
+          0.235,
+          0.6631,
+          0.4865
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2630,8 +3845,24 @@
     "timestamp": 186.0,
     "frame_path": "data/frames/frame_00186.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.685,
+        "bbox": [
+          0.5131,
+          0.2196,
+          0.7118,
+          0.474
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2642,8 +3873,21 @@
     "frame_path": "data/frames/frame_00187.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "door",
+        "window",
+        "door frame"
+      ],
+      "navigation_relevance": [],
+      "description": "A small room with a door, a window, and a door frame."
+    },
+    "landmarks": [
+      "door",
+      "window",
+      "door frame"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2653,8 +3897,21 @@
     "frame_path": "data/frames/frame_00188.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "door",
+        "window",
+        "wall"
+      ],
+      "navigation_relevance": [],
+      "description": "The room is dimly lit, creating a mysterious atmosphere."
+    },
+    "landmarks": [
+      "door",
+      "window",
+      "wall"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2664,7 +3921,12 @@
     "frame_path": "data/frames/frame_00189.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2675,7 +3937,12 @@
     "frame_path": "data/frames/frame_00190.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2686,7 +3953,12 @@
     "frame_path": "data/frames/frame_00191.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2697,7 +3969,12 @@
     "frame_path": "data/frames/frame_00192.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2708,7 +3985,12 @@
     "frame_path": "data/frames/frame_00193.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2719,8 +4001,21 @@
     "frame_path": "data/frames/frame_00194.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "large window",
+        "door",
+        "ceiling fan"
+      ],
+      "navigation_relevance": [],
+      "description": "The room appears to be empty and quiet."
+    },
+    "landmarks": [
+      "large window",
+      "door",
+      "ceiling fan"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2730,8 +4025,21 @@
     "frame_path": "data/frames/frame_00195.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "large window",
+        "door",
+        "ceiling fan"
+      ],
+      "navigation_relevance": [],
+      "description": "The room is likely to be a living room or a similar space."
+    },
+    "landmarks": [
+      "large window",
+      "door",
+      "ceiling fan"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2740,8 +4048,24 @@
     "timestamp": 196.0,
     "frame_path": "data/frames/frame_00196.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.6033,
+        "bbox": [
+          0.1597,
+          0.2573,
+          0.2719,
+          0.5044
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2751,8 +4075,24 @@
     "timestamp": 197.0,
     "frame_path": "data/frames/frame_00197.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.578,
+        "bbox": [
+          0.1316,
+          0.2645,
+          0.2568,
+          0.5299
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2763,7 +4103,12 @@
     "frame_path": "data/frames/frame_00198.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2773,9 +4118,33 @@
     "timestamp": 199.0,
     "frame_path": "data/frames/frame_00199.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.5687,
+        "bbox": [
+          0.0202,
+          0.2166,
+          0.205,
+          0.5427
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "ceiling fan",
+        "large window",
+        "door"
+      ],
+      "navigation_relevance": [],
+      "description": "The room is empty. The room is empty. The room is empty. The room is empty."
+    },
+    "landmarks": [
+      "ceiling fan",
+      "large window",
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2784,8 +4153,24 @@
     "timestamp": 200.0,
     "frame_path": "data/frames/frame_00200.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.7974,
+        "bbox": [
+          0.0001,
+          0.2117,
+          0.1667,
+          0.5483
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2798,16 +4183,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.3636,
+        "confidence": 0.5726,
         "bbox": [
           0.0,
-          0.1945,
-          0.1598,
-          0.5479
+          0.1966,
+          0.1632,
+          0.5263
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2820,16 +4210,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.4018,
+        "confidence": 0.6302,
         "bbox": [
-          0.0001,
-          0.1601,
-          0.1548,
-          0.5375
+          0.0003,
+          0.1599,
+          0.1604,
+          0.5328
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a glass door and a window, featuring a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2839,8 +4234,24 @@
     "timestamp": 203.0,
     "frame_path": "data/frames/frame_00203.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.7599,
+        "bbox": [
+          0.0003,
+          0.1508,
+          0.1527,
+          0.5363
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "An empty room with a glass door and a window, featuring a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2850,8 +4261,24 @@
     "timestamp": 204.0,
     "frame_path": "data/frames/frame_00204.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4239,
+        "bbox": [
+          0.0001,
+          0.1124,
+          0.1481,
+          0.5164
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2861,8 +4288,24 @@
     "timestamp": 205.0,
     "frame_path": "data/frames/frame_00205.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4117,
+        "bbox": [
+          0.0003,
+          0.1015,
+          0.127,
+          0.5279
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "room",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2875,16 +4318,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.3614,
+        "confidence": 0.3888,
         "bbox": [
-          0.0002,
-          0.1118,
-          0.0693,
-          0.5546
+          0.0003,
+          0.1147,
+          0.0722,
+          0.5414
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2895,7 +4343,12 @@
     "frame_path": "data/frames/frame_00207.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2906,7 +4359,12 @@
     "frame_path": "data/frames/frame_00208.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2917,7 +4375,12 @@
     "frame_path": "data/frames/frame_00209.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2928,7 +4391,12 @@
     "frame_path": "data/frames/frame_00210.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2939,7 +4407,12 @@
     "frame_path": "data/frames/frame_00211.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2950,7 +4423,12 @@
     "frame_path": "data/frames/frame_00212.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2961,7 +4439,12 @@
     "frame_path": "data/frames/frame_00213.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2972,7 +4455,12 @@
     "frame_path": "data/frames/frame_00214.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2983,7 +4471,12 @@
     "frame_path": "data/frames/frame_00215.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -2994,7 +4487,14 @@
     "frame_path": "data/frames/frame_00216.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3005,7 +4505,14 @@
     "frame_path": "data/frames/frame_00217.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3016,7 +4523,14 @@
     "frame_path": "data/frames/frame_00218.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window, likely leading to another room or hallway."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3027,7 +4541,14 @@
     "frame_path": "data/frames/frame_00219.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3038,7 +4559,12 @@
     "frame_path": "data/frames/frame_00220.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3049,8 +4575,25 @@
     "frame_path": "data/frames/frame_00221.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "window with geometric pattern",
+        "tiled floor",
+        "white walls",
+        "door at end of corridor"
+      ],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a geometric-patterned window and tiled floor."
+    },
+    "landmarks": [
+      "window with geometric pattern",
+      "tiled floor",
+      "white walls",
+      "door at end of corridor"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3060,8 +4603,23 @@
     "frame_path": "data/frames/frame_00222.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "window with geometric pattern",
+        "tiled floor",
+        "white walls",
+        "door at end of corridor"
+      ],
+      "navigation_relevance": [],
+      "description": "A long corridor with a geometric-patterned window and tiled floor."
+    },
+    "landmarks": [
+      "window with geometric pattern",
+      "tiled floor",
+      "white walls",
+      "door at end of corridor"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3070,19 +4628,15 @@
     "timestamp": 223.0,
     "frame_path": "data/frames/frame_00223.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.5231,
-        "bbox": [
-          0.2476,
-          0.3488,
-          0.2819,
-          0.5231
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window, likely leading to an entrance or exit."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3092,19 +4646,13 @@
     "timestamp": 224.0,
     "frame_path": "data/frames/frame_00224.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.5254,
-        "bbox": [
-          0.2341,
-          0.341,
-          0.2757,
-          0.5234
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door at the end."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3114,20 +4662,20 @@
     "timestamp": 225.0,
     "frame_path": "data/frames/frame_00225.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.5427,
-        "bbox": [
-          0.2353,
-          0.3332,
-          0.2825,
-          0.5318
-        ]
-      }
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "window on right",
+        "door at end of corridor"
+      ],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door at the end."
+    },
+    "landmarks": [
+      "window on right",
+      "door at end of corridor"
     ],
-    "scene_tags": null,
-    "landmarks": [],
     "segment_id": null,
     "place_id": null
   },
@@ -3136,19 +4684,13 @@
     "timestamp": 226.0,
     "frame_path": "data/frames/frame_00226.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.388,
-        "bbox": [
-          0.2477,
-          0.3106,
-          0.2997,
-          0.5142
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3158,29 +4700,13 @@
     "timestamp": 227.0,
     "frame_path": "data/frames/frame_00227.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.603,
-        "bbox": [
-          0.261,
-          0.3259,
-          0.3191,
-          0.535
-        ]
-      },
-      {
-        "class": "clock",
-        "confidence": 0.3863,
-        "bbox": [
-          0.0851,
-          0.0825,
-          0.1325,
-          0.2676
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3193,16 +4719,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.7003,
+        "confidence": 0.7525,
         "bbox": [
-          0.2019,
+          0.2023,
           0.2945,
-          0.2728,
-          0.5243
+          0.2719,
+          0.5248
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and window, featuring a security grate on the right."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3215,16 +4746,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.5505,
+        "confidence": 0.5192,
         "bbox": [
-          0.1557,
-          0.2772,
-          0.2338,
-          0.5241
+          0.1553,
+          0.2784,
+          0.2317,
+          0.5244
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door on the right and a window on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3234,8 +4770,24 @@
     "timestamp": 230.0,
     "frame_path": "data/frames/frame_00230.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4312,
+        "bbox": [
+          0.1415,
+          0.2563,
+          0.2244,
+          0.5173
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and window, likely leading to another room or hallway."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3246,7 +4798,12 @@
     "frame_path": "data/frames/frame_00231.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3257,7 +4814,12 @@
     "frame_path": "data/frames/frame_00232.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3270,16 +4832,21 @@
     "objects": [
       {
         "class": "tv",
-        "confidence": 0.4762,
+        "confidence": 0.4866,
         "bbox": [
-          0.1681,
-          0.2093,
-          0.2645,
-          0.5003
+          0.1675,
+          0.208,
+          0.2639,
+          0.4999
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3289,8 +4856,24 @@
     "timestamp": 234.0,
     "frame_path": "data/frames/frame_00234.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.6022,
+        "bbox": [
+          0.1486,
+          0.1959,
+          0.2531,
+          0.4928
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3303,16 +4886,21 @@
     "objects": [
       {
         "class": "person",
-        "confidence": 0.5004,
+        "confidence": 0.4399,
         "bbox": [
           0.0003,
-          0.3315,
-          0.275,
-          0.9878
+          0.3324,
+          0.2694,
+          0.9332
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a door and window, likely leading to an entrance or exit."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3325,16 +4913,21 @@
     "objects": [
       {
         "class": "person",
-        "confidence": 0.6192,
+        "confidence": 0.656,
         "bbox": [
-          0.0015,
-          0.3374,
-          0.4354,
-          0.99
+          0.0014,
+          0.3404,
+          0.4401,
+          0.9904
         ]
       }
     ],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3345,7 +4938,12 @@
     "frame_path": "data/frames/frame_00237.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3355,19 +4953,13 @@
     "timestamp": 238.0,
     "frame_path": "data/frames/frame_00238.jpg",
     "quality_score": null,
-    "objects": [
-      {
-        "class": "tv",
-        "confidence": 0.4285,
-        "bbox": [
-          0.2179,
-          0.1218,
-          0.3218,
-          0.417
-        ]
-      }
-    ],
-    "scene_tags": null,
+    "objects": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3378,7 +4970,12 @@
     "frame_path": "data/frames/frame_00239.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3389,7 +4986,12 @@
     "frame_path": "data/frames/frame_00240.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3400,7 +5002,12 @@
     "frame_path": "data/frames/frame_00241.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3411,7 +5018,12 @@
     "frame_path": "data/frames/frame_00242.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3422,8 +5034,21 @@
     "frame_path": "data/frames/frame_00243.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "window",
+        "door",
+        "hallway"
+      ],
+      "navigation_relevance": [],
+      "description": "A hallway with a large window, a door, and a hallway."
+    },
+    "landmarks": [
+      "window",
+      "door",
+      "hallway"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3433,8 +5058,21 @@
     "frame_path": "data/frames/frame_00244.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [
+        "window",
+        "door",
+        "hallway"
+      ],
+      "navigation_relevance": [],
+      "description": "A hallway with a large window, a door, and a hallway."
+    },
+    "landmarks": [
+      "window",
+      "door",
+      "hallway"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3444,7 +5082,12 @@
     "frame_path": "data/frames/frame_00245.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3454,8 +5097,24 @@
     "timestamp": 246.0,
     "frame_path": "data/frames/frame_00246.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.3865,
+        "bbox": [
+          0.0005,
+          0.0899,
+          0.2092,
+          0.5952
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door and window, featuring a security camera and a security device."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3465,8 +5124,24 @@
     "timestamp": 247.0,
     "frame_path": "data/frames/frame_00247.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4485,
+        "bbox": [
+          0.0005,
+          0.1023,
+          0.2086,
+          0.6352
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3476,8 +5151,24 @@
     "timestamp": 248.0,
     "frame_path": "data/frames/frame_00248.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.4867,
+        "bbox": [
+          0.0004,
+          0.0781,
+          0.1968,
+          0.623
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3488,7 +5179,12 @@
     "frame_path": "data/frames/frame_00249.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3499,7 +5195,12 @@
     "frame_path": "data/frames/frame_00250.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3510,7 +5211,12 @@
     "frame_path": "data/frames/frame_00251.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "unknown",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3521,7 +5227,14 @@
     "frame_path": "data/frames/frame_00252.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the left, and a window on the right."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3532,7 +5245,14 @@
     "frame_path": "data/frames/frame_00253.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long, narrow corridor with a door and window on the left, leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3543,7 +5263,14 @@
     "frame_path": "data/frames/frame_00254.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3554,7 +5281,14 @@
     "frame_path": "data/frames/frame_00255.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long, narrow corridor with a door and window on the left, leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3565,7 +5299,14 @@
     "frame_path": "data/frames/frame_00256.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the left, and a window on the right."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3576,7 +5317,14 @@
     "frame_path": "data/frames/frame_00257.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long, narrow corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3587,7 +5335,12 @@
     "frame_path": "data/frames/frame_00258.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door on the left side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3598,7 +5351,12 @@
     "frame_path": "data/frames/frame_00259.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long corridor with a door at the end."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3609,7 +5367,14 @@
     "frame_path": "data/frames/frame_00260.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window, likely leading to another room or hallway."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3620,7 +5385,12 @@
     "frame_path": "data/frames/frame_00261.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A long, narrow corridor with a door and a window on the right side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3631,7 +5401,12 @@
     "frame_path": "data/frames/frame_00262.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a door leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3642,7 +5417,12 @@
     "frame_path": "data/frames/frame_00263.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A doorway leading to a building with a sign indicating the department of CSE and a class room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3653,7 +5433,12 @@
     "frame_path": "data/frames/frame_00264.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3664,7 +5449,12 @@
     "frame_path": "data/frames/frame_00265.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a door leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3675,7 +5465,14 @@
     "frame_path": "data/frames/frame_00266.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the right side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3686,8 +5483,23 @@
     "frame_path": "data/frames/frame_00267.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "window",
+        "wall"
+      ],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the left, featuring a wall with a window and a door."
+    },
+    "landmarks": [
+      "door",
+      "window",
+      "wall"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3697,8 +5509,23 @@
     "frame_path": "data/frames/frame_00268.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "window",
+        "wall"
+      ],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the right, and a wall on the left."
+    },
+    "landmarks": [
+      "door",
+      "window",
+      "wall"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3708,7 +5535,14 @@
     "frame_path": "data/frames/frame_00269.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3719,7 +5553,14 @@
     "frame_path": "data/frames/frame_00270.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3730,7 +5571,14 @@
     "frame_path": "data/frames/frame_00271.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3741,7 +5589,14 @@
     "frame_path": "data/frames/frame_00272.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window, likely leading to an entrance or exit."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3752,7 +5607,14 @@
     "frame_path": "data/frames/frame_00273.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3763,7 +5625,14 @@
     "frame_path": "data/frames/frame_00274.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the left, leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3774,7 +5643,14 @@
     "frame_path": "data/frames/frame_00275.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3785,7 +5661,14 @@
     "frame_path": "data/frames/frame_00276.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the left, leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3796,7 +5679,14 @@
     "frame_path": "data/frames/frame_00277.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the left, leading to another room."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3807,7 +5697,14 @@
     "frame_path": "data/frames/frame_00278.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A long corridor with a door and window on the right side."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3818,7 +5715,15 @@
     "frame_path": "data/frames/frame_00279.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign"
+      ],
+      "description": "A long corridor with a door and sign on the left."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3829,7 +5734,15 @@
     "frame_path": "data/frames/frame_00280.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "sign"
+      ],
+      "description": "A long corridor with a door and sign on the left wall."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3840,7 +5753,15 @@
     "frame_path": "data/frames/frame_00281.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "reception",
+        "fire_equipment"
+      ],
+      "description": "A corridor leading to a reception area with fire equipment visible."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3851,8 +5772,22 @@
     "frame_path": "data/frames/frame_00282.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "fire_equipment"
+      ],
+      "navigation_relevance": [
+        "door",
+        "fire_equipment"
+      ],
+      "description": "A corridor with a door and fire equipment."
+    },
+    "landmarks": [
+      "door",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3862,8 +5797,22 @@
     "frame_path": "data/frames/frame_00283.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "fire_equipment"
+      ],
+      "navigation_relevance": [
+        "door",
+        "fire_equipment"
+      ],
+      "description": "A corridor with a door and fire equipment."
+    },
+    "landmarks": [
+      "door",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3873,7 +5822,15 @@
     "frame_path": "data/frames/frame_00284.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "reception",
+        "fire_equipment"
+      ],
+      "description": "A corridor with an information desk and fire equipment."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3884,7 +5841,14 @@
     "frame_path": "data/frames/frame_00285.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A corridor leading to an Information Technology section."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3895,8 +5859,21 @@
     "frame_path": "data/frames/frame_00286.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
-    "landmarks": [],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [
+        "information technology sign",
+        "door on right"
+      ],
+      "navigation_relevance": [
+        "reception"
+      ],
+      "description": "A corridor leading to an information technology sign and a door on the right."
+    },
+    "landmarks": [
+      "information technology sign",
+      "door on right"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3906,7 +5883,12 @@
     "frame_path": "data/frames/frame_00287.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": ""
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3917,7 +5899,12 @@
     "frame_path": "data/frames/frame_00288.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "elevator",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A modern elevator with a glass door and control panel, located in a hallway."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3928,7 +5915,12 @@
     "frame_path": "data/frames/frame_00289.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "elevator",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A dark elevator with a red handle and a red pole in the foreground."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3939,7 +5931,12 @@
     "frame_path": "data/frames/frame_00290.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "elevator",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A dark interior view of an elevator with a glass door and a metal railing."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3950,7 +5947,12 @@
     "frame_path": "data/frames/frame_00291.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "elevator",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A dark elevator with a blue sign on the door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3961,7 +5963,12 @@
     "frame_path": "data/frames/frame_00292.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "elevator",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A dark interior view of an elevator with a blue digital display and a red emergency sign above it."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3972,7 +5979,12 @@
     "frame_path": "data/frames/frame_00293.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "elevator",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A dark, enclosed space with a glass door and a red sign above it."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3983,7 +5995,12 @@
     "frame_path": "data/frames/frame_00294.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a door and a window."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -3994,7 +6011,14 @@
     "frame_path": "data/frames/frame_00295.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A corridor with an information technology sign, emergency exit, and door."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -4005,7 +6029,14 @@
     "frame_path": "data/frames/frame_00296.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door"
+      ],
+      "description": "A corridor with a fire exit sign, information technology sign, and a door leading to the reception area."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -4016,7 +6047,15 @@
     "frame_path": "data/frames/frame_00297.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "fire_equipment"
+      ],
+      "description": "A corridor leading to an information technology section with a door and fire equipment."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -4027,7 +6066,15 @@
     "frame_path": "data/frames/frame_00298.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "fire_equipment"
+      ],
+      "description": "A corridor leading to an information technology reception area with a door and fire equipment."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -4038,7 +6085,15 @@
     "frame_path": "data/frames/frame_00299.jpg",
     "quality_score": null,
     "objects": [],
-    "scene_tags": null,
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [
+        "door",
+        "fire_equipment"
+      ],
+      "description": "A corridor with a sign indicating 'information technology' and a door leading to the reception area."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null
@@ -4048,8 +6103,24 @@
     "timestamp": 300.0,
     "frame_path": "data/frames/frame_00300.jpg",
     "quality_score": null,
-    "objects": [],
-    "scene_tags": null,
+    "objects": [
+      {
+        "class": "tv",
+        "confidence": 0.7046,
+        "bbox": [
+          0.8549,
+          0.3227,
+          0.9999,
+          0.7892
+        ]
+      }
+    ],
+    "scene_tags": {
+      "scene_type": "corridor",
+      "landmarks": [],
+      "navigation_relevance": [],
+      "description": "A corridor with a fire extinguisher and a sign indicating 'INFORMATION TECHNOLOGY'."
+    },
     "landmarks": [],
     "segment_id": null,
     "place_id": null

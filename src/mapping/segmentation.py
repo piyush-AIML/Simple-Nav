@@ -42,21 +42,41 @@ def _landmark_jaccard(a: Observation, b: Observation) -> float:
 
 
 def _semantic_change(a: Observation, b: Observation) -> float:
-    """0 or 1: scene_type change, or a strong landmark change."""
+    """0 or 1: scene_type change, or a strong landmark change.
+
+    "unknown" is neutral (Rule 4) — a flip into/out of unknown is missing
+    evidence, not a real scene change."""
     if a.scene_tags or b.scene_tags:
         sa = (a.scene_tags or {}).get("scene_type")
         sb = (b.scene_tags or {}).get("scene_type")
-        if sa and sb and sa != sb:
+        if sa and sb and sa != sb and sa != "unknown" and sb != "unknown":
             return 1.0
     return 0.0 if _landmark_jaccard(a, b) >= 0.5 else 1.0
 
 
+SEMANTIC_PERSISTENCE_WINDOW = 3
+
+
 def change_scores(observations: list[Observation]) -> list[float]:
-    """Per-pair change score (len = n-1): visual + 0.5 * semantic."""
+    """Per-pair change score (len = n-1): visual + 0.5 * semantic.
+
+    The semantic term is gated on PERSISTENCE: a scene change only counts
+    when the new scene type holds for the next few frames. Per-frame VLM
+    output flickers (corridor <-> room <-> unknown within one walkthrough
+    stretch — measured: 72 flips over 301 frames with the LFM2 tagger), and
+    one flipped frame must not cut the sequence — the same spike-suppression
+    rule §8 applies to the visual signal."""
     scores = []
-    for a, b in zip(observations, observations[1:]):
+    for i, (a, b) in enumerate(zip(observations, observations[1:])):
         visual = _visual_distance(a, b)
         semantic = _semantic_change(a, b)
+        if semantic > 0.0:
+            sb = (b.scene_tags or {}).get("scene_type")
+            window = observations[i + 2 : i + 2 + SEMANTIC_PERSISTENCE_WINDOW]
+            if window and any(
+                (o.scene_tags or {}).get("scene_type") != sb for o in window
+            ):
+                semantic = 0.0
         scores.append(visual + 0.5 * semantic)
     return scores
 

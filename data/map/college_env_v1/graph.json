@@ -3,36 +3,26 @@
     {
       "id": 0,
       "node_type": "unknown",
-      "observation_count": 93
+      "observation_count": 152
     },
     {
       "id": 1,
-      "node_type": "unknown",
-      "observation_count": 4
+      "node_type": "corridor",
+      "observation_count": 30
     },
     {
       "id": 2,
-      "node_type": "unknown",
-      "observation_count": 55
+      "node_type": "corridor",
+      "observation_count": 106
     },
     {
       "id": 3,
-      "node_type": "unknown",
-      "observation_count": 36
+      "node_type": "elevator",
+      "observation_count": 6
     },
     {
       "id": 4,
-      "node_type": "unknown",
-      "observation_count": 101
-    },
-    {
-      "id": 6,
-      "node_type": "unknown",
-      "observation_count": 5
-    },
-    {
-      "id": 7,
-      "node_type": "unknown",
+      "node_type": "corridor",
       "observation_count": 7
     }
   ],
@@ -43,7 +33,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 97,
+      "supporting_observations": 182,
       "mean_visual_strength": 0.0
     },
     {
@@ -52,7 +42,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 59,
+      "supporting_observations": 136,
       "mean_visual_strength": 0.0
     },
     {
@@ -61,7 +51,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 91,
+      "supporting_observations": 112,
       "mean_visual_strength": 0.0
     },
     {
@@ -70,25 +60,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 137,
-      "mean_visual_strength": 0.0
-    },
-    {
-      "source": 4,
-      "target": 6,
-      "confidence": 1.0,
-      "forward_count": 1,
-      "reverse_count": 0,
-      "supporting_observations": 106,
-      "mean_visual_strength": 0.0
-    },
-    {
-      "source": 6,
-      "target": 7,
-      "confidence": 1.0,
-      "forward_count": 1,
-      "reverse_count": 0,
-      "supporting_observations": 12,
+      "supporting_observations": 13,
       "mean_visual_strength": 0.0
     }
   ]

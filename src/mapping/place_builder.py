@@ -32,6 +32,7 @@ class Place:
     exemplar_ids: list[str] = field(default_factory=list)
     scene_types: Counter[str] = field(default_factory=Counter)
     landmarks: list[str] = field(default_factory=list)
+    object_classes: list[str] = field(default_factory=list)  # Stage 23: historical COCO classes
     visual_stats: dict = field(default_factory=dict)  # {"mean_similarity", "std_similarity"}
 
     def to_dict(self) -> dict:
@@ -42,6 +43,7 @@ class Place:
             "exemplar_ids": self.exemplar_ids,
             "scene_types": dict(self.scene_types),
             "landmarks": self.landmarks,
+            "object_classes": self.object_classes,
             "visual_stats": self.visual_stats,
         }
 
@@ -54,6 +56,7 @@ class Place:
             exemplar_ids=list(d.get("exemplar_ids", [])),
             scene_types=Counter(d.get("scene_types", {})),
             landmarks=list(d.get("landmarks", [])),
+            object_classes=list(d.get("object_classes", [])),
             visual_stats=dict(d.get("visual_stats", {})),
         )
 
@@ -133,6 +136,17 @@ def _landmark_union(observations: list[Observation]) -> list[str]:
     return [lm for lm, _ in counts.most_common()]
 
 
+def _object_union(observations: list[Observation]) -> list[str]:
+    """Historical COCO class names observed in this place (Stage 23 evidence)."""
+    counts: Counter[str] = Counter()
+    for o in observations:
+        for obj in (o.objects or []):
+            cls = obj.get("class") if isinstance(obj, dict) else getattr(obj, "class_name", None)
+            if cls:
+                counts[str(cls)] += 1
+    return [c for c, _ in counts.most_common()]
+
+
 def _visual_stats(observations: list[Observation]) -> dict:
     embeddings = np.stack([o.embedding for o in observations])
     mean = embeddings.mean(axis=0)
@@ -170,6 +184,7 @@ def build_places(
                     (o.scene_tags or {}).get("scene_type", "unknown") for o in members
                 ),
                 landmarks=_landmark_union(members),
+                object_classes=_object_union(members),
                 visual_stats=_visual_stats(members),
             )
         )

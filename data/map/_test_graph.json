@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "a",
+      "node_type": "room",
+      "observation_count": 5
+    },
+    {
+      "id": "b",
+      "node_type": "room",
+      "observation_count": 5
+    }
+  ],
+  "edges": [
+    {
+      "source": "a",
+      "target": "b",
+      "confidence": 0.9,
+      "forward_count": 4,
+      "reverse_count": 0,
+      "supporting_observations": 10,
+      "mean_visual_strength": 0.0
+    }
+  ]
+}

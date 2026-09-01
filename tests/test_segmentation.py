@@ -93,3 +93,38 @@ def test_short_noise_burst_at_edge_does_not_create_tiny_segment():
     plan = [(B, "b")] * 2 + [(A, "a")] * 8
     segments = run(plan, min_length=3)
     assert len(segments) == 1, segments
+
+
+def test_scene_flicker_does_not_cut():
+    """A single flipped frame must not create a persistent boundary — the
+    semantic change only counts when the new scene type persists. At most
+    one temporary split survives segmentation; reconciliation converges
+    (same spike contract as the visual case)."""
+    plan = [(A, "corridor")] * 5 + [(A, "room")] + [(A, "corridor")] * 5
+    obs = obs_sequence(plan)
+    segments = segment_observations(obs, distance_threshold=0.35)
+    assert len(segments) <= 2, segments
+
+    from src.mapping.place_builder import build_places
+    from src.mapping.place_reconciliation import reconcile_places
+
+    places = build_places(obs, segments)
+    merged = reconcile_places(
+        places, obs,
+        {"merge_visual_threshold": 0.75, "merge_visual_extra_threshold": 0.92,
+         "merge_landmark_threshold": 0.5, "merge_scene_required": True},
+    )
+    assert len(merged) == 1, f"flicker split survived reconciliation: {merged}"
+
+
+def test_unknown_is_neutral_in_change_scores():
+    """Flipping into 'unknown' is missing evidence, not a scene change."""
+    plan = [(A, "corridor")] * 4 + [(A, "unknown")] * 4
+    scores = change_scores(obs_sequence(plan))
+    assert scores == [0.0] * 7
+
+
+def test_persistent_scene_change_still_cuts():
+    plan = [(A, "corridor")] * 5 + [(A, "room")] * 5
+    segments = run(plan, distance_threshold=0.35)
+    assert len(segments) == 2, segments

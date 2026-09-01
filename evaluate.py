@@ -84,13 +84,16 @@ def report(name: str, y_true: list[str], y_pred: list[str]) -> None:
 
 def main() -> None:
     config = load_config()
-    exemplars_file = resolve_path(config["paths"]["place_exemplars_file"])
-    exemplar_ids_file = resolve_path(config["paths"]["exemplar_place_ids_file"])
-    names_file = resolve_path(config["paths"]["place_names_file"])
-    test_labels_file = resolve_path(config["paths"]["test_labels_file"])
-    frames_dir = resolve_path(config["paths"]["frames_dir"])
-    assignments_file = resolve_path(config["paths"]["place_assignments_file"])
-    frame_names_file = resolve_path(config["paths"]["frame_names_file"])
+    paths = config.get("paths", {})
+    # legacy keys were dropped from config.yaml in the v2 migration — fall
+    # back to the file locations the legacy pipeline always used
+    exemplars_file = resolve_path(paths.get("place_exemplars_file", "data/map/place_exemplars.npy"))
+    exemplar_ids_file = resolve_path(paths.get("exemplar_place_ids_file", "data/map/exemplar_place_ids.npy"))
+    names_file = resolve_path(paths.get("place_names_file", "data/map/place_names.json"))
+    test_labels_file = resolve_path(paths.get("test_labels_file", "data/evaluation/test_labels.json"))
+    frames_dir = resolve_path(paths.get("frames_dir", "data/frames"))
+    assignments_file = resolve_path(paths.get("place_assignments_file", "data/map/place_assignments.json"))
+    frame_names_file = resolve_path(paths.get("frame_names_file", "data/map/frame_names.json"))
     threshold = config["navigation"]["confidence_threshold"]
 
     if not test_labels_file.exists():

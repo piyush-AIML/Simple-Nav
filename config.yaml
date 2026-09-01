@@ -54,22 +54,31 @@ embedding:
   image_size: 224
 
 perception:
-  # Object detection (Stage 06). YOLOv8n detects COCO classes only — doors,
+  # Object detection (Stage 06, planner v2 §5.1). YOLO26n: smaller (2.4M
+  # params), more accurate (COCO mAP50-95 ~40.9 vs ~37.3), NMS-free head =
+  # more consistent per-frame latency. Detects COCO classes only — doors,
   # stairs, signs are covered by the VLM layer (Stage 07). The detector is
   # EVIDENCE, never ground truth for topology/coordinates.
   detector_enabled: true
-  detector_model: "yolov8n.pt"
+  detector_model: "yolo26n.pt"
   detector_confidence: 0.35
-  # VLM scene/landmark tagging (Stage 07). The interface + schema validation
-  # + stub are complete; the Qwen2.5-VL-3B 4-bit backend produced incoherent
-  # output on this GPU (debugging parked 2026-09-02 — see executor Stage 07).
-  # DISABLED for now: the pipeline runs on the deterministic stub. The VLM is
-  # EVIDENCE only — its output can never define coordinates, topology, or the
-  # final localization (fixed JSON schema).
-  vlm_enabled: false
-  vlm_model: "Qwen/Qwen2.5-VL-3B-Instruct"
-  vlm_quantization: "4bit"
+  # VLM scene/landmark tagging (Stage 07, planner v2 §5.2). Default backend
+  # LFM2.5-VL-450M at bf16 — the Qwen2.5-VL-3B 4-bit backend is broken by a
+  # documented transformers >= 4.50 regression (planner v2 §4 incident
+  # report). Never use int4 with LFM2 (degrades sharply). Fallback chain:
+  # LFM2 -> SmolVLM2-500M -> StubTagger. The VLM is EVIDENCE only — its
+  # output can never define coordinates, topology, or the final localization
+  # (fixed JSON schema).
+  vlm_enabled: true
+  vlm_model: "LiquidAI/LFM2.5-VL-450M"
+  vlm_quantization: "bf16"
   vlm_max_tokens: 256
+
+runtime:
+  # Stage 24 (planner v2 §7): live-loop gate + offline map-building batching.
+  max_stale_seconds: 5.0        # forced expensive re-run even if nothing looks novel
+  vlm_batch_size: 12            # offline mapping pass only; live loop stays 1-at-a-time
+  detector_batch_size: 16
 
 clustering:
   # KMeans k is not fixed by hand — we sweep this range and pick the k with the

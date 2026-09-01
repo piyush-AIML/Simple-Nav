@@ -6,8 +6,8 @@
   "encoder_version": "torchvision_imagenet",
   "embedding_dimension": 512,
   "observation_count": 301,
-  "place_count": 7,
-  "edge_count": 6,
-  "created_at": "2026-09-02T01:30:35",
-  "hash": "82e50b12c5c7f9c9"
+  "place_count": 5,
+  "edge_count": 4,
+  "created_at": "2026-09-02T02:41:38",
+  "hash": "c556052452071263"
 }

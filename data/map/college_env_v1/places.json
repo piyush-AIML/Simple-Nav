@@ -97,55 +97,11 @@
       "obs_000089",
       "obs_000090",
       "obs_000091",
-      "obs_000092"
-    ],
-    "exemplar_ids": [
-      "obs_000000",
       "obs_000092",
-      "obs_000046"
-    ],
-    "scene_types": {
-      "unknown": 93
-    },
-    "landmarks": [],
-    "visual_stats": {
-      "mean_similarity": 0.9593,
-      "std_similarity": 0.0142,
-      "observation_count": 93
-    }
-  },
-  {
-    "place_id": 1,
-    "segment_ids": [
-      "seg_001"
-    ],
-    "observation_ids": [
       "obs_000093",
       "obs_000094",
       "obs_000095",
-      "obs_000096"
-    ],
-    "exemplar_ids": [
-      "obs_000093",
       "obs_000096",
-      "obs_000095"
-    ],
-    "scene_types": {
-      "unknown": 4
-    },
-    "landmarks": [],
-    "visual_stats": {
-      "mean_similarity": 0.9558,
-      "std_similarity": 0.015,
-      "observation_count": 4
-    }
-  },
-  {
-    "place_id": 2,
-    "segment_ids": [
-      "seg_002"
-    ],
-    "observation_ids": [
       "obs_000097",
       "obs_000098",
       "obs_000099",
@@ -203,24 +159,37 @@
       "obs_000151"
     ],
     "exemplar_ids": [
-      "obs_000097",
+      "obs_000000",
       "obs_000151",
-      "obs_000124"
+      "obs_000076"
     ],
     "scene_types": {
-      "unknown": 55
+      "unknown": 94,
+      "corridor": 37,
+      "entrance": 1,
+      "room": 20
     },
-    "landmarks": [],
+    "landmarks": [
+      "white wall",
+      "white door",
+      "darkened room"
+    ],
+    "object_classes": [
+      "bench",
+      "tv",
+      "chair",
+      "refrigerator"
+    ],
     "visual_stats": {
-      "mean_similarity": 0.9257,
-      "std_similarity": 0.0366,
-      "observation_count": 55
+      "mean_similarity": 0.9284,
+      "std_similarity": 0.0454,
+      "observation_count": 152
     }
   },
   {
-    "place_id": 3,
+    "place_id": 1,
     "segment_ids": [
-      "seg_003"
+      "seg_001"
     ],
     "observation_ids": [
       "obs_000152",
@@ -252,36 +221,42 @@
       "obs_000178",
       "obs_000179",
       "obs_000180",
+      "obs_000181"
+    ],
+    "exemplar_ids": [
+      "obs_000152",
       "obs_000181",
+      "obs_000167"
+    ],
+    "scene_types": {
+      "corridor": 24,
+      "room": 3,
+      "unknown": 3
+    },
+    "landmarks": [
+      "darkened ceiling",
+      "darkened door",
+      "darkened floor"
+    ],
+    "object_classes": [],
+    "visual_stats": {
+      "mean_similarity": 0.9421,
+      "std_similarity": 0.0247,
+      "observation_count": 30
+    }
+  },
+  {
+    "place_id": 2,
+    "segment_ids": [
+      "seg_002"
+    ],
+    "observation_ids": [
       "obs_000182",
       "obs_000183",
       "obs_000184",
       "obs_000185",
       "obs_000186",
-      "obs_000187"
-    ],
-    "exemplar_ids": [
-      "obs_000152",
       "obs_000187",
-      "obs_000170"
-    ],
-    "scene_types": {
-      "unknown": 36
-    },
-    "landmarks": [],
-    "visual_stats": {
-      "mean_similarity": 0.9256,
-      "std_similarity": 0.0357,
-      "observation_count": 36
-    }
-  },
-  {
-    "place_id": 4,
-    "segment_ids": [
-      "seg_004",
-      "seg_005"
-    ],
-    "observation_ids": [
       "obs_000188",
       "obs_000189",
       "obs_000190",
@@ -381,33 +356,52 @@
       "obs_000284",
       "obs_000285",
       "obs_000286",
-      "obs_000287",
-      "obs_000288"
+      "obs_000287"
     ],
     "exemplar_ids": [
-      "obs_000188",
-      "obs_000261",
-      "obs_000225",
-      "obs_000262",
-      "obs_000288",
-      "obs_000275"
+      "obs_000182",
+      "obs_000287",
+      "obs_000235"
     ],
     "scene_types": {
-      "unknown": 101
+      "unknown": 50,
+      "room": 5,
+      "corridor": 51
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "window",
+      "ceiling fan",
+      "wall",
+      "large window",
+      "door at end of corridor",
+      "window with geometric pattern",
+      "tiled floor",
+      "white walls",
+      "hallway",
+      "fire_equipment",
+      "door frame",
+      "window on right",
+      "information technology sign",
+      "door on right"
+    ],
+    "object_classes": [
+      "tv",
+      "person"
+    ],
     "visual_stats": {
-      "mean_similarity": 0.9407,
-      "std_similarity": 0.0463,
-      "observation_count": 27
+      "mean_similarity": 0.9157,
+      "std_similarity": 0.0484,
+      "observation_count": 106
     }
   },
   {
-    "place_id": 6,
+    "place_id": 3,
     "segment_ids": [
-      "seg_006"
+      "seg_003"
     ],
     "observation_ids": [
+      "obs_000288",
       "obs_000289",
       "obs_000290",
       "obs_000291",
@@ -415,24 +409,25 @@
       "obs_000293"
     ],
     "exemplar_ids": [
-      "obs_000289",
+      "obs_000288",
       "obs_000293",
       "obs_000291"
     ],
     "scene_types": {
-      "unknown": 5
+      "elevator": 6
     },
     "landmarks": [],
+    "object_classes": [],
     "visual_stats": {
-      "mean_similarity": 0.9372,
-      "std_similarity": 0.0209,
-      "observation_count": 5
+      "mean_similarity": 0.9254,
+      "std_similarity": 0.0212,
+      "observation_count": 6
     }
   },
   {
-    "place_id": 7,
+    "place_id": 4,
     "segment_ids": [
-      "seg_007"
+      "seg_004"
     ],
     "observation_ids": [
       "obs_000294",
@@ -449,9 +444,12 @@
       "obs_000297"
     ],
     "scene_types": {
-      "unknown": 7
+      "corridor": 7
     },
     "landmarks": [],
+    "object_classes": [
+      "tv"
+    ],
     "visual_stats": {
       "mean_similarity": 0.959,
       "std_similarity": 0.0438,

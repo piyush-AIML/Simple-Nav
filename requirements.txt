@@ -3,9 +3,17 @@ numpy
 scikit-learn
 torch
 torchvision
-faiss-cpu
+faiss-cpu          # or `faiss` if running the pinned conda env from STATE.md
 networkx
 matplotlib
 streamlit
 PyYAML
 pyttsx3
+ultralytics>=8.4          # YOLO26n support
+transformers>=5.1         # floor per LFM2.5-VL-450M's model card
+accelerate
+pillow
+pytest
+# Optional — only needed if experimenting with the deprecated Qwen2.5-VL backend:
+# bitsandbytes
+# qwen-vl-utils

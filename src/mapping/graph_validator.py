@@ -73,11 +73,20 @@ def validate_graph(
                 ValidationWarning("WARN", "suspicious_node",
                                   f"Place {node} has high internal visual variance (std={var:.2f})")
             )
-        if place is not None and len(place.scene_types) > 1:
-            warnings.append(
-                ValidationWarning("WARN", "suspicious_node",
-                                  f"Place {node} mixes scene types: {dict(place.scene_types)}")
-            )
+        if place is not None and place.scene_types:
+            # "unknown" is missing evidence, not a conflicting type (Rule 4),
+            # and a small minority is per-frame VLM flicker — only flag a
+            # genuine mix of KNOWN types with real support
+            known = {s: c for s, c in place.scene_types.items() if s != "unknown"}
+            total = sum(known.values())
+            if total > 0 and len(known) > 1:
+                top = sorted(known.values(), reverse=True)
+                minority_fraction = (total - top[0]) / total
+                if minority_fraction >= 0.2:
+                    warnings.append(
+                        ValidationWarning("WARN", "suspicious_node",
+                                          f"Place {node} mixes scene types: {known}")
+                    )
 
     # -- weak edges --
     for u, v, attrs in graph.edges(data=True):

@@ -155,6 +155,7 @@ def _merge_places(a: Place, b: Place) -> Place:
         exemplar_ids=a.exemplar_ids + b.exemplar_ids,
         scene_types=a.scene_types + b.scene_types,
         landmarks=_top_landmarks(a.landmarks + b.landmarks),
+        object_classes=_top_landmarks(a.object_classes + b.object_classes),
         visual_stats={**a.visual_stats, **b.visual_stats},
     )
     # cap exemplars at the configured max

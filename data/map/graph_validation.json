@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "level": "WARN",
+    "check": "suspicious_node",
+    "message": "Place 0 mixes scene types: {'corridor': 37, 'entrance': 1, 'room': 20}"
+  }
+]

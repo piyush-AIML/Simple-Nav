@@ -22,7 +22,14 @@ from src.mapping.place_builder import build_places
 from src.mapping.place_reconciliation import reconcile_places
 from src.mapping.segmentation import segment_observations
 from src.mapping.transition_builder import extract_transitions
-from src.utils import load_config, resolve_path, setup_logger
+from src.perception import backend_banner
+from src.utils import (
+    load_config,
+    print_config_issues,
+    resolve_path,
+    setup_logger,
+    validate_config,
+)
 
 logger = setup_logger("build_map")
 
@@ -45,6 +52,15 @@ def main() -> None:
     args = parser.parse_args()
 
     config = load_config(args.config) if args.config else load_config()
+
+    # Stage 30 (planner v2 §13): config validation is the FIRST line —
+    # hard errors abort, warnings print
+    issues = validate_config(config)
+    print_config_issues(issues, logger)
+    if any(level == "error" for level, _ in issues):
+        raise SystemExit("config.yaml failed validation — fix the errors above")
+    logger.info(backend_banner(config))
+
     mapping_cfg = config.get("mapping", {})
     obs_dir = resolve_path(config["paths"]["observations_dir"])
     map_dir = resolve_path(config["paths"]["map_dir"])

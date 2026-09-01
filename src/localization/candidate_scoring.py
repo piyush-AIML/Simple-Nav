@@ -6,6 +6,10 @@ one interpretable score per candidate.
 
 All terms normalized to [0, 1]. Missing metadata yields neutral terms (0.5),
 never a hard zero — absence of evidence is not evidence of absence.
+
+Stage 23 (planner v2 §6): the w_semantic slot is filled by
+src.localization.semantic_scoring.semantic_similarity (scene + landmark +
+object evidence) — previously a placeholder scene/landmark-only term.
 """
 
 from __future__ import annotations
@@ -13,6 +17,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from src.localization.retrieval import Candidate, RetrievalResult
+from src.localization.semantic_scoring import semantic_similarity
 from src.mapping.place_builder import Place
 from src.utils import setup_logger
 
@@ -50,7 +55,10 @@ def landmark_jaccard(list_a: list[str], list_b: list[str]) -> float:
 
 def semantic_term(query_scene: str | None, query_landmarks: list[str],
                   place_scene: str, place_landmarks: list[str]) -> float:
-    """0.5 = neutral when the query carries no semantic evidence."""
+    """Legacy Stage-16 placeholder (scene + landmarks only). Superseded by
+    semantic_similarity (Stage 23) in the scoring path; kept for its tests
+    and as a reference for the original term shape. 0.5 = neutral when the
+    query carries no semantic evidence."""
     if query_scene is None or query_scene == "unknown":
         return 0.5
     scene = 1.0 if query_scene == place_scene else (0.5 if place_scene == "unknown" else 0.0)
@@ -80,20 +88,24 @@ def score_candidates(
     if total_w <= 0:
         w = {k: 0.25 for k in w}
 
-    query_scene = (query_tags or {}).get("scene_type") if query_tags else None
-    query_landmarks = query_tags.get("landmarks", []) if query_tags else []
-
     scored: list[ScoredCandidate] = []
     for cand in result.candidates:
         place = graph_terms and graph_terms.get(cand.place_id)
         gt = place if place is not None else 0.5
         place_rec = places.get(cand.place_id) if places else None
-        place_scene = (
-            place_rec.scene_types.most_common(1)[0][0]
-            if place_rec is not None and place_rec.scene_types else "unknown"
-        )
-        place_landmarks = place_rec.landmarks if place_rec is not None else []
-        s = semantic_term(query_scene, query_landmarks, place_scene, place_landmarks)
+        if place_rec is not None:
+            place_scene = (
+                place_rec.scene_types.most_common(1)[0][0]
+                if place_rec.scene_types else "unknown"
+            )
+            place_tags = {"scene_type": place_scene, "landmarks": place_rec.landmarks}
+            place_objects = getattr(place_rec, "object_classes", None)
+        else:
+            place_tags = None
+            place_objects = None
+        # Stage 23: real semantic evidence (scene + landmarks + objects),
+        # neutral 0.5 when the query carries nothing (Rule 4)
+        s = semantic_similarity(query_tags, query_objects, place_tags, place_objects)
         temporal = 1.0 if previous_place_id is not None and cand.place_id == previous_place_id else 0.5
         total = (
             w["w_visual"] * cand.visual_score

@@ -1,10 +1,11 @@
 # SimpleNav — Vision-Based Indoor Navigation (Prototype)
 
 A smartphone-camera-only indoor navigation prototype: record a walkthrough
-video of a building once, and the system can then tell you which mapped
-area a new photo (or live camera feed) was taken in, and give you —
-and automatically update — directions to another area. No GPS, no BLE
-beacons, no WiFi fingerprinting, no manual floor-plan digitization.
+video of a building once, and the system autonomously builds a semantic
+connectivity graph from it, then tells you which mapped area a new photo (or
+live camera feed) was taken in — and gives you spoken turn-by-turn
+directions to another area. No GPS, no BLE beacons, no WiFi fingerprinting,
+no manual floor-plan digitization.
 
 ## Problem statement
 
@@ -17,65 +18,72 @@ and publicly available pretrained models — can support basic "where am I" /
 
 ## Architecture
 
+Two pipelines. The offline one runs once per building; the runtime one runs
+continuously against the camera.
+
 ```
-                     OFFLINE: build the map (run once per building)
- ┌────────────┐   ┌───────────────┐   ┌───────────────────┐   ┌───────────────┐
- │  Walkthrough│──▶│ extract_frames │──▶│  embed_frames      │──▶│ build_places  │
- │  video      │   │ (every Nth     │   │  (pretrained       │   │ (K-Means, k   │
- │             │   │  frame)        │   │  ResNet18 features)│   │  by silhouette,│
- └────────────┘   └───────────────┘   └───────────────────┘   │  multiple      │
-                                                                 │  exemplars per │
-                                                                 │  place)        │
-                                                                 └───────┬───────┘
-                                                                         │
-                                                                 ┌───────▼───────┐
-                                                                 │ build_graph   │
-                                                                 │ (place        │
-                                                                 │  transitions, │
-                                                                 │  weighted by  │
-                                                                 │  count)       │
-                                                                 └───────┬───────┘
-                                                                         │
-                                        map = exemplar vectors + place names + graph
-                                                                         │
-      RUNTIME: use the map                                              │
- ┌────────────┐   ┌───────────────┐   ┌───────────────────┐             │
- │ Photo / live│──▶│ embed (same   │──▶│ localize.py:        │◀────────────┘
- │ camera frame│   │ ResNet18)     │   │ FAISS flat vector    │
- └────────────┘   └───────────────┘   │ retrieval, confidence │
-                                       │ threshold gate        │
-                                       └──────────┬────────────┘
-                                                  │
-                                       ┌──────────▼────────────┐
-                                       │ navigate.py:           │
-                                       │ weighted shortest path │
-                                       │ → turn-by-turn names   │
-                                       └──────────┬─────────────┘
-                                                  │
-                          ┌───────────────────────┴───────────────────────┐
-                          │                                               │
-                 ┌────────▼────────┐                            ┌─────────▼────────┐
-                 │ live_tracker.py  │                            │ app.py (Streamlit)│
-                 │ re-routes when   │◀── used by both ──────────▶│ single photo +    │
-                 │ your place       │                            │ live camera tabs, │
-                 │ changes          │                            │ floor plan, TTS   │
-                 └──────────────────┘                            └───────────────────┘
+                       OFFLINE MAPPING                        RUNTIME LOCALIZATION
+                     walkthrough video                          camera stream
+                            │                                        │
+                            ▼                                        ▼
+                     smart sampling                           runtime gate (§24)
+               (quality + novelty + sustained                 (cheap novelty + forced
+                     change retention)                        interval; skip redundant
+                            │                                  frames, reuse state)
+                            ▼                                        │
+                observation creation                                  ▼
+                            │                                ┌───────┴───────┐
+               ┌────────────┴────────────┐                   ▼               ▼
+               ▼                         ▼             YOLO26n           embedding
+          YOLO26n                  LFM2.5-VL-450M     (objects)        (ResNet18)
+         (objects)                  (scene tags)           │               │
+               │                         │                 ▼               ▼
+               └────────────┬────────────┘          semantic scoring     FAISS top-K
+                            ▼                          (§23: scene +       │
+                     visual embedding              landmarks + objects)   ▼
+                            │                                │       candidate scoring
+                            ▼                                │               │
+                   temporal segmentation                    │        +──────┴───────+
+                     (adaptive threshold)                   │        ▼              ▼
+                            │                                │  temporal state    graph
+                            ▼                                │  model (Bayes)  constraints
+                     place formation +                       │        │              │
+                     reconciliation,                         └────────┴──────┬───────┘
+                     transitions                                       ▼
+                            │                                   stable location
+                            ▼                                           │
+                    graph + validation                                 ▼
+                            │                                       destination
+                            ▼                                           │
+                     versioned map                                    ▼
+                     (college_env_v1)                            shortest path
+                                                                        │
+                                                                        ▼
+                                                              simple instruction + TTS
 ```
+
+Everything is evidence, nothing is ground truth: the detector, VLM, and
+retrieval propose; the Bayesian state estimator + graph topology decide.
+Unknown beats confidently wrong — residual probability mass is explicit.
 
 ## Tech stack
 
 | Component | Choice |
 |---|---|
-| Frame extraction | OpenCV, fixed sampling interval |
-| Feature extraction | Pretrained ResNet18 (ImageNet weights), classification head removed |
-| Place discovery | K-Means, k chosen by sweeping a range and picking the best silhouette score |
-| Place representation | Multiple exemplar vectors per place (small secondary KMeans within each place), not one blurry average |
-| Map structure | NetworkX graph, edges weighted by observed transition counts |
-| Localization | FAISS `IndexFlatIP` (flat vector retrieval) + confidence threshold + majority-vote smoothing |
+| Frame sampling | OpenCV smart sampler: quality gate (blur/dark) + mean-subtracted 32×32 descriptor novelty + sustained-change retention |
+| Object detection | YOLO26n (`ultralytics`, COCO classes) — evidence for object-overlap scoring |
+| Scene/landmark tagging | `LiquidAI/LFM2.5-VL-450M` at bf16 via transformers (fixed JSON schema, validated; fallback chain LFM2 → SmolVLM2-500M → deterministic stub) |
+| Feature extraction | Pretrained ResNet18 (ImageNet weights), classification head removed, behind a `VisualEncoder` registry |
+| Temporal segmentation | Adaptive threshold (mean + 2.5σ of embedding change scores) |
+| Place formation | One place per temporal segment; ≤3 exemplars via temporal diversity; multi-signal reconciliation (visual + landmarks + scene + context) |
+| Map structure | NetworkX graph from debounced transitions, junction detection, validation report (connectivity/isolated/weak-edge/duplicates) |
+| Map artifact | Versioned bundle under `data/map/<map_id>/`: manifest, places, graph, exemplars, FAISS index |
+| Localization | FAISS top-K retrieval → candidate scoring (visual + semantic + temporal + graph terms) → Bayes state estimator (likelihood = visual+semantic only; graph/temporal enter via the transition prior) |
+| State machine | TRACKING / UNCERTAIN / LOST / REACQUIRING / ARRIVED, K-consecutive stabilization, LOCAL/GLOBAL reacquisition, HIGH/MEDIUM/LOW/UNKNOWN confidence |
 | Routing | NetworkX shortest path, weighted to favor strongly-observed connections |
-| Live tracking | Snapshot-based camera input with automatic re-routing on position change |
+| Live loop | Runtime gate reusing the Stage 03 novelty descriptor + forced interval (`runtime.max_stale_seconds`) |
 | Demo UI | Streamlit (single-photo + live camera tabs) |
-| Optional extras | Floor-plan route overlay, text-to-speech directions |
+| Optional extras | Floor-plan route overlay, text-to-speech directions (`pyttsx3`) |
 | Config | Single `config.yaml`, no hardcoded paths |
 
 ## Setup
@@ -84,31 +92,28 @@ and publicly available pretrained models — can support basic "where am I" /
 pip install -r requirements.txt
 ```
 
-Put a walkthrough video at `data/raw_video.mp4` (or update `config.yaml`).
-The first run needs internet access once, to download the pretrained
-ResNet18 weights (standard PyTorch model hub — should work on any normal
-connection).
+The first run needs internet access once, to download the pretrained model
+weights (ResNet18 from the PyTorch hub; YOLO26n and LFM2.5-VL-450M from
+Hugging Face / Ultralytics). The VLM runs at bf16 and fits a 6 GB GPU
+without quantization — `bitsandbytes` is not required (and must NOT be used
+to quantize LFM2 to 4-bit; it degrades sharply).
 
 ## Building the map
 
-Run these in order:
+Put a walkthrough video at `data/College_env.mp4` (or update
+`config.yaml` → `paths.video`), then:
 
 ```bash
-python -m src.extract_frames
-python -m src.embed_frames
-python -m src.build_places
-python -m src.build_graph
+python -m src.extract_frames      # smart frame sampling
+python -m src.embed_frames        # embeddings + YOLO26n objects + VLM scene tags
+python -m src.mapping.build_map   # segmentation → places → graph → versioned map
 ```
 
-Then name your places. Two ways:
+Then name your places by editing `data/map/<map_id>/place_names.json`.
 
-- **Interactive (recommended):** `python -m src.label_places` — shows a few
-  representative photos per discovered place and lets you type a name.
-- **Manual:** open `data/map/place_names.json` and rename the auto-generated
-  `"Place_0"`, `"Place_1"`, ... entries yourself.
-
-Re-running `build_places.py` won't overwrite a `place_names.json` that
-already has custom names.
+The legacy Milestone-A pipeline (`scripts/benchmark_baseline.py`) remains as
+the permanent before/after comparison harness — it is never deleted and its
+outputs stay reproducible.
 
 ## Using it
 
@@ -133,11 +138,11 @@ as you move:
 ```bash
 python live_navigate.py --destination "Room 101"
 ```
-Press `q` in the video window to quit. This periodically grabs a frame
-(interval configurable in `config.yaml` under `live:`), localizes it, and
-whenever your tracked place changes, recomputes and reprints the route.
-Low-confidence frames hold your last known position instead of causing the
-route to jump around.
+Press `q` in the video window to quit. The live loop runs the full
+localization pipeline (detector → VLM → embedding → retrieval → semantic
+scoring → Bayes update) only on novel frames; redundant frames reuse the
+last state (runtime gate, `runtime.max_stale_seconds` forces a periodic
+re-run).
 
 The desktop live mode defaults to camera index `1`, which is commonly the rear
 camera when both front and rear cameras are available. Use
@@ -176,24 +181,26 @@ graph view.
 
 ## Evaluating accuracy
 
-Hand-label a small set of test frames in `data/test_labels.json`:
+Hand-label a small set of test frames in `data/evaluation/test_labels.json`:
 
 ```json
-{ "frame_00010.jpg": "Lobby", "frame_00050.jpg": "Room 101" }
+{ "frame_00010.jpg": 0, "frame_00050.jpg": 3 }
 ```
 
-Then run:
+Then run the research evaluation suite:
 
 ```bash
-python evaluate.py
+python evaluate_suite.py                 # localization + graph metrics + ablation
+python scripts/failure_inspector.py      # failure_log.jsonl from the decision log
+python evaluate.py                       # legacy single-run report + histogram baseline
 ```
 
-Reports accuracy, a per-place classification report, and a confusion
-matrix — for both this project's CNN-based retrieval AND a naive
-color-histogram baseline, so there's a real point of comparison rather than
-one number in isolation. For a meaningful number, use frames that weren't
-part of building the map (a short second walkthrough, or photos taken on a
-different day).
+**Important honesty note:** without real labels, every number the suite
+reports is *self-consistency against pseudo-labels*, not physical accuracy.
+Record a real walkthrough + a second independent evaluation walkthrough and
+label them before drawing research conclusions; the suite labels its output
+accordingly. For a meaningful number, use frames that weren't part of
+building the map.
 
 ## Testing
 
@@ -201,31 +208,31 @@ different day).
 pytest tests/
 ```
 
-Covers routing (shortest path, unreachable-node handling, direction
-formatting) and the live-tracking/re-routing state machine (place-change
-detection, arrival detection, holding position on low-confidence frames) —
-all with small hand-built toy graphs and synthetic vectors, no ML
-dependencies or camera required.
+130+ tests covering the full pipeline — sampling, observations, segmentation,
+place building/reconciliation, graph construction/validation, retrieval,
+scoring, semantic scoring, the Bayes state estimator, the localization state
+machine, confidence calibration, the runtime gate, and the evaluation suite.
+Slow tests (real YOLO/VLM/encoder smoke) are marked `slow` and skippable;
+fast tests use small toy graphs and synthetic vectors only.
 
 ## Limitations
 
-- Single-pass K-Means clustering — no correction if a cluster spans two
-  visually similar but actually-different rooms.
-- Live tracking is snapshot/interval-based, not true frame-by-frame video
-  tracking.
-- The confidence threshold is a single fixed number, not a calibrated
-  probability — tune it against your own building's data.
+- The current dataset is provisional: 301 pre-extracted frames from a
+  walkthrough video that is no longer in the repo. Metrics on it are
+  self-consistency, not accuracy (see above).
+- Place reconciliation can still merge two visually near-identical but
+  physically distinct rooms; semantic evidence (scene tags + landmarks +
+  objects) is the current mitigation.
+- Live tracking is interval-based, not true frame-by-frame video tracking.
 - No live camera/AR pose estimation — position is "which mapped place do
   you most resemble right now," not a precise coordinate.
 
 ## Future work
 
-- Explore temporal continuity when building places, instead of clustering
-  frames purely by appearance (revisits of a similar-looking spot later in
-  the video currently get lumped into the same cluster).
-- Replace single-frame nearest-neighbor localization with a probabilistic
-  filter that carries belief over time for more robust tracking.
-- Add a lightweight way to detect and correct bad place merges/splits
-  automatically instead of relying on manual review.
-- Investigate on-device deployment (model quantization, mobile inference)
-  for a true continuous live-camera experience on a phone.
+- Run the registered-but-untested encoder comparison (DINOv2 vs ResNet18)
+  behind the `VisualEncoder` interface, gated on a measured win.
+- Consider YOLOE-26n (open-vocabulary detection) for door/stairs/sign
+  bounding boxes — an explicit, separately-reviewed extension.
+- Investigate on-device deployment (LFM2 already runs <250 ms/frame on a
+  Jetson Orin at 512×512) for a true continuous live-camera experience on a
+  phone.
