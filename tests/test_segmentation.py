@@ -21,7 +21,7 @@ def obs_sequence(plan: list[tuple[np.ndarray, str]]) -> list[Observation]:
                 timestamp=float(i),
                 frame_path=f"data/frames/frame_{i:05d}.jpg",
                 embedding=emb,
-                scene_tags={"scene_type": scene, "landmarks": [], "navigation_relevance": []},
+                scene_tags={"scene_type": scene, "landmarks": [], "sign_text": [], "walkable": []},
             )
         )
     return out

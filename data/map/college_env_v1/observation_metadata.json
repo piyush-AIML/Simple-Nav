@@ -6,12 +6,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -22,12 +34,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -38,12 +61,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -66,11 +101,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -93,11 +139,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -120,11 +177,23 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -136,11 +205,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -162,12 +243,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and windows on both sides."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -178,12 +270,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "door",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -194,12 +298,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -221,12 +337,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -237,12 +364,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -253,12 +391,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -280,12 +430,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -307,12 +468,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -334,12 +506,21 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -361,12 +542,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -388,12 +580,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -415,12 +618,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -442,12 +656,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -469,12 +694,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -496,12 +732,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "No Entry"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -512,12 +759,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -550,11 +809,23 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Class 1",
+        "Class 2"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -577,13 +848,20 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door"
       ],
-      "description": "A long corridor with a bench and a sign indicating no entry."
+      "sign_text": [
+        "NO MARK NO ENTRY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -606,11 +884,23 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "NO MASK",
+        "NO ENTRY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -633,11 +923,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "CLASS"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -660,11 +961,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -687,11 +999,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -713,12 +1036,21 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "26"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -740,12 +1072,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "26"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -767,12 +1110,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -794,12 +1148,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -822,11 +1187,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -849,11 +1225,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -876,11 +1263,23 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -903,11 +1302,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -930,11 +1340,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a bench on the right side."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -958,17 +1379,20 @@
     "scene_tags": {
       "scene_type": "corridor",
       "landmarks": [
-        "white wall",
-        "white door",
-        "darkened room"
+        "door",
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A long hallway with a white wall and a white door, leading to a darkened room."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "white wall",
-      "white door",
-      "darkened room"
+      "door",
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -992,11 +1416,23 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a bench on the right and windows on the left."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1018,12 +1454,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a bench on the right and a door on the left."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1046,11 +1493,23 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1072,12 +1531,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1099,12 +1569,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and windows on both sides."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1115,12 +1596,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1131,12 +1624,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1147,12 +1652,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1163,9 +1680,10 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "corridor",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -1190,12 +1708,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "Long hallway with multiple doors, likely in a school or office building."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1206,12 +1735,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1222,12 +1762,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1238,12 +1790,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1265,12 +1828,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a series of doors and windows."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1292,12 +1866,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a series of doors and windows, leading to a hallway."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1308,12 +1893,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1324,12 +1921,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1351,12 +1960,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1367,12 +1987,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1394,12 +2026,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with tall windows and a door leading to another room."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1422,11 +2065,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1449,13 +2103,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with tall windows and a door leading to another room."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1477,12 +2140,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a series of doors and windows, leading to a reception area."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "CIRCUIT"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1504,12 +2178,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1531,12 +2216,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "CLASS AROOM"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1558,12 +2254,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Class Room"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1585,12 +2292,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1612,12 +2330,21 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a class room on the left and a door on the right."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "class room"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1628,12 +2355,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1644,12 +2382,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Class Room"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1660,12 +2409,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long hallway with a white wall and a white door, leading to a room with a green door, possibly a reception desk."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1688,11 +2448,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1715,11 +2486,24 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment"
+      ],
+      "sign_text": [
+        "NOTICE BOARD"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1742,11 +2526,32 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "NOTICE BOARD"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1769,11 +2574,26 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Notice Board"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1796,11 +2616,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and window, likely leading to an office or reception area."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1811,12 +2642,29 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign",
+        "Fire Equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1827,12 +2675,29 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "door",
+        "direction_sign",
+        "fire_equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1843,12 +2708,32 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "fire_equipment"
+      ],
+      "sign_text": [
+        "reception",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1859,12 +2744,34 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening"
+      ],
+      "sign_text": [
+        "reception",
+        "fire_equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1875,12 +2782,35 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening"
+      ],
+      "sign_text": [
+        "reception",
+        "direction_sign",
+        "fire_equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1891,12 +2821,32 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "fire_equipment"
+      ],
+      "sign_text": [
+        "reception",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1907,12 +2857,29 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign",
+        "Fire Equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1923,12 +2890,29 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign",
+        "Fire Equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1939,12 +2923,29 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "fire_equipment"
+      ],
+      "sign_text": [
+        "Door 123",
+        "Reception",
+        "Fire Extinguisher"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1956,14 +2957,25 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
+        "direction_sign",
         "fire_equipment"
       ],
-      "description": "A long corridor with a door on the right and a fire equipment mounted on the wall."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1975,14 +2987,24 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
+        "direction_sign",
         "fire_equipment"
       ],
-      "description": "A long corridor with a door on the right and a fire extinguisher on the left."
+      "sign_text": [
+        "Door 120"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -1994,13 +3016,31 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "fire_equipment"
       ],
-      "description": "A long corridor with a door on the right and a window on the left."
+      "sign_text": [
+        "reception",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2012,13 +3052,35 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A long, narrow corridor with two windows on either side and a door on the right."
+      "sign_text": [
+        "reception",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2030,15 +3092,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "reception",
-        "desk",
-        "fire_equipment"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "Long, narrow corridor with two windows on either side."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2050,13 +3120,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with two windows on either side and a door at the end."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2068,13 +3147,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with two windows on either side and a door at the end."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2086,13 +3175,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with two windows on either side and a door at the end."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2104,13 +3202,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long, narrow corridor with a door and wall on the left."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2122,11 +3229,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a door leading to an unseen area."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2137,17 +3255,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door",
-        "reception",
-        "sign",
-        "fire_equipment"
+      "scene_type": "room",
+      "landmarks": [
+        "door"
       ],
-      "description": "A pink door with a glass window is the main focus of the image, likely leading to an entrance or reception area."
+      "sign_text": [
+        "TFP 320"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A door with a glass window and a sign above it."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2158,17 +3280,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "entrance",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door",
-        "sign",
-        "reception",
-        "fire_equipment"
+      "scene_type": "room",
+      "landmarks": [
+        "door"
       ],
-      "description": "A pink door with a glass window is the main focus of the image, likely leading to an indoor space."
+      "sign_text": [
+        "TF 10"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A door with a glass window and a sign indicating 'TF 10'."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2179,12 +3305,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a door and a sign indicating 'Room 101'."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2195,12 +3330,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2211,12 +3357,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2227,12 +3384,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2254,12 +3422,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2281,12 +3460,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2298,11 +3488,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2324,12 +3525,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and fire equipment."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2351,12 +3563,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and window."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2378,12 +3601,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2394,12 +3628,40 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "junction",
+        "reception",
+        "desk",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Junction",
+        "Directional Sign",
+        "Reception",
+        "Desk",
+        "Corridor Opening",
+        "Fire Equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "reception",
+      "desk",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2410,12 +3672,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "A CSD INITIATIVE BY BURMUTI BANK CENTRE TO LTD."
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2426,12 +3699,37 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "A CSR Initiative",
+        "Hospital",
+        "Medical Centre Pvt. Ltd."
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2442,12 +3740,34 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "reception",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2458,12 +3778,35 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Junction"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2485,9 +3828,10 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "corridor",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -2512,12 +3856,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "A CSR Initiative by Durgapur Medical Centre Pvt. Ltd."
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2540,11 +3895,23 @@
     ],
     "scene_tags": {
       "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "A CSR INITIATIVE by DURGAPUR MEDICAL CENTRE Pvt. LTD.",
+        "NO PARKING NO ENTRY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2555,9 +3922,10 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "corridor",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -2571,12 +3939,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Back Initiative"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2587,12 +3966,25 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "A CSR",
+        "DURG",
+        "MEDICAL CENTER"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2603,12 +3995,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "M"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2619,12 +4020,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "window",
+        "wall",
+        "door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2635,12 +4047,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "window",
+        "wall",
+        "door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2651,12 +4074,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2667,12 +4099,22 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "window",
+        "door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2683,9 +4125,10 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -2699,12 +4142,22 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "door",
+        "window"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2726,12 +4179,21 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2763,12 +4225,36 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a tiled floor and a large window."
+      "scene_type": "room",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "reception",
+        "door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2790,12 +4276,21 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2806,9 +4301,10 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -2822,9 +4318,10 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -2838,12 +4335,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2854,12 +4360,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2870,12 +4385,22 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "door",
+        "window"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2887,13 +4412,21 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door"
       ],
-      "description": "An empty room with a door and window."
+      "sign_text": [
+        "door",
+        "window"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2905,11 +4438,21 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a window and a door."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "left",
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2921,11 +4464,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a window and a wall."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "window",
+        "door"
+      ],
+      "walkable": [
+        "left",
+        "forward"
+      ],
+      "description": "Indoor room with windows, doors, and tiled floor."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2937,11 +4491,21 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a large window and a wall."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "window_sign"
+      ],
+      "walkable": [
+        "left",
+        "forward"
+      ],
+      "description": "Indoor space with windows, doors, and a window sign."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2953,11 +4517,21 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a large window and a white wall."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "left",
+        "forward"
+      ],
+      "description": "Indoor room with large windows, blinds, and a door."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2969,13 +4543,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "An indoor room with a window and a door."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -2987,11 +4570,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An indoor room with a window and a wall."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "door",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3003,11 +4598,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An indoor room with a window and a wall."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3019,11 +4625,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a door and tiled floor."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3035,11 +4650,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An indoor room with a door and wall."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with a door and a door sign."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3051,11 +4675,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "Indoor corridor with a central door and signage."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a door and a sign indicating the entrance."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3067,15 +4700,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door",
-        "sign",
-        "fire_equipment"
+      "landmarks": [
+        "door"
       ],
-      "description": "A room with a door and a fire extinguisher mounted on the wall."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a door and a sign indicating the entrance."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3087,14 +4725,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door",
-        "sign"
+      "landmarks": [
+        "door"
       ],
-      "description": "Indoor hallway with a door and sign."
+      "sign_text": [
+        "Digital Class Room"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a door and a sign indicating it is a digital class room."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3106,14 +4750,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door",
-        "sign"
+      "landmarks": [
+        "door"
       ],
-      "description": "Indoor hallway with a door and sign."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3125,14 +4775,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door",
-        "sign"
+      "landmarks": [
+        "door"
       ],
-      "description": "Indoor hallway with a door and sign."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3144,13 +4800,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door"
       ],
-      "description": "A hallway with a digital class room door."
+      "sign_text": [
+        "DIGITAL CLASS ROOM"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a digital class room sign and a door."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3162,13 +4825,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "fire_equipment"
       ],
-      "description": "A red fire alarm box mounted on a white wall with a yellow sign above it."
+      "sign_text": [
+        "STUDENTS ONLY",
+        "CALL CENTER"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a door and a fire alarm box."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3180,13 +4853,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "fire_equipment"
       ],
-      "description": "A hallway with a door and a fire alarm box."
+      "sign_text": [
+        "Welcome to College",
+        "Mission Statement"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a door and a fire alarm box."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3198,11 +4881,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A hallway with a door and fire equipment."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "door_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3214,11 +4906,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A room with a door and a yellow sign on top."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "A room with a door and a sign."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3229,12 +4930,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a wall and a door."
+      "scene_type": "room",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3245,12 +4957,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a door leading to another room."
+      "scene_type": "room",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3262,13 +4985,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a window and a door."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3280,13 +5012,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a central door and a window on the left."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3298,11 +5039,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a ceiling fan and large windows."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3314,13 +5067,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window on the left side."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3332,13 +5094,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a window and a door."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3350,13 +5122,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a window and a door."
+      "sign_text": [
+        "door",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3368,13 +5150,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a window and a door."
+      "sign_text": [
+        "door",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3386,11 +5178,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a window and a door."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3402,13 +5206,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a window and two doors."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3420,13 +5234,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a window and a door."
+      "sign_text": [
+        "door",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3438,13 +5262,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a window and two doors."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3456,13 +5289,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with two doors and a window on the left."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3474,13 +5316,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with doors and walls."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3492,13 +5343,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with two doors and walls on either side."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3510,13 +5370,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with two doors and a wall on the left."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3528,13 +5397,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long, narrow corridor with a central door and walls on either side."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3546,11 +5424,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3562,13 +5451,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A corridor with a central door and walls on either side."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3580,13 +5478,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A corridor with a central door and walls on either side."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3598,14 +5505,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
-        "door"
+        "direction_sign"
       ],
-      "description": "A corridor with two doors, one on the left and one on the right."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3617,11 +5532,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with two doors visible."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3633,11 +5559,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An indoor hallway with two doors and a sign on the wall."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3648,13 +5585,11 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "room",
+      "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [
-        "door",
-        "sign"
-      ],
-      "description": "Indoor corridor with a sign on the left wall."
+      "sign_text": [],
+      "walkable": [],
+      "description": ""
     },
     "landmarks": [],
     "segment_id": null,
@@ -3667,9 +5602,10 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "room",
+      "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -3683,10 +5619,11 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "room",
+      "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
-      "description": "Indoor corridor with two doors and a sign on the wall."
+      "sign_text": [],
+      "walkable": [],
+      "description": ""
     },
     "landmarks": [],
     "segment_id": null,
@@ -3701,8 +5638,9 @@
     "scene_tags": {
       "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
-      "description": "Indoor hallway with two doors and a sign on the wall."
+      "sign_text": [],
+      "walkable": [],
+      "description": ""
     },
     "landmarks": [],
     "segment_id": null,
@@ -3716,11 +5654,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with two doors, no visible signage."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3731,19 +5678,22 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [
-        "darkened ceiling",
-        "darkened door",
-        "darkened floor"
+        "door",
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A large room with a darkened ceiling, a darkened door, and a darkened floor."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "darkened ceiling",
-      "darkened door",
-      "darkened floor"
+      "door",
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -3755,17 +5705,22 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [
-        "ceiling fan",
-        "door"
+        "door",
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A large room with a ceiling fan, and a door."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "ceiling fan",
-      "door"
+      "door",
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -3778,11 +5733,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3805,11 +5771,22 @@
     ],
     "scene_tags": {
       "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "unknown"
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3832,11 +5809,22 @@
     ],
     "scene_tags": {
       "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3860,8 +5848,9 @@
     "scene_tags": {
       "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "sign_text": [],
+      "walkable": [],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [],
     "segment_id": null,
@@ -3877,16 +5866,19 @@
       "scene_type": "unknown",
       "landmarks": [
         "door",
-        "window",
-        "door frame"
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A small room with a door, a window, and a door frame."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
       "door",
-      "window",
-      "door frame"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -3901,16 +5893,19 @@
       "scene_type": "unknown",
       "landmarks": [
         "door",
-        "window",
-        "wall"
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "The room is dimly lit, creating a mysterious atmosphere."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
       "door",
-      "window",
-      "wall"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -3923,11 +5918,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with doors, window, and wall."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3940,7 +5944,8 @@
     "scene_tags": {
       "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -3955,11 +5960,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with a door and a sign indicating the entrance to the Winston-Salem Hall of the B.M. & M. Engineering College."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -3972,7 +5986,8 @@
     "scene_tags": {
       "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -3986,9 +6001,10 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -4004,17 +6020,18 @@
     "scene_tags": {
       "scene_type": "unknown",
       "landmarks": [
-        "large window",
-        "door",
-        "ceiling fan"
+        "door"
       ],
-      "navigation_relevance": [],
-      "description": "The room appears to be empty and quiet."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with a door, window, and wall. The door is open, and there is a window on the left side. The wall has a door and a window."
     },
     "landmarks": [
-      "large window",
-      "door",
-      "ceiling fan"
+      "door"
     ],
     "segment_id": null,
     "place_id": null
@@ -4026,19 +6043,20 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [
-        "large window",
-        "door",
-        "ceiling fan"
+        "door"
       ],
-      "navigation_relevance": [],
-      "description": "The room is likely to be a living room or a similar space."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "large window",
-      "door",
-      "ceiling fan"
+      "door"
     ],
     "segment_id": null,
     "place_id": null
@@ -4061,10 +6079,11 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a door and a window."
+      "sign_text": [],
+      "walkable": [],
+      "description": ""
     },
     "landmarks": [],
     "segment_id": null,
@@ -4088,12 +6107,21 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4104,12 +6132,21 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "room",
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with a door, window, and tiled floor."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4131,18 +6168,19 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "room",
       "landmarks": [
-        "ceiling fan",
-        "large window",
         "door"
       ],
-      "navigation_relevance": [],
-      "description": "The room is empty. The room is empty. The room is empty. The room is empty."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with a large window, a door, and a ceiling fan."
     },
     "landmarks": [
-      "ceiling fan",
-      "large window",
       "door"
     ],
     "segment_id": null,
@@ -4168,8 +6206,9 @@
     "scene_tags": {
       "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a door and a window."
+      "sign_text": [],
+      "walkable": [],
+      "description": ""
     },
     "landmarks": [],
     "segment_id": null,
@@ -4193,9 +6232,10 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "room",
+      "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
+      "sign_text": [],
+      "walkable": [],
       "description": ""
     },
     "landmarks": [],
@@ -4220,10 +6260,11 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "room",
+      "scene_type": "unknown",
       "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a glass door and a window, featuring a door and a window."
+      "sign_text": [],
+      "walkable": [],
+      "description": ""
     },
     "landmarks": [],
     "segment_id": null,
@@ -4248,11 +6289,36 @@
     ],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "An empty room with a glass door and a window, featuring a door and a window."
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "entrance",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "reception"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor room with a glass door, reception area, and a reception desk."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "entrance",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4275,11 +6341,23 @@
     ],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Indoor space with glass doors, tiled floor, and a green rug."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4302,11 +6380,34 @@
     ],
     "scene_tags": {
       "scene_type": "room",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "reception"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4328,12 +6429,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4344,12 +6456,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4360,12 +6483,35 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "reception"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4376,12 +6522,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4392,12 +6549,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4408,12 +6576,31 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4424,12 +6611,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4440,12 +6638,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "BCRE"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4456,12 +6665,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4472,12 +6692,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4489,13 +6720,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4507,13 +6747,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4525,13 +6775,35 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A long corridor with a door and window, likely leading to another room or hallway."
+      "sign_text": [
+        "door",
+        "direction_sign",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4543,13 +6815,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and a window."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4561,11 +6843,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4578,21 +6872,21 @@
     "scene_tags": {
       "scene_type": "corridor",
       "landmarks": [
-        "window with geometric pattern",
-        "tiled floor",
-        "white walls",
-        "door at end of corridor"
+        "door",
+        "direction_sign"
       ],
-      "navigation_relevance": [
-        "door"
+      "sign_text": [
+        "Door",
+        "Direction Sign"
       ],
-      "description": "A long corridor with a geometric-patterned window and tiled floor."
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "window with geometric pattern",
-      "tiled floor",
-      "white walls",
-      "door at end of corridor"
+      "door",
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -4606,19 +6900,20 @@
     "scene_tags": {
       "scene_type": "corridor",
       "landmarks": [
-        "window with geometric pattern",
-        "tiled floor",
-        "white walls",
-        "door at end of corridor"
+        "door",
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A long corridor with a geometric-patterned window and tiled floor."
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "window with geometric pattern",
-      "tiled floor",
-      "white walls",
-      "door at end of corridor"
+      "door",
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -4631,13 +6926,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window, likely leading to an entrance or exit."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4649,11 +6954,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door at the end."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4666,15 +6983,21 @@
     "scene_tags": {
       "scene_type": "corridor",
       "landmarks": [
-        "window on right",
-        "door at end of corridor"
+        "door",
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door at the end."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "window on right",
-      "door at end of corridor"
+      "door",
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -4687,11 +7010,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4703,11 +7038,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "door",
+        "direction_sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4730,11 +7077,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and window, featuring a security grate on the right."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4757,11 +7115,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door on the right and a window on the left."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4784,11 +7153,22 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and window, likely leading to another room or hallway."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4799,12 +7179,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4815,12 +7206,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4842,12 +7245,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4869,12 +7283,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and a window."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4896,12 +7321,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a door and window, likely leading to an entrance or exit."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4923,12 +7359,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4939,12 +7386,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4955,12 +7413,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4971,12 +7440,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -4987,12 +7468,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5003,12 +7495,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5019,12 +7523,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5035,19 +7551,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "corridor",
       "landmarks": [
-        "window",
         "door",
-        "hallway"
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A hallway with a large window, a door, and a hallway."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "window",
       "door",
-      "hallway"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -5059,19 +7579,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
+      "scene_type": "corridor",
       "landmarks": [
-        "window",
         "door",
-        "hallway"
+        "direction_sign"
       ],
-      "navigation_relevance": [],
-      "description": "A hallway with a large window, a door, and a hallway."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "window",
       "door",
-      "hallway"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -5083,12 +7607,24 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5110,12 +7646,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door and window, featuring a security camera and a security device."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5137,12 +7684,24 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5164,12 +7723,23 @@
       }
     ],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5180,12 +7750,30 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "junction",
+        "corridor_opening",
+        "fire_equipment"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "corridor_opening",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5196,12 +7784,35 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign",
+        "Junction",
+        "Corridor Opening",
+        "Fire Equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5212,12 +7823,27 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "unknown",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5229,13 +7855,30 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "junction",
+        "corridor_opening",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A long corridor with a door and window on the left, and a window on the right."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5247,13 +7890,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long, narrow corridor with a door and window on the left, leading to another room."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5265,13 +7917,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5283,13 +7945,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long, narrow corridor with a door and window on the left, leading to another room."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5301,13 +7973,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window on the left, and a window on the right."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5319,13 +8000,26 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A long, narrow corridor with a door and a window."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5337,11 +8031,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door on the left side."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5353,11 +8059,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long corridor with a door at the end."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5369,13 +8086,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window, likely leading to another room or hallway."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5387,11 +8113,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A long, narrow corridor with a door and a window on the right side."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5403,11 +8141,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a door leading to another room."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5419,11 +8168,21 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A doorway leading to a building with a sign indicating the department of CSE and a class room."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "DEPT. OF CSM",
+        "CLASS ROOM"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Class room entrance with a door leading to a hallway."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5435,11 +8194,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Dept of CSE",
+        "Class Room"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5451,11 +8222,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a door leading to another room."
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5467,13 +8249,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window on the right side."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5487,18 +8278,20 @@
       "scene_type": "corridor",
       "landmarks": [
         "door",
-        "window",
-        "wall"
+        "direction_sign"
       ],
-      "navigation_relevance": [
-        "door"
+      "sign_text": [
+        "Door",
+        "Direction Sign"
       ],
-      "description": "A long corridor with a door and window on the left, featuring a wall with a window and a door."
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
       "door",
-      "window",
-      "wall"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -5513,18 +8306,20 @@
       "scene_type": "corridor",
       "landmarks": [
         "door",
-        "window",
-        "wall"
+        "direction_sign"
       ],
-      "navigation_relevance": [
-        "door"
+      "sign_text": [
+        "Door",
+        "Direction Sign"
       ],
-      "description": "A long corridor with a door and window on the right, and a wall on the left."
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
       "door",
-      "window",
-      "wall"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -5537,13 +8332,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and a window."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5555,13 +8360,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and a window."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5573,13 +8387,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and a window."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5591,13 +8414,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window, likely leading to an entrance or exit."
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5609,13 +8441,26 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A corridor with a door and a window."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5627,13 +8472,28 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A long corridor with a door and window on the left, leading to another room."
+      "sign_text": [
+        "door",
+        "direction_sign",
+        "fire_equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5645,13 +8505,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5663,13 +8533,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and window on the left, leading to another room."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5681,13 +8561,28 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "junction",
+        "corridor_opening",
+        "fire_equipment"
       ],
-      "description": "A long corridor with a door and window on the left, leading to another room."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "corridor_opening",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5699,13 +8594,26 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A long corridor with a door and window on the right side."
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5717,14 +8625,23 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
-        "sign"
+        "direction_sign"
       ],
-      "description": "A long corridor with a door and sign on the left."
+      "sign_text": [
+        "Door",
+        "Direction Sign"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5736,14 +8653,37 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
-        "sign"
+        "direction_sign",
+        "fire_equipment",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening",
+        "entrance",
+        "other"
       ],
-      "description": "A long corridor with a door and sign on the left wall."
+      "sign_text": [
+        "reception",
+        "fire_equipment"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "entrance",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5755,14 +8695,32 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
         "reception",
-        "fire_equipment"
+        "desk",
+        "junction",
+        "corridor_opening"
       ],
-      "description": "A corridor leading to a reception area with fire equipment visible."
+      "sign_text": [
+        "Information Technology"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5776,17 +8734,20 @@
       "scene_type": "corridor",
       "landmarks": [
         "door",
-        "fire_equipment"
+        "direction_sign"
       ],
-      "navigation_relevance": [
-        "door",
-        "fire_equipment"
+      "sign_text": [
+        "Door",
+        "Direction Sign"
       ],
-      "description": "A corridor with a door and fire equipment."
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
       "door",
-      "fire_equipment"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -5801,17 +8762,20 @@
       "scene_type": "corridor",
       "landmarks": [
         "door",
-        "fire_equipment"
+        "direction_sign"
       ],
-      "navigation_relevance": [
-        "door",
-        "fire_equipment"
+      "sign_text": [
+        "Door",
+        "Direction Sign"
       ],
-      "description": "A corridor with a door and fire equipment."
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
       "door",
-      "fire_equipment"
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -5824,14 +8788,32 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
         "reception",
-        "fire_equipment"
+        "desk",
+        "junction",
+        "corridor_opening"
       ],
-      "description": "A corridor with an information desk and fire equipment."
+      "sign_text": [
+        "Information Technology"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5843,13 +8825,32 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A corridor leading to an Information Technology section."
+      "sign_text": [
+        "RECEPTION TECHNOLOGY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5862,17 +8863,20 @@
     "scene_tags": {
       "scene_type": "corridor",
       "landmarks": [
-        "information technology sign",
-        "door on right"
+        "door",
+        "direction_sign"
       ],
-      "navigation_relevance": [
-        "reception"
+      "sign_text": [
+        "INFORMATION TECHNOLOGY"
       ],
-      "description": "A corridor leading to an information technology sign and a door on the right."
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
     "landmarks": [
-      "information technology sign",
-      "door on right"
+      "door",
+      "direction_sign"
     ],
     "segment_id": null,
     "place_id": null
@@ -5885,11 +8889,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": ""
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5900,12 +8915,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "elevator",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A modern elevator with a glass door and control panel, located in a hallway."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5916,12 +8942,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "elevator",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A dark elevator with a red handle and a red pole in the foreground."
+      "scene_type": "corridor",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "Room 101"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5933,11 +8970,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "elevator",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A dark interior view of an elevator with a glass door and a metal railing."
+      "landmarks": [
+        "door",
+        "elevator"
+      ],
+      "sign_text": [
+        "Elevator"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Elevator with door and signage."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "elevator"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5949,11 +8997,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "elevator",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A dark elevator with a blue sign on the door."
+      "landmarks": [
+        "door",
+        "elevator"
+      ],
+      "sign_text": [
+        "Elevator"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Elevator with blue light"
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "elevator"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5965,11 +9024,22 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "elevator",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A dark interior view of an elevator with a blue digital display and a red emergency sign above it."
+      "landmarks": [
+        "door",
+        "elevator"
+      ],
+      "sign_text": [
+        "LIFT"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Elevator with a red LIFT sign."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "elevator"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5981,11 +9051,20 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "elevator",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A dark, enclosed space with a glass door and a red sign above it."
+      "landmarks": [
+        "door"
+      ],
+      "sign_text": [
+        "Elevator"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Elevator with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -5996,12 +9075,23 @@
     "quality_score": null,
     "objects": [],
     "scene_tags": {
-      "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a door and a window."
+      "scene_type": "elevator",
+      "landmarks": [
+        "door",
+        "direction_sign"
+      ],
+      "sign_text": [
+        "unknown"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -6013,13 +9103,32 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "reception",
+        "desk",
+        "junction",
+        "fire_equipment",
+        "other"
       ],
-      "description": "A corridor with an information technology sign, emergency exit, and door."
+      "sign_text": [
+        "Information Technology"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "desk",
+      "junction",
+      "fire_equipment",
+      "other"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -6031,13 +9140,24 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
-        "door"
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment"
       ],
-      "description": "A corridor with a fire exit sign, information technology sign, and a door leading to the reception area."
+      "sign_text": [
+        "Information Technology"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -6049,14 +9169,24 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
+        "direction_sign",
         "fire_equipment"
       ],
-      "description": "A corridor leading to an information technology section with a door and fire equipment."
+      "sign_text": [
+        "INFORMATION TECHNOLOGY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -6068,14 +9198,24 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
+        "direction_sign",
         "fire_equipment"
       ],
-      "description": "A corridor leading to an information technology reception area with a door and fire equipment."
+      "sign_text": [
+        "INFORMATION TECHNOLOGY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -6087,14 +9227,24 @@
     "objects": [],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [
+      "landmarks": [
         "door",
+        "direction_sign",
         "fire_equipment"
       ],
-      "description": "A corridor with a sign indicating 'information technology' and a door leading to the reception area."
+      "sign_text": [
+        "INFORMATION TECHNOLOGY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
     "segment_id": null,
     "place_id": null
   },
@@ -6117,11 +9267,32 @@
     ],
     "scene_tags": {
       "scene_type": "corridor",
-      "landmarks": [],
-      "navigation_relevance": [],
-      "description": "A corridor with a fire extinguisher and a sign indicating 'INFORMATION TECHNOLOGY'."
+      "landmarks": [
+        "door",
+        "direction_sign",
+        "fire_equipment",
+        "reception",
+        "desk",
+        "junction",
+        "corridor_opening"
+      ],
+      "sign_text": [
+        "INFORMATION TECHNOLOGY"
+      ],
+      "walkable": [
+        "forward"
+      ],
+      "description": "Long corridor with doors on both sides."
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening"
+    ],
     "segment_id": null,
     "place_id": null
   }

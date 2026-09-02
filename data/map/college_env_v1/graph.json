@@ -2,43 +2,73 @@
   "nodes": [
     {
       "id": 0,
-      "node_type": "unknown",
-      "observation_count": 97
+      "node_type": "corridor",
+      "observation_count": 72
     },
     {
       "id": 1,
-      "node_type": "unknown",
-      "observation_count": 55
-    },
-    {
-      "id": 2,
       "node_type": "corridor",
-      "observation_count": 30
+      "observation_count": 9
     },
     {
       "id": 3,
-      "node_type": "unknown",
-      "observation_count": 5
+      "node_type": "corridor",
+      "observation_count": 7
     },
     {
       "id": 4,
-      "node_type": "unknown",
-      "observation_count": 78
+      "node_type": "corridor",
+      "observation_count": 9
     },
     {
       "id": 5,
       "node_type": "corridor",
-      "observation_count": 23
+      "observation_count": 11
     },
     {
       "id": 6,
-      "node_type": "elevator",
-      "observation_count": 6
+      "node_type": "corridor",
+      "observation_count": 9
     },
     {
       "id": 7,
+      "node_type": "room",
+      "observation_count": 8
+    },
+    {
+      "id": 8,
+      "node_type": "room",
+      "observation_count": 27
+    },
+    {
+      "id": 9,
       "node_type": "corridor",
-      "observation_count": 7
+      "observation_count": 60
+    },
+    {
+      "id": 10,
+      "node_type": "junction",
+      "observation_count": 52
+    },
+    {
+      "id": 12,
+      "node_type": "corridor",
+      "observation_count": 4
+    },
+    {
+      "id": 13,
+      "node_type": "corridor",
+      "observation_count": 12
+    },
+    {
+      "id": 16,
+      "node_type": "corridor",
+      "observation_count": 16
+    },
+    {
+      "id": 17,
+      "node_type": "elevator",
+      "observation_count": 5
     }
   ],
   "edges": [
@@ -48,25 +78,16 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 152,
+      "supporting_observations": 81,
       "mean_visual_strength": 0.0
     },
     {
       "source": 1,
-      "target": 2,
-      "confidence": 1.0,
-      "forward_count": 1,
-      "reverse_count": 0,
-      "supporting_observations": 85,
-      "mean_visual_strength": 0.0
-    },
-    {
-      "source": 2,
       "target": 3,
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 35,
+      "supporting_observations": 16,
       "mean_visual_strength": 0.0
     },
     {
@@ -75,7 +96,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 83,
+      "supporting_observations": 16,
       "mean_visual_strength": 0.0
     },
     {
@@ -84,7 +105,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 101,
+      "supporting_observations": 20,
       "mean_visual_strength": 0.0
     },
     {
@@ -93,7 +114,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 29,
+      "supporting_observations": 20,
       "mean_visual_strength": 0.0
     },
     {
@@ -102,7 +123,79 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 13,
+      "supporting_observations": 17,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 35,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 87,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 112,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 10,
+      "target": 12,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 56,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 10,
+      "target": 13,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 64,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 10,
+      "target": 16,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 68,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 16,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 16,
+      "target": 17,
+      "confidence": 1.0,
+      "forward_count": 2,
+      "reverse_count": 0,
+      "supporting_observations": 42,
       "mean_visual_strength": 0.0
     }
   ]

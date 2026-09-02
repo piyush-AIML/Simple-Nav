@@ -74,6 +74,40 @@ def test_place_serialization_roundtrip_includes_object_classes():
     assert p2.object_classes == ["door"]
 
 
+def test_place_aggregates_walkable_directions():
+    """§15: per-observation walkable votes flatten into a place-level Counter."""
+    obs = [
+        make_obs(0, A), make_obs(1, A), make_obs(2, A),
+    ]
+    obs[0].scene_tags["walkable"] = ["forward"]
+    obs[1].scene_tags["walkable"] = ["forward", "left"]
+    obs[2].scene_tags["walkable"] = []
+    segments = [Segment("seg_000", ["obs_0000", "obs_0001", "obs_0002"], 0, 2, "obs_0001")]
+    place = build_places(obs, segments)[0]
+    assert place.walkable_directions == {"forward": 2, "left": 1}
+
+
+def test_place_normalizes_legacy_scene_types():
+    """v1 corridor_junction counts collapse onto v2 junction (stored data is
+    never re-tagged, so counters normalize at build time instead)."""
+    obs = [
+        make_obs(0, A, scene="corridor_junction"),
+        make_obs(1, A, scene="corridor_junction"),
+    ]
+    segments = [Segment("seg_000", ["obs_0000", "obs_0001"], 0, 1, "obs_0000")]
+    place = build_places(obs, segments)[0]
+    assert place.scene_types["junction"] == 2
+    assert "corridor_junction" not in place.scene_types
+
+
+def test_place_serialization_roundtrips_walkable_directions():
+    p = build_places([make_obs(0, A)],
+                     [Segment("seg_000", ["obs_0000"], 0, 0, "obs_0000")])[0]
+    p.walkable_directions = {"forward": 2}
+    p2 = Place.from_dict(p.to_dict())
+    assert dict(p2.walkable_directions) == {"forward": 2}
+
+
 def test_missing_observations_are_skipped():
     obs = [make_obs(0, A)]
     segments = [Segment("seg_000", ["obs_0000", "obs_9999"], 0, 1, "obs_0000")]

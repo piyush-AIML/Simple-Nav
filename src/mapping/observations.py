@@ -31,7 +31,7 @@ class Observation:
     objects: list[dict] = field(default_factory=list)
     # [{"class": ..., "confidence": ..., "bbox": [x1, y1, x2, y2]}]
     scene_tags: dict | None = None
-    # {"scene_type": ..., "landmarks": [...], "navigation_relevance": [...], "description": ...}
+    # {"scene_type": ..., "landmarks": [...], "sign_text": [...], "walkable": [...], "description": ...}
     landmarks: list[str] = field(default_factory=list)
     segment_id: str | None = None
     place_id: str | None = None

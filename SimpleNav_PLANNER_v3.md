@@ -848,3 +848,66 @@ runtime:
 # until that measurement has actually run; that's the entire point of
 # making it a protocol instead of a one-time edit.
 ```
+
+# 14. Next Changes / Backlog (added 2026-09-02)
+
+Not yet staged. Each entry follows the v3 protocol discipline: measure
+before switching, calibrate outputs of a measurement run, never hand-edit
+thresholds into this document before that run happened (see Appendix B).
+
+## 14.1 Stage 37 (proposed) — DINOv3-Base embedding swap (opt-in, gated)
+
+Current: `embedding.model: dinov2_registers_small` (`facebook/dinov2-with-registers-small`, 384-d).
+Target: **DINOv3 ViT-B/16** = `facebook/dinov3-vitb16-pretrain-lvd1689m`
+(768-d, 86M params, 4 register tokens, RoPE). NOTE: the DINOv3 entry already
+registered (`dinov3_vits16plus`, 384-d, `src/embeddings/encoder.py:157`) is
+the ViT-S+/16 variant — DINOv3-base is a NEW registry entry, not a config flip.
+
+Steps (in order):
+1. **License gate** — HF account + gated license accepted AND approved for
+   `facebook/dinov3-vitb16-pretrain-lvd1689m` (manual approval, days; the
+   existing `Dinov3Encoder` docstring's "fails closed" rule applies). Verify
+   `AutoModel`/`AutoImageProcessor` load with the installed transformers
+   (DINOv3 ViT auto-mapping needs >= v4.56).
+2. **Registry** — add `Dinov3VitbEncoder` next to `Dinov3Encoder`
+   (`name="dinov3_vitb16"`, the HF id above, `dimension=768`), register it.
+   `validate_config` picks the registry up automatically. Tests:
+   encoder-consistency + a gated slow smoke that skips without access.
+3. **Measure (protocol §5/Stage 33)** — `scripts/compare_encoders.py
+   --encoders dinov2_registers_small dinov3_vitb16` → separation margin vs
+   DINOv2's 0.1319 (2.64× over resnet18). Only proceed if the margin wins.
+4. **Recalibrate (Stage 34 protocol)** — `scripts/recalibrate_thresholds.py
+   --old dinov2_registers_small --new dinov3_vitb16` rewrites config
+   thresholds percentile-matched to the new distribution (old values stay as
+   rollback comments). DECISION NEEDED: include the mapping merge floors
+   (0.425 / 0.835) in the recalibration, or leave them until the corridor-
+   granularity question (§14.2) is settled.
+5. **Re-embed in place** — do NOT run the full `python -m src.embed_frames`
+   (that re-runs the VLM pass). Reuse the surgical pattern of
+   `scripts/retag_observations.py`: load the ObservationStore, batch-encode
+   the stored frames with the new encoder, replace embeddings, keep stored
+   objects + scene_tags, `store.save(encoder.name)` (768-d FAISS rebuilt
+   inside `save()`).
+6. **Rebuild + measure** — `python -m src.mapping.build_map`, then
+   `python evaluate_suite.py`; report top-1/top-3/false_jump + ambiguous
+   subset against the current DINOv2 numbers (14-place map: visual 0.6279 /
+   graph 0.5017 pseudo-label self-consistency).
+7. **Docs sync** — STATE.md encoder line, DEMO claims, this planner entry.
+
+Acceptance: separation margin > DINOv2's; thresholds recalibrated by the
+protocol (not hand-edited); eval report recorded; map artifacts rebuilt
+deterministically; rollback = config comment values + git.
+
+## 14.2 Open items carried from STATE.md (2026-09-02)
+
+- **Corridor-granularity decision (OPEN):** re-tagged map is 14 places / 14
+  edges; the scene-aware merge guard (§ corridor merges need discriminating
+  evidence at >= 0.835, or near-exact >= 0.95) over-fragmented relative to
+  the 5-place over-merge and the v1 8-place era. Self-consistency cannot pick
+  the right granularity — Stage 29 real labels are the arbiter. Levers not
+  yet tried: segmentation scene-change gating at room↔corridor doorways;
+  lower the disc-strong corridor floor; expose the floor as a mapping-config
+  knob. Affects what §14.1 step 4 calibrates.
+- **Stage 29 — blocked on USER:** two real walkthrough videos (different
+  day/lighting) + hand labels via `scripts/make_contact_sheet.py`. Also the
+  only true validator for the §14.2 granularity question and for §14.1.

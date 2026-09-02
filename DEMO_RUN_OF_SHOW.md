@@ -34,9 +34,14 @@ Say this first, then everything below is evidence for it.
 1. Show the versioned map artifact: `data/map/college_env_v1/` — manifest,
    places.json, graph.json, exemplars, vector index. One folder, versioned,
    reproducible.
-2. Show the graph: 8 places, 7 edges, 0 validation warnings — built
-   autonomously from one walkthrough (301 frames), no floor plan, no GPS
-   (DINOv2-with-Registers encoder, planner v3 §4).
+2. Show the graph: 8 places, 7 edges, 0 validation warnings at the v1-tag
+   build — built autonomously from one walkthrough (301 frames), no floor
+   plan, no GPS (DINOv2-with-Registers encoder, planner v3 §4).
+   > Status note (2026-09-02): the map was rebuilt with scene-tagger v2
+   > tags; the bundle on disk is 14 places / 14 edges / 3 warnings while the
+   > corridor-granularity decision is OPEN (STATE.md "Scene tagger v2
+   > schema"). Say the count that matches the bundle you're showing; say
+   > "the walkthrough split is under review" if asked about the change.
 3. Point out the evidence chain on one place record: scene types, landmarks,
    object classes, exemplar stats — the semantic graph.
 

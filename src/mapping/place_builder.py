@@ -19,9 +19,43 @@ import numpy as np
 
 from src.mapping.observations import Observation
 from src.mapping.segmentation import Segment
+from src.perception.scene_tagger import normalize_scene_type
 from src.utils import setup_logger
 
 logger = setup_logger("place_builder")
+
+# Landmark classes for MERGE evidence (scene tagger v2 closed vocabulary).
+# v2 tokens carry no identity: "door" appears in 283/301 observations and
+# "direction_sign" in 235 — wall fixtures shared by every corridor. Merge
+# evidence must come from tokens that mark identity/function, plus the actual
+# readable sign text (room numbers etc.) the VLM reports in sign_text.
+GENERIC_LANDMARK_TYPES = frozenset(
+    {"door", "direction_sign", "corridor_opening", "fire_equipment", "junction", "other"}
+)
+DISCRIMINATIVE_LANDMARK_TYPES = frozenset(
+    {"room_sign", "stairs", "elevator", "entrance", "reception", "desk"}
+)
+
+# sign_text values that repeat the closed vocabulary or object names the VLM
+# over-reports as signage ("Door", "Direction Sign", "unknown" on a wall) —
+# not readable place identity. Everything else kept (e.g. "room 101").
+SIGN_TEXT_JUNK = (
+    GENERIC_LANDMARK_TYPES | DISCRIMINATIVE_LANDMARK_TYPES
+    | {"direction sign", "fire equipment", "unknown", "window", "wall", "doorway"}
+)
+
+
+def aggregate_sign_texts(observations: list[Observation], limit: int = 8) -> list[str]:
+    """Readable sign text seen in this place, most frequent first. Junk
+    (generic vocabulary over-reports) filtered out — sign text is the place's
+    identity evidence (§12; scene tagger v2 schema)."""
+    counts: Counter[str] = Counter()
+    for o in observations:
+        for t in ((o.scene_tags or {}).get("sign_text") or []):
+            token = str(t).strip().lower()
+            if token and token not in SIGN_TEXT_JUNK:
+                counts[token] += 1
+    return [t for t, _ in counts.most_common(limit)]
 
 
 @dataclass
@@ -32,6 +66,8 @@ class Place:
     exemplar_ids: list[str] = field(default_factory=list)
     scene_types: Counter[str] = field(default_factory=Counter)
     landmarks: list[str] = field(default_factory=list)
+    sign_texts: list[str] = field(default_factory=list)  # readable sign text, top-8 (identity evidence, §12)
+    walkable_directions: Counter[str] = field(default_factory=Counter)  # per-direction vote counts (§15 junction evidence)
     object_classes: list[str] = field(default_factory=list)  # Stage 23: historical COCO classes
     visual_stats: dict = field(default_factory=dict)  # {"mean_similarity", "std_similarity"}
 
@@ -43,6 +79,8 @@ class Place:
             "exemplar_ids": self.exemplar_ids,
             "scene_types": dict(self.scene_types),
             "landmarks": self.landmarks,
+            "sign_texts": self.sign_texts,
+            "walkable_directions": dict(self.walkable_directions),
             "object_classes": self.object_classes,
             "visual_stats": self.visual_stats,
         }
@@ -56,6 +94,8 @@ class Place:
             exemplar_ids=list(d.get("exemplar_ids", [])),
             scene_types=Counter(d.get("scene_types", {})),
             landmarks=list(d.get("landmarks", [])),
+            sign_texts=list(d.get("sign_texts", [])),
+            walkable_directions=Counter(d.get("walkable_directions", {})),
             object_classes=list(d.get("object_classes", [])),
             visual_stats=dict(d.get("visual_stats", {})),
         )
@@ -181,9 +221,14 @@ def build_places(
                 observation_ids=[o.id for o in members],
                 exemplar_ids=exemplars,
                 scene_types=Counter(
-                    (o.scene_tags or {}).get("scene_type", "unknown") for o in members
+                    normalize_scene_type((o.scene_tags or {}).get("scene_type", "unknown"))
+                    for o in members
                 ),
                 landmarks=_landmark_union(members),
+                sign_texts=aggregate_sign_texts(members),
+                walkable_directions=Counter(
+                    d for o in members for d in ((o.scene_tags or {}).get("walkable") or [])
+                ),
                 object_classes=_object_union(members),
                 visual_stats=_visual_stats(members),
             )

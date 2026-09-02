@@ -24,13 +24,16 @@ from __future__ import annotations
 from collections import Counter
 from typing import Any
 
+from src.perception.scene_tagger import normalize_scene_type
+
 
 def _scene(tags: Any) -> str:
-    """scene_type of one tag record (SceneTags, dict, or None)."""
+    """scene_type of one tag record (SceneTags, dict, or None), normalized
+    onto the current vocabulary (legacy 'corridor_junction' == 'junction')."""
     if tags is None:
         return "unknown"
     s = tags.get("scene_type") if isinstance(tags, dict) else getattr(tags, "scene_type", None)
-    return str(s) if s else "unknown"
+    return normalize_scene_type(str(s)) if s else "unknown"
 
 
 def _landmarks(tags: Any) -> set[str]:

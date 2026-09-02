@@ -1,24 +1,24 @@
 {
-  "timestamp": "2026-09-02T06:00:49",
+  "timestamp": "2026-09-02T17:46:10",
   "map": "/mnt/c/PS/projects/simplenav/data/map/college_env_v1",
   "localization_metrics": {
     "frames": 301,
     "label_source": "pseudo",
-    "top1_accuracy": 0.7774,
-    "top3_accuracy": 0.9269,
-    "segment_accuracy": 0.6447,
-    "transition_recall": 0.8571,
-    "transition_precision": 0.4615,
-    "false_jump_rate": 0.02,
+    "top1_accuracy": 0.5017,
+    "top3_accuracy": 0.8538,
+    "segment_accuracy": 0.4742,
+    "transition_recall": 0.3333,
+    "transition_precision": 0.2632,
+    "false_jump_rate": 0.0433,
     "reacquisition_time_frames": null,
     "unknown_precision": 0.0,
     "note": "SELF-CONSISTENCY on pseudo-labels (Rule 6): the ground truth below is the map's own place assignment, NOT physical accuracy. Drop real labels into data/test_labels.json and re-run to get accuracy against ground truth."
   },
   "graph_metrics": {
-    "node_purity": 0.6295,
-    "intra_place_mean_similarity": 0.8766,
-    "cross_place_mean_similarity": 0.516,
-    "duplicate_rate": 0.0,
+    "node_purity": 0.6159,
+    "intra_place_mean_similarity": 0.896,
+    "cross_place_mean_similarity": 0.5589,
+    "duplicate_rate": 0.0269,
     "merge_error": null,
     "edge_precision": 1.0,
     "edge_recall": 1.0,
@@ -35,7 +35,7 @@
           "temporal": false,
           "graph": false
         },
-        "top1_accuracy": 0.814
+        "top1_accuracy": 0.6279
       },
       {
         "variant": "semantic",
@@ -45,7 +45,7 @@
           "temporal": false,
           "graph": false
         },
-        "top1_accuracy": 0.7807
+        "top1_accuracy": 0.5116
       },
       {
         "variant": "temporal",
@@ -55,7 +55,7 @@
           "temporal": true,
           "graph": false
         },
-        "top1_accuracy": 0.804
+        "top1_accuracy": 0.5282
       },
       {
         "variant": "graph",
@@ -65,7 +65,7 @@
           "temporal": true,
           "graph": true
         },
-        "top1_accuracy": 0.7774
+        "top1_accuracy": 0.5017
       }
     ],
     "semantic_active": true,
@@ -74,14 +74,14 @@
     "explanation": "non-monotonic: semantic evidence is measured on the visually-ambiguous subset (see ambiguous_subset), temporal smoothing trades top-1 for a lower false-jump rate, graph adds the same smoothing via the prior \u2014 per planner v3 \u00a79",
     "ambiguous_subset": {
       "ambiguous_margin_threshold": 0.05,
-      "n_ambiguous": 57,
-      "n_clear": 244,
-      "margin_median": 0.1062,
-      "ambiguous_visual_only_top1": 0.5614,
-      "ambiguous_semantic_top1": 0.4035,
+      "n_ambiguous": 177,
+      "n_clear": 124,
+      "margin_median": 0.0355,
+      "ambiguous_visual_only_top1": 0.5424,
+      "ambiguous_semantic_top1": 0.4068,
       "ambiguous_semantic_helps": false,
-      "clear_visual_only_top1": 0.873,
-      "clear_semantic_top1": 0.8689,
+      "clear_visual_only_top1": 0.75,
+      "clear_semantic_top1": 0.6613,
       "note": "top-1 self-consistency on the visual-ambiguous subset only \u2014 the acceptance metric for semantic evidence (Stage 23 / planner v3 \u00a79); overall top-1 was never the acceptance"
     }
   }

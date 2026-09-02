@@ -14,6 +14,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from src.mapping.observations import Observation, sort_observations
+from src.perception.scene_tagger import normalize_scene_type
 from src.utils import setup_logger
 
 logger = setup_logger("segmentation")
@@ -47,9 +48,9 @@ def _semantic_change(a: Observation, b: Observation) -> float:
     "unknown" is neutral (Rule 4) — a flip into/out of unknown is missing
     evidence, not a real scene change."""
     if a.scene_tags or b.scene_tags:
-        sa = (a.scene_tags or {}).get("scene_type")
-        sb = (b.scene_tags or {}).get("scene_type")
-        if sa and sb and sa != sb and sa != "unknown" and sb != "unknown":
+        sa = normalize_scene_type((a.scene_tags or {}).get("scene_type") or "unknown")
+        sb = normalize_scene_type((b.scene_tags or {}).get("scene_type") or "unknown")
+        if sa != sb and sa != "unknown" and sb != "unknown":
             return 1.0
     return 0.0 if _landmark_jaccard(a, b) >= 0.5 else 1.0
 
@@ -71,10 +72,11 @@ def change_scores(observations: list[Observation]) -> list[float]:
         visual = _visual_distance(a, b)
         semantic = _semantic_change(a, b)
         if semantic > 0.0:
-            sb = (b.scene_tags or {}).get("scene_type")
+            sb = normalize_scene_type((b.scene_tags or {}).get("scene_type") or "unknown")
             window = observations[i + 2 : i + 2 + SEMANTIC_PERSISTENCE_WINDOW]
             if window and any(
-                (o.scene_tags or {}).get("scene_type") != sb for o in window
+                normalize_scene_type((o.scene_tags or {}).get("scene_type") or "unknown") != sb
+                for o in window
             ):
                 semantic = 0.0
         scores.append(visual + 0.5 * semantic)

@@ -7,11 +7,13 @@ from src.mapping.place_builder import Place
 from src.mapping.transition_builder import TransitionStats
 
 
-def place(pid: str, scene: str = "room", obs_count: int = 5) -> Place:
+def place(pid: str, scene: str = "room", obs_count: int = 5,
+          walkable: Counter | None = None) -> Place:
     return Place(
         place_id=pid,
         observation_ids=[f"obs_{pid}_{i}" for i in range(obs_count)],
         scene_types=Counter({scene: obs_count}),
+        walkable_directions=walkable or Counter(),
     )
 
 
@@ -80,6 +82,87 @@ def test_junction_detection_by_degree_and_scene():
     assert graph.nodes["stairs"]["node_type"] == "stairs"
     assert graph.nodes["n2"]["node_type"] == "room"
     assert graph.nodes["n3"]["node_type"] == "room"
+
+
+def test_junction_scene_without_walkable_evidence_is_corridor():
+    """A 'junction' scene alone never forces node_type — v1 parity: without
+    branching walkable votes it degrades to corridor (soft metadata, §15)."""
+    places = [
+        place("twoway", "junction", obs_count=6),   # no walkable votes
+        place("n1", "room"), place("n2", "room"),
+    ]
+    transitions = [transition("twoway", "n1", 5), transition("twoway", "n2", 5)]
+    graph = build_graph(places, transitions, minimum_edge_support=1)
+    detect_junctions(graph, places)
+    assert graph.nodes["twoway"]["node_type"] == "corridor"
+
+
+def test_junction_scene_with_walkable_evidence_is_junction():
+    """Branching walkable votes (two directions in a majority of the place's
+    observations) corroborate the VLM 'junction' scene below the degree gate."""
+    walkable = Counter({"forward": 6, "left": 6})  # obs_count=6: both >= ceil(6/2)
+    places = [
+        place("split", "junction", obs_count=6, walkable=walkable),
+        place("n1", "room"), place("n2", "room"),
+    ]
+    transitions = [transition("split", "n1", 5), transition("split", "n2", 5)]
+    graph = build_graph(places, transitions, minimum_edge_support=1)
+    detect_junctions(graph, places)
+    assert graph.nodes["split"]["node_type"] == "junction"
+
+
+def test_junction_evidence_requires_majority_support():
+    """One isolated frame must not vote a place into junction — each direction
+    needs support in at least half the observations."""
+    walkable = Counter({"forward": 5, "left": 1})  # 6 obs: left seen once only
+    places = [
+        place("twoway", "junction", obs_count=6, walkable=walkable),
+        place("n1", "room"), place("n2", "room"),
+    ]
+    transitions = [transition("twoway", "n1", 5), transition("twoway", "n2", 5)]
+    graph = build_graph(places, transitions, minimum_edge_support=1)
+    detect_junctions(graph, places)
+    assert graph.nodes["twoway"]["node_type"] == "corridor"
+
+
+def test_junction_evidence_can_be_disabled():
+    walkable = Counter({"forward": 6, "left": 6})
+    places = [
+        place("split", "junction", obs_count=6, walkable=walkable),
+        place("n1", "room"), place("n2", "room"),
+    ]
+    transitions = [transition("split", "n1", 5), transition("split", "n2", 5)]
+    graph = build_graph(places, transitions, minimum_edge_support=1)
+    detect_junctions(graph, places, junction_semantic_evidence=False)
+    assert graph.nodes["split"]["node_type"] == "corridor"
+
+
+def test_lobby_scene_maps_to_room():
+    places = [
+        place("lobby", "lobby"),
+        place("n1", "room"),
+    ]
+    transitions = [transition("lobby", "n1", 5)]
+    graph = build_graph(places, transitions, minimum_edge_support=1)
+    detect_junctions(graph, places)
+    assert graph.nodes["lobby"]["node_type"] == "room"
+
+
+def test_legacy_corridor_junction_scene_maps_to_corridor():
+    """Stored v1 scene counts normalize on read: corridor_junction is treated
+    exactly like junction-without-walkable (v1 node_type parity)."""
+    from collections import Counter as C
+
+    p = Place(
+        place_id="oldjunc",
+        observation_ids=[f"obs_{i}" for i in range(5)],
+        scene_types=C({"corridor_junction": 5}),
+    )
+    places = [p, place("n1", "room"), place("n2", "room")]
+    transitions = [transition("oldjunc", "n1", 5), transition("oldjunc", "n2", 5)]
+    graph = build_graph(places, transitions, minimum_edge_support=1)
+    detect_junctions(graph, places)
+    assert graph.nodes["oldjunc"]["node_type"] == "corridor"
 
 
 def test_export_graph_json_round_trip():

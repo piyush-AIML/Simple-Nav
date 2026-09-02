@@ -8,12 +8,15 @@ import pytest
 
 from src.perception.detector import DetectedObject
 from src.perception.scene_tagger import (
+    LANDMARK_TYPES,
     PROMPT,
     SCENE_TYPES,
+    WALKABLE_DIRS,
     SceneTags,
     StubTagger,
     _strip_prompt_echo,
     get_scene_tagger,
+    normalize_scene_type,
     parse_and_validate,
 )
 
@@ -21,10 +24,11 @@ from src.perception.scene_tagger import (
 def valid_json() -> str:
     return json.dumps(
         {
-            "scene_type": "corridor_junction",
-            "landmarks": ["blue room-number sign", "staircase on left"],
-            "navigation_relevance": ["junction", "stairs"],
-            "description": "T-shaped corridor intersection with stairs on the left.",
+            "scene_type": "junction",
+            "landmarks": ["direction_sign", "corridor_opening"],
+            "sign_text": ["East Wing"],
+            "walkable": ["forward", "left"],
+            "description": "Three-way corridor split with a sign.",
         }
     )
 
@@ -47,14 +51,16 @@ def test_stub_derives_scene_from_objects():
     )
     assert tags.scene_type == "room"
     tags2 = t.tag(img, [DetectedObject(class_name="fire hydrant", confidence=0.9, bbox=(0, 0, 1, 1))])
-    assert "fire_equipment" in tags2.navigation_relevance
+    assert tags2.landmarks == ["fire_equipment"]
+    assert tags2.walkable == []
 
 
 def test_parse_valid_json():
     tags = parse_and_validate(valid_json())
-    assert tags.scene_type == "corridor_junction"
-    assert tags.landmarks == ["blue room-number sign", "staircase on left"]
-    assert tags.navigation_relevance == ["junction", "stairs"]
+    assert tags.scene_type == "junction"
+    assert tags.landmarks == ["direction_sign", "corridor_opening"]
+    assert tags.sign_text == ["East Wing"]
+    assert tags.walkable == ["forward", "left"]
 
 
 def test_parse_rejects_malformed():
@@ -64,15 +70,32 @@ def test_parse_rejects_malformed():
 
 
 def test_parse_rejects_bad_scene_type():
-    out = json.dumps({"scene_type": "moon crater", "landmarks": [], "navigation_relevance": []})
+    out = json.dumps({"scene_type": "moon crater", "landmarks": []})
     assert parse_and_validate(out).scene_type == "unknown"
 
 
-def test_parse_filters_unknown_nav_tags():
-    out = json.dumps({"scene_type": "room", "landmarks": ["desk"],
-                      "navigation_relevance": ["junction", "teleport"]})
+def test_parse_accepts_all_scene_types():
+    for st in SCENE_TYPES:
+        out = json.dumps({"scene_type": st, "landmarks": []})
+        assert parse_and_validate(out).scene_type == st, st
+
+
+def test_parse_filters_landmarks_to_closed_vocab():
+    out = json.dumps({"scene_type": "room", "landmarks": ["desk", "blue sign", "teleporter"]})
     tags = parse_and_validate(out)
-    assert tags.navigation_relevance == ["junction"]
+    assert tags.landmarks == ["desk"]  # closed vocab only; junk dropped
+
+
+def test_parse_filters_and_dedupes_walkable():
+    out = json.dumps({"scene_type": "junction", "walkable": ["forward", "left", "forward", "up", "right"]})
+    tags = parse_and_validate(out)
+    assert tags.walkable == ["forward", "left", "right"]  # whitelist, dedupe, order kept
+
+
+def test_parse_sanitizes_sign_text():
+    out = json.dumps({"scene_type": "corridor", "sign_text": [" 2F ", 5, "", "Nursing"]})
+    tags = parse_and_validate(out)
+    assert tags.sign_text == ["2F", "Nursing"]  # strings only, stripped
 
 
 def test_strip_prompt_echo():
@@ -86,7 +109,7 @@ def test_strip_prompt_echo():
 def test_parse_handles_markdown_fences():
     out = f"```json\n{valid_json()}\n```"
     tags = parse_and_validate(out)
-    assert tags.scene_type == "corridor_junction"
+    assert tags.scene_type == "junction"
 
 
 def test_parse_never_emits_coordinates_or_topology():
@@ -96,20 +119,39 @@ def test_parse_never_emits_coordinates_or_topology():
         {
             "scene_type": "room",
             "landmarks": [],
-            "navigation_relevance": [],
+            "sign_text": [],
+            "walkable": [],
             "description": "x: 0.5, y: 0.3",
             "coords": [1.0, 2.0],
+            "navigation_relevance": ["junction"],
         }
     )
     tags = parse_and_validate(sneaky)
     assert not hasattr(tags, "coords")
+    assert not hasattr(tags, "navigation_relevance")  # legacy field structurally dropped
     assert tags.scene_type == "room"  # description is human-only, not used for matching
+
+
+def test_parse_maps_legacy_corridor_junction():
+    """v1 model output (corridor_junction) is accepted and normalized to the
+    v2 vocabulary so pre-upgrade data behaves like fresh tags."""
+    out = json.dumps({"scene_type": "corridor_junction", "landmarks": []})
+    tags = parse_and_validate(out)
+    assert tags.scene_type == "junction"
+
+
+def test_normalize_scene_type_legacy_alias():
+    assert normalize_scene_type("corridor_junction") == "junction"
+    assert normalize_scene_type("junction") == "junction"
+    assert normalize_scene_type("room") == "room"
+    assert normalize_scene_type("moon crater") == "moon crater"  # pass-through, callers decide
 
 
 def test_prompt_contains_schema_and_closed_vocab():
     assert "JSON ONLY" in PROMPT
-    assert "corridor_junction" in PROMPT
     assert all(t in PROMPT for t in SCENE_TYPES)
+    assert all(t in PROMPT for t in LANDMARK_TYPES)
+    assert all(d in PROMPT for d in WALKABLE_DIRS)
 
 
 def test_get_scene_tagger_disabled_returns_stub():
@@ -137,6 +179,8 @@ def test_qwen_tagger_real_smoke():
         pytest.skip(f"Qwen2.5-VL unavailable: {e}")
     tags = t.tag("data/frames/frame_00010.jpg")
     assert tags.scene_type in SCENE_TYPES
+    assert all(lm in LANDMARK_TYPES for lm in tags.landmarks)
+    assert all(d in WALKABLE_DIRS for d in tags.walkable)
 
 
 @pytest.mark.slow
@@ -152,6 +196,8 @@ def test_lfm2_tagger_real_smoke():
         pytest.skip(f"LFM2.5-VL unavailable: {e}")
     tags = t.tag("data/frames/frame_00010.jpg")
     assert tags.scene_type in SCENE_TYPES
+    assert all(lm in LANDMARK_TYPES for lm in tags.landmarks)
+    assert all(d in WALKABLE_DIRS for d in tags.walkable)
 
 
 def test_get_scene_tagger_dispatch_lfm2(monkeypatch):

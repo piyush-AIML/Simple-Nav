@@ -107,7 +107,12 @@ def main() -> None:
         edge_confidence_threshold=mapping_cfg.get("edge_confidence_threshold", 0.6),
         minimum_edge_support=mapping_cfg.get("minimum_edge_support", 3),
     )
-    detect_junctions(graph, places, junction_min_degree=mapping_cfg.get("junction_min_degree", 3))
+    detect_junctions(
+        graph,
+        places,
+        junction_min_degree=mapping_cfg.get("junction_min_degree", 3),
+        junction_semantic_evidence=mapping_cfg.get("junction_semantic_evidence", True),
+    )
 
     # 13: validation
     warnings = validate_graph(graph, places, mapping_cfg, observations=observations)

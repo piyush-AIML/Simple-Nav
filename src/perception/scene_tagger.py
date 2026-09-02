@@ -4,7 +4,8 @@ discrimination, with hard constraints:
 - fixed JSON schema, validated before storage;
 - the VLM NEVER emits coordinates, distances, graph topology, or a location —
   the schema structurally forbids it (§7 "must NOT produce");
-- deterministic-ish: temperature 0, fixed prompt, closed scene vocabulary;
+- deterministic-ish: temperature 0, fixed prompt, closed scene + landmark
+  vocabularies; sign_text and walkable directions are evidence only;
 - tagger failures degrade to unknown/[] — never crash the pipeline.
 
 Backends (config perception.vlm_model):
@@ -27,41 +28,85 @@ from src.utils import setup_logger
 
 logger = setup_logger("scene_tagger")
 
-SCENE_TYPES = ("room", "corridor", "corridor_junction", "stairs", "elevator", "entrance", "unknown")
-VALID_NAV_TAGS = ("junction", "stairs", "elevator", "entrance", "sign", "door",
-                  "reception", "desk", "fire_equipment")
+SCENE_TYPES = ("room", "corridor", "junction", "stairs", "elevator", "entrance", "lobby", "unknown")
+# v1 schema used "corridor_junction"; v2 renamed it to "junction". Legacy
+# stored data is normalized via normalize_scene_type() (never re-tagged).
+LEGACY_SCENE_ALIASES = {"corridor_junction": "junction"}
+LANDMARK_TYPES = ("door", "room_sign", "direction_sign", "stairs", "elevator",
+                  "entrance", "reception", "desk", "junction",
+                  "corridor_opening", "fire_equipment", "other")
+WALKABLE_DIRS = ("left", "forward", "right")
 
-PROMPT = """You are a navigation assistant analyzing ONE indoor camera frame.
-Respond with JSON ONLY, using exactly this schema:
-{"scene_type": <one of: room, corridor, corridor_junction, stairs, elevator, entrance, unknown>,
- "landmarks": [<short noun phrases, up to 6, e.g. "blue room-number sign", "staircase on left">],
- "navigation_relevance": [<subset of: junction, stairs, elevator, entrance, sign, door, reception, desk, fire_equipment>],
- "description": <one short sentence, max 20 words>}
+# NOTE: the schema below must match the model's actual output habits — the
+# default backend (LFM2.5-VL-450M) echoes "scene_type": "a | b | ..." verbatim
+# when the enum is presented as bare pipe text, so the JSON template uses
+# explicit <one of: ...> / [<plain strings>] placeholders plus a worked
+# example. Content = the scene-tagger v2 spec; format = what the 450M
+# actually follows (verified on real frames).
+PROMPT = """You are an indoor navigation vision assistant analyzing ONE camera frame.
+Return JSON ONLY, every list item a plain quoted string:
+{"scene_type": <one of: room, corridor, junction, stairs, elevator, entrance, lobby, unknown>,
+ "landmarks": [<plain strings, subset of: door, room_sign, direction_sign, stairs, elevator, entrance, reception, desk, junction, corridor_opening, fire_equipment, other>],
+ "sign_text": [<plain strings: text actually readable on visible signs>],
+ "walkable": [<plain strings, subset of: left, forward, right>],
+ "description": <one short sentence, max 15 words>}
+Example: {"scene_type": "corridor", "landmarks": ["door", "direction_sign"], "sign_text": ["Room 101"], "walkable": ["forward"], "description": "Long corridor with doors on both sides."}
 
 Rules:
-- scene_type must be one of the listed values.
-- List only VISIBLE, navigation-useful landmarks.
-- If unsure, use "unknown" with empty lists — never guess.
-- Do NOT output anything except the JSON."""
+- Report only what is clearly visible. NEVER guess.
+- If unsure use scene_type "unknown" — but still list clearly visible landmarks. Do not say "unknown" just because you cannot name the whole scene.
+- left/forward/right mean LEFT/FRONT/RIGHT in the image; report a direction only when an open path is visibly present. A door is not automatically a walkable path.
+- junction means two or more visible paths branch/intersect.
+- Never invent sign text — write only text that can actually be read. If nothing useful is identifiable, use "unknown" and empty lists.
+- No coordinates, distances, map locations, compass directions, or graph info.
+
+Return exactly one JSON object."""
+
+
+def normalize_scene_type(scene_type: str) -> str:
+    """Map legacy stored scene values onto the current vocabulary
+    (v1 "corridor_junction" == v2 "junction"). Unknown values pass through
+    unchanged — callers handle unrecognized values themselves."""
+    if scene_type in SCENE_TYPES:
+        return scene_type
+    return LEGACY_SCENE_ALIASES.get(scene_type, scene_type)
 
 
 @dataclass
 class SceneTags:
     scene_type: str = "unknown"
-    landmarks: list[str] = field(default_factory=list)
-    navigation_relevance: list[str] = field(default_factory=list)
+    landmarks: list[str] = field(default_factory=list)  # subset of LANDMARK_TYPES
+    sign_text: list[str] = field(default_factory=list)
+    walkable: list[str] = field(default_factory=list)  # subset of WALKABLE_DIRS
     description: str = ""
 
     def to_dict(self) -> dict:
         return {
             "scene_type": self.scene_type,
             "landmarks": self.landmarks,
-            "navigation_relevance": self.navigation_relevance,
+            "sign_text": self.sign_text,
+            "walkable": self.walkable,
             "description": self.description,
         }
 
 
 UNKNOWN_TAGS = SceneTags()
+
+
+def _str_list(value, cap: int) -> list[str]:
+    """Coerce JSON value to a cleaned string list: strings only, stripped,
+    length-capped, order-preserving dedupe (no item cap — callers filter
+    against vocabularies before slicing)."""
+    if not isinstance(value, list):
+        return []
+    out: list[str] = []
+    for item in value:
+        if not isinstance(item, str):
+            continue
+        item = item.strip()[:cap]
+        if item and item not in out:
+            out.append(item)
+    return out
 
 
 def parse_and_validate(text: str) -> SceneTags:
@@ -80,19 +125,17 @@ def parse_and_validate(text: str) -> SceneTags:
     except json.JSONDecodeError:
         return UNKNOWN_TAGS
 
-    scene_type = data.get("scene_type", "unknown")
+    scene_type = normalize_scene_type(str(data.get("scene_type", "unknown")))
     if scene_type not in SCENE_TYPES:
         scene_type = "unknown"
 
-    landmarks = data.get("landmarks", [])
-    if not isinstance(landmarks, list):
-        landmarks = []
-    landmarks = [str(l).strip()[:80] for l in landmarks if isinstance(l, str)][:8]
+    # vocabulary filter BEFORE the item cap: an out-of-vocab token must never
+    # displace a valid one
+    landmarks = [lm for lm in _str_list(data.get("landmarks"), cap=80) if lm in LANDMARK_TYPES][:12]
 
-    nav = data.get("navigation_relevance", [])
-    if not isinstance(nav, list):
-        nav = []
-    nav = [str(t) for t in nav if str(t) in VALID_NAV_TAGS][:8]
+    sign_text = _str_list(data.get("sign_text"), cap=80)[:8]
+
+    walkable = [d for d in _str_list(data.get("walkable"), cap=16) if d in WALKABLE_DIRS][:3]
 
     desc = data.get("description", "")
     if not isinstance(desc, str):
@@ -100,7 +143,7 @@ def parse_and_validate(text: str) -> SceneTags:
     desc = desc[:160]
 
     return SceneTags(scene_type=scene_type, landmarks=landmarks,
-                     navigation_relevance=nav, description=desc)
+                     sign_text=sign_text, walkable=walkable, description=desc)
 
 
 class SceneTagger(ABC):
@@ -190,6 +233,15 @@ class LFM2VLTagger(_HFVisionTagger):
         self._model = AutoModelForImageTextToText.from_pretrained(
             self.model_id, torch_dtype=torch.bfloat16, device_map="auto"
         )
+        # decoder-only: batched generation needs LEFT padding. Right padding
+        # corrupts outputs — measured on the 301-frame offline pass: the
+        # right-padded batch run kept ~49% unknown while the same frames
+        # single-image scored ~77%+ known. The stored v1 tags carry this
+        # artifact too (that pass was also batched).
+        try:
+            self._processor.tokenizer.padding_side = "left"
+        except Exception as e:
+            logger.warning(f"Could not set left padding ({e}) — batch tagging may degrade")
         logger.info(f"LFM2.5-VL loaded: {self.model_id} (bf16)")
 
     @staticmethod
@@ -316,7 +368,7 @@ class StubTagger(SceneTagger):
     name_ = "stub"
 
     def tag(self, image, objects: list | None = None) -> SceneTags:
-        nav = []
+        landmarks = []
         scene = "unknown"
         if objects:
             names = [o.class_name if hasattr(o, "class_name") else str(o) for o in objects]
@@ -325,8 +377,8 @@ class StubTagger(SceneTagger):
             if any("bench" in n or "person" in n for n in names):
                 scene = "corridor" if scene == "unknown" else scene
             if any("fire hydrant" in n for n in names):
-                nav.append("fire_equipment")
-        return SceneTags(scene_type=scene, landmarks=[], navigation_relevance=nav)
+                landmarks.append("fire_equipment")
+        return SceneTags(scene_type=scene, landmarks=landmarks)
 
     def name(self) -> str:
         return self.name_

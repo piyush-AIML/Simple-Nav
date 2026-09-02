@@ -81,6 +81,17 @@ def test_similar_corridors_separated_by_landmarks():
     assert score_a - score_b >= 0.4
 
 
+def test_legacy_corridor_junction_matches_junction():
+    """v1 stored scenes ('corridor_junction') normalize onto v2 'junction' —
+    pre-upgrade map artifacts must score identically against fresh tags."""
+    q = {"scene_type": "junction", "landmarks": ["door"]}
+    p_legacy = [{"scene_type": "corridor_junction", "landmarks": ["door"]}]
+    p_new = [{"scene_type": "junction", "landmarks": ["door"]}]
+    score_legacy = semantic_similarity(q, [], p_legacy)
+    score_new = semantic_similarity(q, [], p_new)
+    assert score_legacy == score_new == 0.9  # scene+landmark full match, object-neutral
+
+
 def test_dict_inputs_tolerated():
     q = {"scene_type": "room", "landmarks": ["desk"]}
     objs = [{"class": "chair", "confidence": 0.9, "bbox": [0, 0, 1, 1]}]

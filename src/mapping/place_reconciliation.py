@@ -17,10 +17,50 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from src.mapping.observations import Observation
-from src.mapping.place_builder import Place
+from src.mapping.place_builder import DISCRIMINATIVE_LANDMARK_TYPES, Place
+from src.perception.scene_tagger import normalize_scene_type
 from src.utils import setup_logger
 
 logger = setup_logger("reconciliation")
+
+# Scenes whose places form long, visually continuous regions. Generic
+# closed-vocab landmarks (door, direction_sign, ...) repeat in every such
+# place, so corridor merging is gated on DISCRIMINATING evidence only.
+CORRIDOR_SCENES = {"corridor", "junction"}
+
+
+def _dominant_scene(place: Place) -> str:
+    return (
+        normalize_scene_type(place.scene_types.most_common(1)[0][0])
+        if place.scene_types else "unknown"
+    )
+
+
+def _discriminating_evidence(place: Place) -> set[str]:
+    """Identity-bearing merge evidence: discriminative landmark tokens
+    (reception/desk/elevator/stairs/entrance/room_sign) plus the readable
+    sign text seen in the place (room numbers etc.). Generic wall fixtures
+    (door, direction_sign, fire_equipment, ...) never count."""
+    tokens = {
+        lm for lm in (place.landmarks or []) if lm in DISCRIMINATIVE_LANDMARK_TYPES
+    }
+    return tokens | set(place.sign_texts or [])
+
+
+def _set_jaccard(a: set, b: set) -> float:
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
+def _cap_exemplars(exemplar_ids: list[str], max_n: int) -> list[str]:
+    """Deterministic temporal spread when a merged place exceeds the exemplar
+    cap — prevents best-of-any-exemplar similarity from inflating as places
+    grow (unbounded exemplars let one distant view bridge distinct regions)."""
+    if max_n <= 0 or len(exemplar_ids) <= max_n:
+        return exemplar_ids
+    idx = np.linspace(0, len(exemplar_ids) - 1, max_n).round().astype(int)
+    return [exemplar_ids[i] for i in idx]
 
 
 @dataclass
@@ -61,14 +101,14 @@ def _landmark_jaccard(a: Place, b: Place) -> float:
 
 def _scene_compatible(a: Place, b: Place) -> bool:
     """Most-common scene types are compatible (equal, or one side unknown)."""
-    sa = a.scene_types.most_common(1)[0][0] if a.scene_types else "unknown"
-    sb = b.scene_types.most_common(1)[0][0] if b.scene_types else "unknown"
+    sa = normalize_scene_type(a.scene_types.most_common(1)[0][0]) if a.scene_types else "unknown"
+    sb = normalize_scene_type(b.scene_types.most_common(1)[0][0]) if b.scene_types else "unknown"
     if sa == "unknown" or sb == "unknown":
         return True
     if sa == sb:
         return True
-    # corridor <-> corridor_junction is compatible (a junction IS a corridor)
-    return {sa, sb} == {"corridor", "corridor_junction"}
+    # corridor <-> junction is compatible (a junction IS a corridor)
+    return {sa, sb} == {"corridor", "junction"}
 
 
 def _context_compatible(a: Place, b: Place, places: list[Place]) -> bool:
@@ -107,11 +147,63 @@ def decide_merge(
 
     reasons: list[str] = []
     visual_strong = vis >= v_thr
-    landmark_strong = lm >= lm_thr
-    landmarks_both_empty = not a.landmarks and not b.landmarks
     scene_ok_required = (not scene_required) or scene_ok
 
-    # -- evidence FOR merging (multiple signals, §12) --
+    # -- corridor pair: scene-aware merge guard (scene tagger v2 schema) --
+    # Generic closed-vocab landmarks (door, direction_sign, ...) appear in
+    # every corridor, so corridor↔corridor merging requires the calibrated
+    # near-identical visual floor AND shared DISCRIMINATING evidence
+    # (reception/desk/elevator/stairs/entrance/room_sign tokens or readable
+    # sign text). Disjoint discriminators = different places (identity
+    # conflict, v1-style). This keeps a chain of visually similar but
+    # distinct corridor regions from collapsing into one mega-place.
+    corridor_pair = _dominant_scene(a) in CORRIDOR_SCENES and _dominant_scene(b) in CORRIDOR_SCENES
+    if corridor_pair:
+        da, db = _discriminating_evidence(a), _discriminating_evidence(b)
+        disc_j = _set_jaccard(da, db)
+        scene_conflict = scene_required and not scene_ok and visual_strong
+        # Corridor merge evidence comes in two forms:
+        #  - shared identity evidence on a genuinely-same-view floor
+        #    (>= extra_thr — the calibrated "same view" threshold), OR
+        #  - a near-exact same view with no identity evidence on either side
+        #    (>= 0.95: a same-pose revisit of a signless stretch — the
+        #    corridor-flicker split case, cos=1.0 on identical frames). Below
+        #    0.95 is a different view of the corridor and needs real identity
+        #    evidence, so visually-similar-but-distinct corridor regions can
+        #    never chain into one mega-place.
+        no_disc = not da and not db
+        disc_strong = disc_j >= lm_thr and vis >= extra_thr
+        exact_view = no_disc and vis >= 0.95
+        corridor_evidence = disc_strong or exact_view
+        landmark_conflict = bool(da) and bool(db) and not (da & db) and vis >= v_thr - 0.15
+
+        if disc_strong:
+            reasons.append("landmarks")
+        if exact_view:
+            reasons.append("visual_near_identical")
+        if visual_strong:
+            reasons.append("visual")
+        if ctx_ok and visual_strong:
+            reasons.append("context")
+        if scene_ok:
+            reasons.append("scene")
+        if landmark_conflict:
+            reasons.append("landmark_conflict")
+        if scene_conflict:
+            reasons.append("scene_conflict")
+
+        merged = (
+            corridor_evidence
+            and scene_ok_required
+            and not landmark_conflict
+            and not scene_conflict
+        )
+        return MergeDecision(a.place_id, b.place_id, vis, lm, scene_ok, ctx_ok, merged, reasons)
+
+    # -- room / special / mixed pairs: original evidence rules unchanged --
+    landmark_strong = lm >= lm_thr
+    landmarks_both_empty = not a.landmarks and not b.landmarks
+
     if visual_strong:
         reasons.append("visual")
     if landmark_strong:
@@ -123,7 +215,6 @@ def decide_merge(
     if scene_ok:
         reasons.append("scene")
 
-    # -- evidence AGAINST merging (hard rejects, §12) --
     landmark_conflict = bool(a.landmarks) and bool(b.landmarks) and lm < 1e-9 and vis >= v_thr - 0.15
     scene_conflict = scene_required and not scene_ok and visual_strong
     if landmark_conflict:
@@ -147,7 +238,7 @@ def decide_merge(
     return MergeDecision(a.place_id, b.place_id, vis, lm, scene_ok, ctx_ok, merged, reasons)
 
 
-def _merge_places(a: Place, b: Place) -> Place:
+def _merge_places(a: Place, b: Place, max_exemplars: int | None = None) -> Place:
     merged = Place(
         place_id=min(a.place_id, b.place_id),
         segment_ids=sorted(a.segment_ids + b.segment_ids),
@@ -155,10 +246,13 @@ def _merge_places(a: Place, b: Place) -> Place:
         exemplar_ids=a.exemplar_ids + b.exemplar_ids,
         scene_types=a.scene_types + b.scene_types,
         landmarks=_top_landmarks(a.landmarks + b.landmarks),
+        sign_texts=_top_landmarks(a.sign_texts + b.sign_texts),
+        walkable_directions=a.walkable_directions + b.walkable_directions,
         object_classes=_top_landmarks(a.object_classes + b.object_classes),
         visual_stats={**a.visual_stats, **b.visual_stats},
     )
-    # cap exemplars at the configured max
+    if max_exemplars is not None:
+        merged.exemplar_ids = _cap_exemplars(merged.exemplar_ids, max_exemplars)
     return merged
 
 
@@ -202,7 +296,10 @@ def reconcile_places(
                     }
                 )
                 if decision.merged:
-                    merged_place = _merge_places(current[i], current[j])
+                    merged_place = _merge_places(
+                        current[i], current[j],
+                        max_exemplars=int(config.get("max_exemplars_per_place", 3)),
+                    )
                     current = [current[k] for k in range(len(current)) if k not in (i, j)]
                     current.insert(i, merged_place)
                     logger.info(

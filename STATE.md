@@ -129,10 +129,17 @@ failure_inspector. validate_config, backend_banner, DEMO_RUN_OF_SHOW.
 
 ### Map artifact (DINOv2 era)
 
-`data/map/college_env_v1`: **8 places / 7 edges / 301 obs**, encoder
-dinov2_registers_small / 384-d, 0 validation warnings, 0 merges (even at
-recalibrated 0.425 — DINOv2 places are genuinely distinct). Rebuild
-reproduced deterministically after the threshold swap.
+`data/map/college_env_v1`: **8 places / 7 edges / 301 obs** at this point in
+time (v1 tags; encoder dinov2_registers_small / 384-d, 0 validation
+warnings, 0 merges even at recalibrated 0.425 — DINOv2 places were
+"genuinely distinct" under v1 landmark evidence, which actually masked
+reconciliation's v1 landmark-mismatch failures). Rebuild reproduced
+deterministically after the threshold swap.
+
+**SUPERSEDED (2026-09-02):** the re-tag rebuild replaced this bundle — the
+map on disk is now **14 places / 14 edges / 301 obs / 3 warnings** with the
+corridor granularity question still OPEN (see the Scene tagger v2 section
+below). Do not treat the 8/7 numbers below this note as current.
 
 ### Planner v3 — Stage 35 ✅ product unified (Findings C/D/I closed)
 
@@ -174,6 +181,56 @@ reproduced deterministically after the threshold swap.
   `test_term_breakdown_reports_all_four_terms`, encoder-consistency tests
   (Stage 31), compare_encoders metrics tests (Stage 33).
 
+### Scene tagger v2 schema + 301-obs re-tag (2026-09-02, uncommitted, suite green)
+
+- `scene_tagger.PROMPT` + `SceneTags` upgraded: scene vocab now
+  `room/corridor/junction/stairs/elevator/entrance/lobby/unknown`
+  (`corridor_junction` → `junction`, `lobby` added); `landmarks` is a CLOSED
+  vocabulary (door, room_sign, direction_sign, stairs, elevator, entrance,
+  reception, desk, junction, corridor_opening, fire_equipment, other); new
+  `sign_text` (readable sign text) and `walkable` (`left/forward/right`,
+  evidence only) fields; `navigation_relevance` dropped (was stored-only).
+- `normalize_scene_type` maps legacy `corridor_junction` → `junction` at
+  every comparison point (parse, place counters, segmentation, reconciliation,
+  semantic scoring, graph node types).
+- **BATCH-PADDING FIX (root cause of the §2.1 unknown-scene skew):** the
+  LFM2 batched offline pass right-padded decoder-only generation, corrupting
+  outputs — stored v1 tags measured 46% unknown BECAUSE of it. Left padding
+  set in `LFM2VLTagger._load` → re-tag of all 301 obs
+  (`scripts/retag_observations.py`, embeddings untouched) → known-scene rate
+  49.5% → **93.4%** (corridor 223 / room 53 / elevator 5 / unknown 20).
+- **Re-tag exposed reconciliation over-merge:** v2 closed-vocab landmarks are
+  generic (door 283/301, direction_sign 235), so landmark Jaccard fired on
+  pure genericity and the main corridor collapsed into one 231-obs place
+  (5 places / 5 edges; visual-only self-consistency 0.5482, graph 0.7243).
+- **Corridor merge guard (implemented):** `place_reconciliation` corridor↔
+  corridor pairs now merge only on shared DISCRIMINATING evidence (readable
+  sign text aggregated per place — `Place.sign_texts`, junk-filtered — or
+  reception/desk/elevator/stairs/entrance/room_sign tokens) at visual ≥ the
+  calibrated same-view floor (0.835), or near-exact same-view ≥0.95 with no
+  identity evidence; disjoint identity evidence is a hard conflict. Room/
+  special paths unchanged. Merged exemplars capped (spread pick) — fixes a
+  latent unbounded-exemplar bug. 195 tests green.
+- `graph_builder.detect_junctions`: junction/lobby map to corridor/room node
+  types; below the degree gate a `junction` scene plus branching walkable
+  votes (≥2 directions, ≥half the place's observations,
+  `mapping.junction_semantic_evidence`, default on) yields `node_type="junction"`
+  — soft metadata, degree stays authoritative.
+
+**OPEN (2026-09-02): guard over-fragments the corridor — needs a decision.**
+Rebuilt map after the guard: 14 places / 14 edges, largest 72 obs (was 5 /
+5, largest 231; v1-era 8 / 7). Self-consistency (pseudo-labels):
+visual-only 0.6279 / graph 0.5017 (was 0.5482 / 0.7243 on the 5-place map;
+0.814 / 0.7774 in the v1-era). Structural cause: scene-tag flips at doorway
+thresholds now create real segmentation boundaries mid-corridor (v1 masking
+them as unknown), so the corridor splits into visually-continuous fragments
+that the 0.835 floor keeps apart; 177/301 frames are visually ambiguous on
+14 places. Candidate levers (not yet tried): gate segmentation scene-change
+on room↔corridor doorway alternation persistence, or lower the disc-strong
+corridor floor / add a mapping-config floor knob for experiments. Any map
+partition needs Stage 29 real labels to validate physically; self-consistency
+alone cannot pick the right granularity.
+
 ---
 
 ## 2. Current problems / next actions
@@ -211,8 +268,15 @@ generic landmarks). Conclusion recorded as "resolved: measured + re-tuned;
 re-validate on Stage 29 real labels, where tag quality and landmark
 discriminability are the actual test." Do NOT re-tune further on
 pseudo-labels.
+(2026-09-02 addendum: the 46%-unknown root cause was later found and fixed —
+LFM2 batch right-padding — see the Scene tagger v2 section. The §2.1 re-tune
+numbers above stand as the historical measurement of the era before that
+fix.)
 
 ### 2.2 Stage 35 — unify the product (next, in progress)
+
+> SUPERSEDED: completed in §1 (Planner v3 — Stage 35 ✅). Kept as the
+> historical problem record.
 
 app.py + live_navigate.py still run the legacy PlaceIndex/LiveTracker stack
 — semantic evidence, the Bayes estimator, the state machine, the runtime

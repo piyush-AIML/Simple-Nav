@@ -19,6 +19,7 @@ import networkx as nx
 
 from src.mapping.place_builder import Place
 from src.mapping.transition_builder import TransitionStats
+from src.perception.scene_tagger import normalize_scene_type
 from src.utils import setup_logger
 
 logger = setup_logger("graph_builder")
@@ -74,25 +75,53 @@ def build_graph(
     return graph
 
 
+def _walkable_junction_evidence(walkable: Counter, n_obs: int) -> bool:
+    """Branching evidence from VLM walkable votes (§15): at least two distinct
+    walkable directions, each reported in at least half the place's
+    observations. Majority support keeps one anomalous frame from voting."""
+    if n_obs <= 0:
+        return False
+    required = max(1, (n_obs + 1) // 2)  # ceil(n_obs / 2)
+    strong = [d for d, c in walkable.items() if c >= required]
+    return len(strong) >= 2
+
+
 def detect_junctions(
     graph: nx.Graph,
     places: list[Place],
     junction_min_degree: int = 3,
+    junction_semantic_evidence: bool = True,
 ) -> None:
-    """Set node_type per place (soft metadata — §15). Mutates node attrs."""
+    """Set node_type per place (soft metadata — §15). Mutates node attrs.
+
+    Geometry stays authoritative: degree >= junction_min_degree is always a
+    junction. Below that gate, a VLM 'junction' scene with branching walkable
+    evidence (two directions, majority support) is treated as a junction —
+    evidence, never a hard topology claim. 'junction' without that evidence
+    degrades to a corridor (v1 parity)."""
     place_by_id = {p.place_id: p for p in places}
     for node, attrs in graph.nodes(data=True):
         degree = graph.degree(node)
-        scene_counter = place_by_id[node].scene_types if node in place_by_id else Counter()
-        dominant_scene = scene_counter.most_common(1)[0][0] if scene_counter else "unknown"
+        place = place_by_id.get(node)
+        scene_counter = place.scene_types if place is not None else Counter()
+        dominant_scene = normalize_scene_type(
+            scene_counter.most_common(1)[0][0] if scene_counter else "unknown"
+        )
 
         if degree >= junction_min_degree:
             attrs["node_type"] = "junction"
         elif dominant_scene in ("stairs", "elevator", "entrance"):
             attrs["node_type"] = dominant_scene
-        elif dominant_scene == "corridor_junction" or dominant_scene == "corridor":
+        elif dominant_scene == "junction":
+            evidence = (
+                junction_semantic_evidence
+                and place is not None
+                and _walkable_junction_evidence(place.walkable_directions, len(place.observation_ids))
+            )
+            attrs["node_type"] = "junction" if evidence else "corridor"
+        elif dominant_scene == "corridor":
             attrs["node_type"] = "corridor"
-        elif dominant_scene == "room":
+        elif dominant_scene in ("room", "lobby"):
             attrs["node_type"] = "room"
         else:
             attrs["node_type"] = "unknown"

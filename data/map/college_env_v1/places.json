@@ -76,7 +76,52 @@
       "obs_000068",
       "obs_000069",
       "obs_000070",
+      "obs_000071"
+    ],
+    "exemplar_ids": [
+      "obs_000000",
       "obs_000071",
+      "obs_000036"
+    ],
+    "scene_types": {
+      "corridor": 72
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment"
+    ],
+    "sign_texts": [
+      "room 101",
+      "class room",
+      "no entry",
+      "26",
+      "class 1",
+      "class 2",
+      "no mark no entry",
+      "no mask"
+    ],
+    "walkable_directions": {
+      "forward": 71
+    },
+    "object_classes": [
+      "bench",
+      "chair",
+      "tv"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.9301,
+      "std_similarity": 0.0437,
+      "observation_count": 72
+    }
+  },
+  {
+    "place_id": 1,
+    "segment_ids": [
+      "seg_001",
+      "seg_002"
+    ],
+    "observation_ids": [
       "obs_000072",
       "obs_000073",
       "obs_000074",
@@ -85,14 +130,94 @@
       "obs_000077",
       "obs_000078",
       "obs_000079",
-      "obs_000080",
+      "obs_000080"
+    ],
+    "exemplar_ids": [
+      "obs_000072",
+      "obs_000074",
+      "obs_000079"
+    ],
+    "scene_types": {
+      "corridor": 9
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "other",
+      "corridor_opening"
+    ],
+    "sign_texts": [
+      "notice board"
+    ],
+    "walkable_directions": {
+      "forward": 9
+    },
+    "object_classes": [
+      "tv"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.9822,
+      "std_similarity": 0.0029,
+      "observation_count": 4
+    }
+  },
+  {
+    "place_id": 3,
+    "segment_ids": [
+      "seg_003"
+    ],
+    "observation_ids": [
       "obs_000081",
       "obs_000082",
       "obs_000083",
       "obs_000084",
       "obs_000085",
       "obs_000086",
+      "obs_000087"
+    ],
+    "exemplar_ids": [
+      "obs_000081",
       "obs_000087",
+      "obs_000084"
+    ],
+    "scene_types": {
+      "corridor": 7
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening"
+    ],
+    "sign_texts": [
+      "door 123",
+      "fire extinguisher",
+      "door 120"
+    ],
+    "walkable_directions": {
+      "forward": 7
+    },
+    "object_classes": [],
+    "visual_stats": {
+      "mean_similarity": 0.9823,
+      "std_similarity": 0.0026,
+      "observation_count": 7
+    }
+  },
+  {
+    "place_id": 4,
+    "segment_ids": [
+      "seg_004"
+    ],
+    "observation_ids": [
       "obs_000088",
       "obs_000089",
       "obs_000090",
@@ -104,35 +229,37 @@
       "obs_000096"
     ],
     "exemplar_ids": [
-      "obs_000000",
+      "obs_000088",
       "obs_000096",
-      "obs_000048"
+      "obs_000092"
     ],
     "scene_types": {
-      "unknown": 60,
-      "corridor": 36,
-      "entrance": 1
+      "corridor": 6,
+      "room": 3
     },
     "landmarks": [
-      "white wall",
-      "white door",
-      "darkened room"
+      "door",
+      "direction_sign"
     ],
-    "object_classes": [
-      "bench",
-      "tv",
-      "chair"
+    "sign_texts": [
+      "room 101",
+      "tfp 320",
+      "tf 10"
     ],
+    "walkable_directions": {
+      "forward": 9
+    },
+    "object_classes": [],
     "visual_stats": {
-      "mean_similarity": 0.8882,
-      "std_similarity": 0.136,
-      "observation_count": 97
+      "mean_similarity": 0.7525,
+      "std_similarity": 0.0937,
+      "observation_count": 9
     }
   },
   {
-    "place_id": 1,
+    "place_id": 5,
     "segment_ids": [
-      "seg_001"
+      "seg_005"
     ],
     "observation_ids": [
       "obs_000097",
@@ -145,7 +272,50 @@
       "obs_000104",
       "obs_000105",
       "obs_000106",
+      "obs_000107"
+    ],
+    "exemplar_ids": [
+      "obs_000097",
       "obs_000107",
+      "obs_000102"
+    ],
+    "scene_types": {
+      "corridor": 11
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "reception",
+      "desk",
+      "corridor_opening",
+      "fire_equipment",
+      "other"
+    ],
+    "sign_texts": [
+      "room 101",
+      "directional sign",
+      "corridor opening",
+      "a csd initiative by burmuti bank centre to ltd."
+    ],
+    "walkable_directions": {
+      "forward": 11
+    },
+    "object_classes": [
+      "refrigerator"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.9159,
+      "std_similarity": 0.1094,
+      "observation_count": 11
+    }
+  },
+  {
+    "place_id": 6,
+    "segment_ids": [
+      "seg_006"
+    ],
+    "observation_ids": [
       "obs_000108",
       "obs_000109",
       "obs_000110",
@@ -154,7 +324,56 @@
       "obs_000113",
       "obs_000114",
       "obs_000115",
+      "obs_000116"
+    ],
+    "exemplar_ids": [
+      "obs_000108",
       "obs_000116",
+      "obs_000112"
+    ],
+    "scene_types": {
+      "corridor": 6,
+      "room": 2,
+      "unknown": 1
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "reception",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other",
+      "desk"
+    ],
+    "sign_texts": [
+      "a csr initiative by durgapur medical centre pvt. ltd.",
+      "a csr initiative",
+      "hospital",
+      "medical centre pvt. ltd.",
+      "no parking no entry",
+      "back initiative",
+      "a csr",
+      "durg"
+    ],
+    "walkable_directions": {
+      "forward": 7
+    },
+    "object_classes": [
+      "refrigerator"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.8367,
+      "std_similarity": 0.0633,
+      "observation_count": 9
+    }
+  },
+  {
+    "place_id": 7,
+    "segment_ids": [
+      "seg_007"
+    ],
+    "observation_ids": [
       "obs_000117",
       "obs_000118",
       "obs_000119",
@@ -162,7 +381,40 @@
       "obs_000121",
       "obs_000122",
       "obs_000123",
+      "obs_000124"
+    ],
+    "exemplar_ids": [
+      "obs_000117",
       "obs_000124",
+      "obs_000121"
+    ],
+    "scene_types": {
+      "room": 8
+    },
+    "landmarks": [
+      "door"
+    ],
+    "sign_texts": [
+      "m"
+    ],
+    "walkable_directions": {
+      "forward": 7
+    },
+    "object_classes": [
+      "refrigerator"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.9729,
+      "std_similarity": 0.0065,
+      "observation_count": 8
+    }
+  },
+  {
+    "place_id": 8,
+    "segment_ids": [
+      "seg_008"
+    ],
+    "observation_ids": [
       "obs_000125",
       "obs_000126",
       "obs_000127",
@@ -192,29 +444,49 @@
       "obs_000151"
     ],
     "exemplar_ids": [
-      "obs_000097",
+      "obs_000125",
       "obs_000151",
-      "obs_000124"
+      "obs_000138"
     ],
     "scene_types": {
-      "unknown": 34,
-      "corridor": 1,
-      "room": 20
+      "room": 27
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "other"
+    ],
+    "sign_texts": [
+      "digital class room",
+      "window_sign",
+      "students only",
+      "call center",
+      "welcome to college",
+      "mission statement",
+      "door_sign"
+    ],
+    "walkable_directions": {
+      "forward": 25,
+      "left": 4
+    },
     "object_classes": [
       "refrigerator"
     ],
     "visual_stats": {
-      "mean_similarity": 0.7635,
-      "std_similarity": 0.1579,
-      "observation_count": 55
+      "mean_similarity": 0.7151,
+      "std_similarity": 0.1408,
+      "observation_count": 27
     }
   },
   {
-    "place_id": 2,
+    "place_id": 9,
     "segment_ids": [
-      "seg_002"
+      "seg_009"
     ],
     "observation_ids": [
       "obs_000152",
@@ -246,69 +518,12 @@
       "obs_000178",
       "obs_000179",
       "obs_000180",
-      "obs_000181"
-    ],
-    "exemplar_ids": [
-      "obs_000152",
       "obs_000181",
-      "obs_000167"
-    ],
-    "scene_types": {
-      "corridor": 24,
-      "room": 3,
-      "unknown": 3
-    },
-    "landmarks": [
-      "darkened ceiling",
-      "darkened door",
-      "darkened floor"
-    ],
-    "object_classes": [],
-    "visual_stats": {
-      "mean_similarity": 0.9133,
-      "std_similarity": 0.0715,
-      "observation_count": 30
-    }
-  },
-  {
-    "place_id": 3,
-    "segment_ids": [
-      "seg_003"
-    ],
-    "observation_ids": [
       "obs_000182",
       "obs_000183",
       "obs_000184",
       "obs_000185",
-      "obs_000186"
-    ],
-    "exemplar_ids": [
-      "obs_000182",
       "obs_000186",
-      "obs_000184"
-    ],
-    "scene_types": {
-      "unknown": 5
-    },
-    "landmarks": [
-      "ceiling fan",
-      "door"
-    ],
-    "object_classes": [
-      "tv"
-    ],
-    "visual_stats": {
-      "mean_similarity": 0.8964,
-      "std_similarity": 0.0636,
-      "observation_count": 5
-    }
-  },
-  {
-    "place_id": 4,
-    "segment_ids": [
-      "seg_004"
-    ],
-    "observation_ids": [
       "obs_000187",
       "obs_000188",
       "obs_000189",
@@ -333,7 +548,53 @@
       "obs_000208",
       "obs_000209",
       "obs_000210",
+      "obs_000211"
+    ],
+    "exemplar_ids": [
+      "obs_000152",
       "obs_000211",
+      "obs_000182"
+    ],
+    "scene_types": {
+      "room": 13,
+      "corridor": 28,
+      "unknown": 19
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "junction",
+      "corridor_opening",
+      "fire_equipment",
+      "other",
+      "reception",
+      "desk",
+      "entrance"
+    ],
+    "sign_texts": [
+      "room 101"
+    ],
+    "walkable_directions": {
+      "forward": 48
+    },
+    "object_classes": [
+      "tv"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.812,
+      "std_similarity": 0.09,
+      "observation_count": 60
+    }
+  },
+  {
+    "place_id": 10,
+    "segment_ids": [
+      "seg_010",
+      "seg_011",
+      "seg_014",
+      "seg_015"
+    ],
+    "observation_ids": [
       "obs_000212",
       "obs_000213",
       "obs_000214",
@@ -371,63 +632,6 @@
       "obs_000246",
       "obs_000247",
       "obs_000248",
-      "obs_000249",
-      "obs_000250",
-      "obs_000251",
-      "obs_000252",
-      "obs_000253",
-      "obs_000254",
-      "obs_000255",
-      "obs_000256",
-      "obs_000257",
-      "obs_000258",
-      "obs_000259",
-      "obs_000260",
-      "obs_000261",
-      "obs_000262",
-      "obs_000263",
-      "obs_000264"
-    ],
-    "exemplar_ids": [
-      "obs_000187",
-      "obs_000264",
-      "obs_000226"
-    ],
-    "scene_types": {
-      "unknown": 45,
-      "room": 5,
-      "corridor": 28
-    },
-    "landmarks": [
-      "door",
-      "window",
-      "large window",
-      "ceiling fan",
-      "door at end of corridor",
-      "window with geometric pattern",
-      "tiled floor",
-      "white walls",
-      "hallway",
-      "door frame",
-      "wall",
-      "window on right"
-    ],
-    "object_classes": [
-      "tv",
-      "person"
-    ],
-    "visual_stats": {
-      "mean_similarity": 0.8261,
-      "std_similarity": 0.1344,
-      "observation_count": 78
-    }
-  },
-  {
-    "place_id": 5,
-    "segment_ids": [
-      "seg_005"
-    ],
-    "observation_ids": [
       "obs_000265",
       "obs_000266",
       "obs_000267",
@@ -442,7 +646,138 @@
       "obs_000276",
       "obs_000277",
       "obs_000278",
-      "obs_000279",
+      "obs_000279"
+    ],
+    "exemplar_ids": [
+      "obs_000212",
+      "obs_000271",
+      "obs_000278"
+    ],
+    "scene_types": {
+      "corridor": 52
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other",
+      "junction",
+      "corridor_opening"
+    ],
+    "sign_texts": [
+      "room 101",
+      "bcre"
+    ],
+    "walkable_directions": {
+      "forward": 52
+    },
+    "object_classes": [
+      "tv",
+      "person"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.9839,
+      "std_similarity": 0.0022,
+      "observation_count": 3
+    }
+  },
+  {
+    "place_id": 12,
+    "segment_ids": [
+      "seg_012"
+    ],
+    "observation_ids": [
+      "obs_000249",
+      "obs_000250",
+      "obs_000251",
+      "obs_000252"
+    ],
+    "exemplar_ids": [
+      "obs_000249",
+      "obs_000252",
+      "obs_000251"
+    ],
+    "scene_types": {
+      "corridor": 4
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "junction",
+      "corridor_opening",
+      "other"
+    ],
+    "sign_texts": [
+      "room 101",
+      "corridor opening"
+    ],
+    "walkable_directions": {
+      "forward": 4
+    },
+    "object_classes": [],
+    "visual_stats": {
+      "mean_similarity": 0.9712,
+      "std_similarity": 0.0083,
+      "observation_count": 4
+    }
+  },
+  {
+    "place_id": 13,
+    "segment_ids": [
+      "seg_013"
+    ],
+    "observation_ids": [
+      "obs_000253",
+      "obs_000254",
+      "obs_000255",
+      "obs_000256",
+      "obs_000257",
+      "obs_000258",
+      "obs_000259",
+      "obs_000260",
+      "obs_000261",
+      "obs_000262",
+      "obs_000263",
+      "obs_000264"
+    ],
+    "exemplar_ids": [
+      "obs_000253",
+      "obs_000264",
+      "obs_000259"
+    ],
+    "scene_types": {
+      "corridor": 12
+    },
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "other"
+    ],
+    "sign_texts": [
+      "room 101",
+      "class room",
+      "dept. of csm",
+      "dept of cse"
+    ],
+    "walkable_directions": {
+      "forward": 12
+    },
+    "object_classes": [],
+    "visual_stats": {
+      "mean_similarity": 0.8495,
+      "std_similarity": 0.166,
+      "observation_count": 12
+    }
+  },
+  {
+    "place_id": 16,
+    "segment_ids": [
+      "seg_016",
+      "seg_018"
+    ],
+    "observation_ids": [
       "obs_000280",
       "obs_000281",
       "obs_000282",
@@ -450,67 +785,9 @@
       "obs_000284",
       "obs_000285",
       "obs_000286",
-      "obs_000287"
-    ],
-    "exemplar_ids": [
-      "obs_000265",
       "obs_000287",
-      "obs_000276"
-    ],
-    "scene_types": {
-      "corridor": 23
-    },
-    "landmarks": [
-      "door",
-      "window",
-      "wall",
-      "fire_equipment",
-      "information technology sign",
-      "door on right"
-    ],
-    "object_classes": [],
-    "visual_stats": {
-      "mean_similarity": 0.9346,
-      "std_similarity": 0.0767,
-      "observation_count": 23
-    }
-  },
-  {
-    "place_id": 6,
-    "segment_ids": [
-      "seg_006"
-    ],
-    "observation_ids": [
       "obs_000288",
       "obs_000289",
-      "obs_000290",
-      "obs_000291",
-      "obs_000292",
-      "obs_000293"
-    ],
-    "exemplar_ids": [
-      "obs_000288",
-      "obs_000293",
-      "obs_000291"
-    ],
-    "scene_types": {
-      "elevator": 6
-    },
-    "landmarks": [],
-    "object_classes": [],
-    "visual_stats": {
-      "mean_similarity": 0.8688,
-      "std_similarity": 0.0529,
-      "observation_count": 6
-    }
-  },
-  {
-    "place_id": 7,
-    "segment_ids": [
-      "seg_007"
-    ],
-    "observation_ids": [
-      "obs_000294",
       "obs_000295",
       "obs_000296",
       "obs_000297",
@@ -519,21 +796,76 @@
       "obs_000300"
     ],
     "exemplar_ids": [
-      "obs_000294",
-      "obs_000300",
-      "obs_000297"
+      "obs_000280",
+      "obs_000285",
+      "obs_000298"
     ],
     "scene_types": {
-      "corridor": 7
+      "corridor": 16
     },
-    "landmarks": [],
+    "landmarks": [
+      "door",
+      "direction_sign",
+      "fire_equipment",
+      "reception",
+      "desk",
+      "junction",
+      "corridor_opening",
+      "other"
+    ],
+    "sign_texts": [
+      "information technology",
+      "room 101",
+      "reception technology"
+    ],
+    "walkable_directions": {
+      "forward": 16
+    },
     "object_classes": [
       "tv"
     ],
     "visual_stats": {
-      "mean_similarity": 0.922,
-      "std_similarity": 0.1029,
-      "observation_count": 7
+      "mean_similarity": 0.9716,
+      "std_similarity": 0.0133,
+      "observation_count": 6
+    }
+  },
+  {
+    "place_id": 17,
+    "segment_ids": [
+      "seg_017"
+    ],
+    "observation_ids": [
+      "obs_000290",
+      "obs_000291",
+      "obs_000292",
+      "obs_000293",
+      "obs_000294"
+    ],
+    "exemplar_ids": [
+      "obs_000290",
+      "obs_000294",
+      "obs_000292"
+    ],
+    "scene_types": {
+      "elevator": 5
+    },
+    "landmarks": [
+      "door",
+      "elevator",
+      "direction_sign"
+    ],
+    "sign_texts": [
+      "lift"
+    ],
+    "walkable_directions": {
+      "forward": 5
+    },
+    "object_classes": [],
+    "visual_stats": {
+      "mean_similarity": 0.8679,
+      "std_similarity": 0.0854,
+      "observation_count": 5
     }
   }
 ]
