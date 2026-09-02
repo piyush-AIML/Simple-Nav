@@ -50,8 +50,13 @@ sampling:
   dark_threshold: 20.0          # mean grayscale below this = unusably dark
 
 embedding:
-  model: "resnet18" # torchvision model used as a frozen feature extractor
-  image_size: 224
+  # Default as of planner v3 §4: DINOv2-with-Registers (self-supervised,
+  # better viewpoint/lighting invariance than ResNet18). Rollback: set
+  # back to "resnet18" — both stay registered, no other change needed.
+  # Optional gated stretch (planner v3 §4.1): "dinov3_vits16plus" — only
+  # after the HF license is approved; the registry fails closed otherwise.
+  model: "dinov2_registers_small"
+  image_size: 224  # ResNet18 only — HF-family encoders use their own AutoImageProcessor
 
 perception:
   # Object detection (Stage 06, planner v2 §5.1). YOLO26n: smaller (2.4M
@@ -79,6 +84,7 @@ runtime:
   max_stale_seconds: 5.0        # forced expensive re-run even if nothing looks novel
   vlm_batch_size: 12            # offline mapping pass only; live loop stays 1-at-a-time
   detector_batch_size: 16
+  encoder_batch_size: 16        # planner v3 §6 — closes the embed_frames batching gap
 
 clustering:
   # KMeans k is not fixed by hand — we sweep this range and pick the k with the
@@ -103,10 +109,14 @@ mapping:
   exemplar_method: "temporal_diversity"   # kmeans | diversity | temporal_diversity
   max_exemplars_per_place: 3
   # Stage 10 — place reconciliation: multi-signal merge (§12)
-  merge_visual_threshold: 0.75
-  # both places lack landmarks -> merge only when near-identical (0.92;
-  # same-building cross-area ResNet18 similarity is ~0.87)
-  merge_visual_extra_threshold: 0.92
+  # Recalibrated for DINOv2 (planner v3 §5, 2026-09-02): old ResNet18 value
+  # 0.75 sat at the 16.8th percentile of ResNet18's different-place
+  # similarity — 0.425 is the same percentile of DINOv2's.
+  merge_visual_threshold: 0.425
+  # both places lack landmarks -> merge only when near-identical (was 0.92 =
+  # 96.1st percentile of ResNet18 diff-place; 0.835 = same percentile of
+  # DINOv2). Rollback: restore 0.92/0.75 if the map over- or under-merges.
+  merge_visual_extra_threshold: 0.835
   merge_landmark_threshold: 0.5
   merge_scene_required: true
   # Stage 11 — transition extraction: debouncing + minimum support (§13).
@@ -122,7 +132,9 @@ mapping:
   weak_edge_threshold: 0.4
   min_observations_per_place: 3
   high_variance_threshold: 0.35
-  duplicate_similarity_threshold: 0.9
+  # 0.9 -> 0.791 = 47.6th percentile of DINOv2 same-place similarity
+  # (was the 47.6th percentile of ResNet18's — planner v3 §5 recalibration)
+  duplicate_similarity_threshold: 0.791
 
 localization:
   # Stage 15 — candidate retrieval (§18): FAISS proposes, reasoning decides
@@ -140,31 +152,42 @@ localization:
   # Stage 18 — probabilistic state estimator (Bayes filter, §21)
   self_transition_prior: 0.7
   far_transition_prior: 0.05
-  likelihood_temperature: 0.1
+  # Recalibrated for DINOv2 (planner v3 §5): temperature 0.1 -> 0.379 by
+  # preserving the softmax discrimination ratio (top-2 candidate-total gap /
+  # T) measured from the decision logs — DINOv2's median top-2 visual gap is
+  # 3.79x ResNet18's (0.106 vs 0.028). (The std-ratio value 0.281 was tried
+  # first and rejected: the same-place pairwise std is inflated by
+  # far-apart same-place pairs, overstating the likelihood's spread.) The
+  # tracker/confidence floors below shifted by w_visual * Δsame_mean =
+  # -0.0744 (they sat below the entire ResNet18 same-place distribution, so
+  # percentile-matching was undefined). Old ResNet18 values for rollback:
+  # temperature 0.1, tracking 0.5, lost 0.2, reacquired 0.5, arrived 0.6,
+  # recovery 0.45, transition 0.65, high 0.6, low 0.3.
+  likelihood_temperature: 0.379
   # Stage 19 — state machine thresholds (§22)
-  tracking_threshold: 0.5
+  tracking_threshold: 0.426
   tracking_entropy: 0.6
   uncertain_floor: 0.2
   lost_after: 3
-  lost_threshold: 0.2
+  lost_threshold: 0.126
   # LOST also fires when the belief mass is mostly unknown (weak evidence
   # never pushes posterior below lost_threshold because temporal/graph terms
   # floor the candidate totals — §Rule 4)
   lost_unknown_mass: 0.6
-  reacquired_threshold: 0.5
-  arrived_threshold: 0.6
+  reacquired_threshold: 0.426
+  arrived_threshold: 0.526
   arrived_confirmations: 2
   # Stage 20 — transition stabilization: K consecutive or high posterior (§23)
   transition_confirmation_count: 3
-  transition_threshold: 0.65
+  transition_threshold: 0.576
   # Stage 21 — global reacquisition (§24)
   global_reacquisition_after: 3
-  recovery_threshold: 0.45
+  recovery_threshold: 0.376
   # Stage 22 — confidence calibration (§25)
-  high_score: 0.6
+  high_score: 0.526
   high_margin: 0.15
   high_entropy: 0.4
-  low_score: 0.3
+  low_score: 0.226
   low_margin: 0.02
   unknown_high_mass: 0.4
 
@@ -174,7 +197,9 @@ navigation:
   smoothing_window: 5
   # If the best matching similarity score is below this, the system reports
   # "not confidently recognized" instead of forcing a guess.
-  confidence_threshold: 0.40
+  # 0.40 -> 0.251: floor-shift by DINOv2's same-place mean drop (raw-scale
+  # gate; planner v3 §5). Rollback: 0.40.
+  confidence_threshold: 0.251
   # Route by strongest-observed connections (favor edges with more recorded
   # transitions) rather than plain fewest-hops.
   use_weighted_routing: true

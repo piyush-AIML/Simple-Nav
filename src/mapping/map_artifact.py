@@ -184,7 +184,7 @@ def write_map(
     # vector index (copy of the store index + ids, plus store metadata)
     vec_dir = target / "vector_index"
     vec_dir.mkdir()
-    store.save()
+    store.save(encoder_name=encoder_name)
     shutil.copy(store.obs_dir / "index.faiss", vec_dir / "index.faiss")
     shutil.copy(store.obs_dir / "id_order.json", vec_dir / "id_order.json")
     shutil.copy(store.obs_dir / "observations.jsonl", vec_dir / "observations.jsonl")

@@ -3,25 +3,40 @@
     {
       "id": 0,
       "node_type": "unknown",
-      "observation_count": 152
+      "observation_count": 97
     },
     {
       "id": 1,
-      "node_type": "corridor",
-      "observation_count": 30
+      "node_type": "unknown",
+      "observation_count": 55
     },
     {
       "id": 2,
       "node_type": "corridor",
-      "observation_count": 106
+      "observation_count": 30
     },
     {
       "id": 3,
+      "node_type": "unknown",
+      "observation_count": 5
+    },
+    {
+      "id": 4,
+      "node_type": "unknown",
+      "observation_count": 78
+    },
+    {
+      "id": 5,
+      "node_type": "corridor",
+      "observation_count": 23
+    },
+    {
+      "id": 6,
       "node_type": "elevator",
       "observation_count": 6
     },
     {
-      "id": 4,
+      "id": 7,
       "node_type": "corridor",
       "observation_count": 7
     }
@@ -33,7 +48,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 182,
+      "supporting_observations": 152,
       "mean_visual_strength": 0.0
     },
     {
@@ -42,7 +57,7 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 136,
+      "supporting_observations": 85,
       "mean_visual_strength": 0.0
     },
     {
@@ -51,12 +66,39 @@
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,
-      "supporting_observations": 112,
+      "supporting_observations": 35,
       "mean_visual_strength": 0.0
     },
     {
       "source": 3,
       "target": 4,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 83,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 101,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "confidence": 1.0,
+      "forward_count": 1,
+      "reverse_count": 0,
+      "supporting_observations": 29,
+      "mean_visual_strength": 0.0
+    },
+    {
+      "source": 6,
+      "target": 7,
       "confidence": 1.0,
       "forward_count": 1,
       "reverse_count": 0,

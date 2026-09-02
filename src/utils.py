@@ -91,6 +91,16 @@ def validate_config(config: dict) -> list[tuple[str, str]]:
         issues.append(("error", "perception.vlm_quantization: LFM2 must never run at 4bit "
                                 "(planner v2 §5.2)"))
 
+    # embedding.model must be a registered encoder (planner v3 §6). Lazy
+    # import: src/embeddings/encoder.py imports setup_logger from this
+    # module, so a module-level import here would be circular.
+    from src.embeddings.encoder import _REGISTRY as KNOWN_ENCODERS
+
+    emb = (config.get("embedding") or {}).get("model")
+    if emb not in KNOWN_ENCODERS:
+        issues.append(("error", f"embedding.model: unknown model {emb!r} "
+                                f"(known: {sorted(KNOWN_ENCODERS)})"))
+
     # localization weights: each in [0, 1], non-trivial sum
     loc = config.get("localization", {}) or {}
     weights = {k: float(loc.get(k, 0.0)) for k in

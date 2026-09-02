@@ -99,14 +99,18 @@ class ObservationStore:
 
     # ---------- persistence ----------
 
-    def save(self) -> None:
+    def save(self, encoder_name: str) -> None:
+        """Persist the store. encoder_name is recorded in encoder.json and
+        must be the encoder that produced the stored embeddings (planner v3
+        §6) — callers pass the real value from get_encoder(config), never a
+        literal, so the file can't silently lie about the vectors."""
         self.obs_dir.mkdir(parents=True, exist_ok=True)
         save_observations_jsonl(self.observations, self.obs_dir / "observations.jsonl")
         embeddings = np.stack([o.embedding for o in self.observations if o.embedding is not None]).astype("float32")
         np.save(self.obs_dir / "embeddings.npy", embeddings)
         with open(self.obs_dir / "encoder.json", "w") as f:
             json.dump(
-                {"model": "resnet18", "dimension": int(embeddings.shape[1])},
+                {"model": encoder_name, "dimension": int(embeddings.shape[1])},
                 f,
                 indent=2,
             )

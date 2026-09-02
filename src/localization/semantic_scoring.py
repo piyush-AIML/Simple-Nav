@@ -75,11 +75,17 @@ def _dominant_scene(place_tags: list[Any]) -> str:
 
 
 def _scene_match(query_scene: str, place_scene: str) -> float:
-    """1.0 exact match; 0.3 if either side is unknown; else 0.0."""
+    """1.0 exact match; 0.5 if either side is unknown; else 0.0.
+
+    Planner v3 §9 re-tune: the old 0.3 penalized the PLACE side for
+    'unknown', but on this dataset 46% of observations have scene
+    'unknown' because tagging failed — absence of stored evidence is not
+    evidence of absence (the same Rule 4 that protects the query side).
+    Unknown now abstains (0.5) instead of voting against."""
     if query_scene == place_scene and query_scene != "unknown":
         return 1.0
     if query_scene == "unknown" or place_scene == "unknown":
-        return 0.3
+        return 0.5
     return 0.0
 
 

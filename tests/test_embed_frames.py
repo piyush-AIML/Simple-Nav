@@ -45,8 +45,33 @@ def test_scene_type_debounce_tolerates_missing_tags():
 
 
 def test_batch_size_from_runtime_config():
-    cfg = {"runtime": {"vlm_batch_size": 12, "detector_batch_size": 16}}
+    cfg = {"runtime": {"vlm_batch_size": 12, "detector_batch_size": 16,
+                       "encoder_batch_size": 16}}
     assert _batch_size(cfg, "vlm_batch_size", 12) == 12
     assert _batch_size(cfg, "detector_batch_size", 16) == 16
+    assert _batch_size(cfg, "encoder_batch_size", 16) == 16  # planner v3 §6
     assert _batch_size({}, "vlm_batch_size", 12) == 12  # defaults
     assert _batch_size({"runtime": {"vlm_batch_size": 0}}, "vlm_batch_size", 12) == 1
+
+
+def test_save_observations_dir_threads_encoder_name(tmp_path):
+    """Planner v3 §6: the name written to encoder.json is the one handed to
+    save_observations_dir — not a hardcoded literal (dead-parameter fix)."""
+    import json
+
+    import numpy as np
+
+    from src.embed_frames import save_observations_dir
+    from src.mapping.observations import Observation
+
+    obs = [
+        Observation(id="obs_0000", timestamp=0.0, frame_path="data/frames/f0.jpg",
+                    embedding=np.array([1.0, 0.0, 0.0], dtype="float32")),
+        Observation(id="obs_0001", timestamp=1.0, frame_path="data/frames/f1.jpg",
+                    embedding=np.array([0.0, 1.0, 0.0], dtype="float32")),
+    ]
+    save_observations_dir(obs, tmp_path, encoder_name="dinov2_registers_small")
+    with open(tmp_path / "encoder.json") as f:
+        meta = json.load(f)
+    assert meta["model"] == "dinov2_registers_small"
+    assert meta["dimension"] == 3

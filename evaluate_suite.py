@@ -284,6 +284,58 @@ def run_graph_metrics(bundle: MapBundle, labels: dict | None = None) -> dict:
 
 ABLATION_VARIANTS = ["visual", "semantic", "temporal", "graph"]
 
+AMBIGUOUS_VISUAL_MARGIN = 0.05  # planner v3 §9 / STATE.md §2.1
+
+
+def ambiguous_subset_analysis(bundle: MapBundle, config: dict,
+                              gt: dict[str, int]) -> dict:
+    """Planner v3 §9 (Stage 36): close out the non-monotonic ablation
+    finding. The acceptance Stage 23 always specified for semantic evidence
+    is "improve on the subset tagged visually ambiguous" — NOT overall
+    top-1. A frame is ambiguous when the top-2 VISUAL candidate margin
+    (visual-only pass, raw retrieval scores) is below
+    AMBIGUOUS_VISUAL_MARGIN. Report top-1 for visual-only vs +semantic on
+    that subset, plus the clear subset for contrast."""
+    vis_rows, _ = _run_pass(bundle, config, "visual", gt)
+    sem_rows, _ = _run_pass(bundle, config, "semantic", gt)
+    by_id_sem = {r["obs_id"]: r for r in sem_rows}
+
+    def margin(row: dict) -> float | None:
+        vs = sorted((c["visual_score"] for c in row["candidates"]), reverse=True)
+        return vs[0] - vs[1] if len(vs) >= 2 else None
+
+    def top1(rows: list[dict]) -> float | None:
+        denom = sum(1 for r in rows if r["gt"] is not None)
+        hits = sum(1 for r in rows if r["gt"] is not None and r["reported"] == r["gt"])
+        return round(hits / denom, 4) if denom else None
+
+    amb_rows, clear_rows = [], []
+    for row in vis_rows:
+        m = margin(row)
+        if m is None:
+            continue
+        (amb_rows if m < AMBIGUOUS_VISUAL_MARGIN else clear_rows).append(row)
+
+    margins = [m for m in (margin(r) for r in vis_rows) if m is not None]
+    amb_visual = top1(amb_rows)
+    amb_semantic = top1([by_id_sem[r["obs_id"]] for r in amb_rows])
+    return {
+        "ambiguous_margin_threshold": AMBIGUOUS_VISUAL_MARGIN,
+        "n_ambiguous": len(amb_rows),
+        "n_clear": len(clear_rows),
+        "margin_median": round(float(np.median(margins)), 4),
+        "ambiguous_visual_only_top1": amb_visual,
+        "ambiguous_semantic_top1": amb_semantic,
+        "ambiguous_semantic_helps": bool(
+            amb_semantic is not None and amb_visual is not None
+            and amb_semantic >= amb_visual),
+        "clear_visual_only_top1": top1(clear_rows),
+        "clear_semantic_top1": top1([by_id_sem[r["obs_id"]] for r in clear_rows]),
+        "note": ("top-1 self-consistency on the visual-ambiguous subset only — "
+                 "the acceptance metric for semantic evidence (Stage 23 / "
+                 "planner v3 §9); overall top-1 was never the acceptance"),
+    }
+
 
 def run_ablation(bundle: MapBundle, config: dict, labels: dict | None = None) -> dict:
     """Incremental localization: visual -> +semantic -> +temporal -> +graph
@@ -313,12 +365,24 @@ def run_ablation(bundle: MapBundle, config: dict, labels: dict | None = None) ->
         for obs in bundle.store.all()
     )
     tops = [v["top1_accuracy"] for v in variants]
-    return {
+    monotonic = all(a <= b + 1e-9 for a, b in zip(tops, tops[1:]))
+    result = {
         "variants": variants,
         "semantic_active": semantic_active,
-        "monotonic_or_explained": all(a <= b + 1e-9 for a, b in zip(tops, tops[1:])),
+        "monotonic_or_explained": monotonic,
         "note": PSEUDO_NOTE,
     }
+    if not monotonic:
+        # planner v3 §9: a non-monotonic ablation is explained when the
+        # ambiguous-subset breakdown (below) records where each term's
+        # benefit is measured; the flag stays false — the flag is the raw
+        # check, the subset analysis is the explanation.
+        result["explanation"] = (
+            "non-monotonic: semantic evidence is measured on the "
+            "visually-ambiguous subset (see ambiguous_subset), temporal "
+            "smoothing trades top-1 for a lower false-jump rate, graph "
+            "adds the same smoothing via the prior — per planner v3 §9")
+    return result
 
 
 def main() -> None:
@@ -345,6 +409,10 @@ def main() -> None:
     loc_metrics = run_localization_metrics(bundle, config, labels)
     graph_metrics = run_graph_metrics(bundle, labels)
     ablation = run_ablation(bundle, config, labels)
+    # planner v3 §9 (Stage 36): the visually-ambiguous-subset breakdown —
+    # the actual acceptance metric for semantic evidence
+    ablation["ambiguous_subset"] = ambiguous_subset_analysis(
+        bundle, config, gt_place_of_obs(bundle, labels))
 
     # decision log for the failure inspector
     rows, _ = _run_pass(bundle, config, "graph", gt_place_of_obs(bundle, labels))

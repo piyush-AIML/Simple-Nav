@@ -52,6 +52,22 @@ def test_tracking_converges_and_keeps_status_contract(tmp_path):
     assert status["directions"] == "Lobby -> Corridor -> Room101"
 
 
+def test_term_breakdown_reports_all_four_terms(tmp_path):
+    """Planner v3 §8: the status dict carries the per-candidate evidence
+    breakdown the demo app displays — visual/semantic/temporal/graph terms
+    for the top-3 scored candidates."""
+    tracker = make_tracker(tmp_path)
+    status = tracker.process_frame(V0)
+    breakdown = status["term_breakdown"]
+    assert len(breakdown) == 3  # top-3 candidates
+    best = breakdown[0]
+    assert best["place_id"] == 0
+    assert best["place_name"] == "Lobby"
+    assert best["visual_term"] >= best["semantic_term"]  # exact exemplar hit
+    for key in ("visual_term", "semantic_term", "temporal_term", "graph_term", "total"):
+        assert 0.0 <= best[key] <= 1.0
+
+
 def test_arrival_is_detected_after_confirmations(tmp_path):
     tracker = make_tracker(tmp_path, destination=2)
     for _ in range(4):

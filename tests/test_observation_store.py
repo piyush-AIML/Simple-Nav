@@ -1,6 +1,8 @@
 """Tests for the ObservationStore (§9): save/load round trip, id -> all
 metadata + frame path recovery, FAISS search, append behavior."""
 
+import json
+
 import numpy as np
 import pytest
 
@@ -29,7 +31,7 @@ def test_save_load_round_trip_recovers_everything(tmp_path):
     ]
     store = ObservationStore(tmp_path)
     store.add(obs_list)
-    store.save()
+    store.save(encoder_name="resnet18")
 
     fresh = ObservationStore.load(tmp_path)
     assert len(fresh) == 2
@@ -60,7 +62,7 @@ def test_append_preserves_ids(tmp_path):
     store = ObservationStore(tmp_path)
     store.add([make_obs(0, np.array([1.0, 0.0, 0.0, 0.0], dtype="float32"))])
     store.add([make_obs(1, np.array([0.0, 1.0, 0.0, 0.0], dtype="float32"))])
-    store.save()
+    store.save(encoder_name="resnet18")
 
     fresh = ObservationStore.load(tmp_path)
     assert [o.id for o in fresh.all()] == ["obs_0000", "obs_0001"]
@@ -80,6 +82,19 @@ def test_missing_embedding_rejected():
     obs.embedding = None
     with pytest.raises(ObservationStoreError, match="no embedding"):
         store.add([obs])
+
+
+def test_save_writes_the_encoder_name_it_was_given(tmp_path):
+    """Planner v3 §6: encoder.json must record the encoder that actually
+    produced the vectors — a non-default name, not a hardcoded literal."""
+    store = ObservationStore(tmp_path)
+    store.add([make_obs(0)])
+    store.save(encoder_name="dinov2_registers_small")
+
+    with open(tmp_path / "encoder.json") as f:
+        meta = json.load(f)
+    assert meta["model"] == "dinov2_registers_small"
+    assert meta["dimension"] == 4
 
 
 def test_load_missing_files_raises(tmp_path):

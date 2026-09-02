@@ -38,6 +38,20 @@ def test_unknown_scene_capped_never_dominates():
     assert score < 0.5
 
 
+def test_place_side_unknown_scene_abstains_not_penalized():
+    """Planner v3 §9 re-tune: a PLACE whose stored scene is 'unknown'
+    (tagging failed, not scene absent) must abstain at 0.5 — the same Rule 4
+    that protects the query side — not vote at 0.3. 46% of this dataset's
+    observations are unknown-scene; the old 0.3 made the semantic term
+    systematically vote against exactly those places."""
+    q = SceneTags(scene_type="corridor", landmarks=["blue sign"])
+    p_unknown = [SceneTags(scene_type="unknown", landmarks=["blue sign"])]
+    p_mismatch = [SceneTags(scene_type="room", landmarks=["blue sign"])]
+    score_unknown = semantic_similarity(q, [], p_unknown)
+    score_mismatch = semantic_similarity(q, [], p_mismatch)
+    assert score_unknown > score_mismatch  # abstaining beats voting against
+
+
 def test_stub_tagger_falls_back_to_object_overlap_only():
     """Stub-tagger inputs (empty landmarks always, unknown scene) -> object
     overlap only, no crash."""

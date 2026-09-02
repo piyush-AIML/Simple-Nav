@@ -16,7 +16,6 @@ from pathlib import Path
 
 import numpy as np
 
-from src.embedder import embed_image
 from src.mapping.observation_store import ObservationStore
 from src.mapping.observations import Observation
 from src.perception import backend_banner
@@ -25,25 +24,33 @@ from src.utils import load_config, project_root, resolve_path, setup_logger
 logger = setup_logger("embed_frames")
 
 
-def embed_frames(frames_dir: Path) -> tuple[np.ndarray, list[str]]:
+def embed_frames(frames_dir: Path, config: dict) -> tuple[np.ndarray, list[str]]:
+    """Encode every extracted frame (planner v3 §6).
+
+    The encoder comes from config.embedding.model via the registry in
+    src/embeddings/encoder.py — the registry is the single source of truth
+    for which encoder produced the stored vectors (Finding A: this used to
+    be hardcoded to ResNet18 and the config knob was decorative). Batched
+    like the detector/VLM offline passes (Stage 24 precedent)."""
+    from src.embeddings.encoder import get_encoder
+
     frame_paths = sorted(frames_dir.glob("*.jpg"))
     if not frame_paths:
         raise RuntimeError(f"No frames found in {frames_dir}. Run extract_frames.py first.")
 
+    encoder = get_encoder(config)
+    batch_size = _batch_size(config, "encoder_batch_size", 16)
     embeddings = []
-    names = []
-    for i, path in enumerate(frame_paths):
-        vec = embed_image(str(path))
-        embeddings.append(vec)
-        names.append(path.name)
-        if (i + 1) % 25 == 0 or (i + 1) == len(frame_paths):
-            logger.info(f"Embedded {i + 1}/{len(frame_paths)} frames")
+    for start in range(0, len(frame_paths), batch_size):
+        chunk = frame_paths[start:start + batch_size]
+        embeddings.append(encoder.batch_encode([str(p) for p in chunk]))
+        logger.info(f"Embedded {min(start + batch_size, len(frame_paths))}/{len(frame_paths)} frames")
 
-    return np.stack(embeddings).astype("float32"), names
+    return np.concatenate(embeddings).astype("float32"), [p.name for p in frame_paths]
 
 
 def build_observations(
-    frame_paths: list[Path], embeddings: np.ndarray, encoder_name: str = "resnet18"
+    frame_paths: list[Path], embeddings: np.ndarray
 ) -> list[Observation]:
     """Turn aligned frame/embedding lists into Observation records.
 
@@ -70,13 +77,16 @@ def build_observations(
 
 
 def save_observations_dir(
-    observations: list[Observation], observations_dir: Path, encoder_name: str = "resnet18"
+    observations: list[Observation], observations_dir: Path, encoder_name: str
 ) -> None:
     """Write a full ObservationStore (Stage 05): JSONL metadata + embeddings
-    + FAISS index + id order, so data/observations/ is loadable as-is."""
+    + FAISS index + id order, so data/observations/ is loadable as-is.
+    encoder_name must be the encoder that produced the embeddings — the
+    store records it in encoder.json (planner v3 §6); no function in this
+    chain may write a name it wasn't handed."""
     store = ObservationStore(observations_dir)
     store.add(observations)
-    store.save()
+    store.save(encoder_name=encoder_name)
     logger.info(f"Saved {len(observations)} observations to {observations_dir}")
 
 
@@ -169,7 +179,10 @@ def main() -> None:
     frames_dir = resolve_path(config["paths"]["frames_dir"])
     observations_dir = resolve_path(config["paths"]["observations_dir"])
 
-    embeddings, names = embed_frames(frames_dir)
+    from src.embeddings.encoder import get_encoder
+
+    encoder = get_encoder(config)
+    embeddings, names = embed_frames(frames_dir, config)
 
     # Legacy parallel outputs (embeddings.npy + frame_names.json) are only
     # written when their config keys still exist — the v2 pipeline consumes
@@ -190,7 +203,7 @@ def main() -> None:
     observations = build_observations(frame_paths, embeddings)
     observations = attach_detections(observations, config)
     observations = attach_scene_tags(observations, config)
-    save_observations_dir(observations, observations_dir)
+    save_observations_dir(observations, observations_dir, encoder_name=encoder.name)
 
 
 if __name__ == "__main__":

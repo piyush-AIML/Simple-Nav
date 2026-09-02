@@ -101,7 +101,40 @@
       "obs_000093",
       "obs_000094",
       "obs_000095",
+      "obs_000096"
+    ],
+    "exemplar_ids": [
+      "obs_000000",
       "obs_000096",
+      "obs_000048"
+    ],
+    "scene_types": {
+      "unknown": 60,
+      "corridor": 36,
+      "entrance": 1
+    },
+    "landmarks": [
+      "white wall",
+      "white door",
+      "darkened room"
+    ],
+    "object_classes": [
+      "bench",
+      "tv",
+      "chair"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.8882,
+      "std_similarity": 0.136,
+      "observation_count": 97
+    }
+  },
+  {
+    "place_id": 1,
+    "segment_ids": [
+      "seg_001"
+    ],
+    "observation_ids": [
       "obs_000097",
       "obs_000098",
       "obs_000099",
@@ -159,37 +192,29 @@
       "obs_000151"
     ],
     "exemplar_ids": [
-      "obs_000000",
+      "obs_000097",
       "obs_000151",
-      "obs_000076"
+      "obs_000124"
     ],
     "scene_types": {
-      "unknown": 94,
-      "corridor": 37,
-      "entrance": 1,
+      "unknown": 34,
+      "corridor": 1,
       "room": 20
     },
-    "landmarks": [
-      "white wall",
-      "white door",
-      "darkened room"
-    ],
+    "landmarks": [],
     "object_classes": [
-      "bench",
-      "tv",
-      "chair",
       "refrigerator"
     ],
     "visual_stats": {
-      "mean_similarity": 0.9284,
-      "std_similarity": 0.0454,
-      "observation_count": 152
+      "mean_similarity": 0.7635,
+      "std_similarity": 0.1579,
+      "observation_count": 55
     }
   },
   {
-    "place_id": 1,
+    "place_id": 2,
     "segment_ids": [
-      "seg_001"
+      "seg_002"
     ],
     "observation_ids": [
       "obs_000152",
@@ -240,22 +265,50 @@
     ],
     "object_classes": [],
     "visual_stats": {
-      "mean_similarity": 0.9421,
-      "std_similarity": 0.0247,
+      "mean_similarity": 0.9133,
+      "std_similarity": 0.0715,
       "observation_count": 30
     }
   },
   {
-    "place_id": 2,
+    "place_id": 3,
     "segment_ids": [
-      "seg_002"
+      "seg_003"
     ],
     "observation_ids": [
       "obs_000182",
       "obs_000183",
       "obs_000184",
       "obs_000185",
+      "obs_000186"
+    ],
+    "exemplar_ids": [
+      "obs_000182",
       "obs_000186",
+      "obs_000184"
+    ],
+    "scene_types": {
+      "unknown": 5
+    },
+    "landmarks": [
+      "ceiling fan",
+      "door"
+    ],
+    "object_classes": [
+      "tv"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.8964,
+      "std_similarity": 0.0636,
+      "observation_count": 5
+    }
+  },
+  {
+    "place_id": 4,
+    "segment_ids": [
+      "seg_004"
+    ],
+    "observation_ids": [
       "obs_000187",
       "obs_000188",
       "obs_000189",
@@ -333,7 +386,48 @@
       "obs_000261",
       "obs_000262",
       "obs_000263",
+      "obs_000264"
+    ],
+    "exemplar_ids": [
+      "obs_000187",
       "obs_000264",
+      "obs_000226"
+    ],
+    "scene_types": {
+      "unknown": 45,
+      "room": 5,
+      "corridor": 28
+    },
+    "landmarks": [
+      "door",
+      "window",
+      "large window",
+      "ceiling fan",
+      "door at end of corridor",
+      "window with geometric pattern",
+      "tiled floor",
+      "white walls",
+      "hallway",
+      "door frame",
+      "wall",
+      "window on right"
+    ],
+    "object_classes": [
+      "tv",
+      "person"
+    ],
+    "visual_stats": {
+      "mean_similarity": 0.8261,
+      "std_similarity": 0.1344,
+      "observation_count": 78
+    }
+  },
+  {
+    "place_id": 5,
+    "segment_ids": [
+      "seg_005"
+    ],
+    "observation_ids": [
       "obs_000265",
       "obs_000266",
       "obs_000267",
@@ -359,46 +453,32 @@
       "obs_000287"
     ],
     "exemplar_ids": [
-      "obs_000182",
+      "obs_000265",
       "obs_000287",
-      "obs_000235"
+      "obs_000276"
     ],
     "scene_types": {
-      "unknown": 50,
-      "room": 5,
-      "corridor": 51
+      "corridor": 23
     },
     "landmarks": [
       "door",
       "window",
-      "ceiling fan",
       "wall",
-      "large window",
-      "door at end of corridor",
-      "window with geometric pattern",
-      "tiled floor",
-      "white walls",
-      "hallway",
       "fire_equipment",
-      "door frame",
-      "window on right",
       "information technology sign",
       "door on right"
     ],
-    "object_classes": [
-      "tv",
-      "person"
-    ],
+    "object_classes": [],
     "visual_stats": {
-      "mean_similarity": 0.9157,
-      "std_similarity": 0.0484,
-      "observation_count": 106
+      "mean_similarity": 0.9346,
+      "std_similarity": 0.0767,
+      "observation_count": 23
     }
   },
   {
-    "place_id": 3,
+    "place_id": 6,
     "segment_ids": [
-      "seg_003"
+      "seg_006"
     ],
     "observation_ids": [
       "obs_000288",
@@ -419,15 +499,15 @@
     "landmarks": [],
     "object_classes": [],
     "visual_stats": {
-      "mean_similarity": 0.9254,
-      "std_similarity": 0.0212,
+      "mean_similarity": 0.8688,
+      "std_similarity": 0.0529,
       "observation_count": 6
     }
   },
   {
-    "place_id": 4,
+    "place_id": 7,
     "segment_ids": [
-      "seg_004"
+      "seg_007"
     ],
     "observation_ids": [
       "obs_000294",
@@ -451,8 +531,8 @@
       "tv"
     ],
     "visual_stats": {
-      "mean_similarity": 0.959,
-      "std_similarity": 0.0438,
+      "mean_similarity": 0.922,
+      "std_similarity": 0.1029,
       "observation_count": 7
     }
   }

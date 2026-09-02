@@ -7,7 +7,11 @@ import numpy as np
 import pytest
 from PIL import Image
 
-from src.embeddings.encoder import ResNet18Encoder, get_encoder
+from src.embeddings.encoder import (
+    Dinov2RegistersEncoder,
+    ResNet18Encoder,
+    get_encoder,
+)
 
 
 def tiny_rgb_image() -> np.ndarray:
@@ -62,6 +66,62 @@ def test_batch_encode_matches_sequential():
     assert batch.shape == (2, 512)
     # tolerance accommodates GPU reduction-order nondeterminism (~1e-5 abs);
     # cosine similarity is affected at the 1e-9 level — irrelevant in practice
+    for row, img in zip(batch, images):
+        single = encoder.encode(img)
+        np.testing.assert_allclose(row, single, rtol=1e-3, atol=1e-4)
+
+
+# ---------- planner v3 §4: DINOv2-with-Registers (new default) ----------
+
+
+def test_dinov2_registers_registered_not_default_change_get_encoder_fallback():
+    """Registry exposure + dimension, without loading the model (slow)."""
+    from src.embeddings.encoder import _REGISTRY
+
+    assert "dinov2_registers_small" in _REGISTRY
+    assert "dinov3_vits16plus" in _REGISTRY  # documented opt-in, never default
+    assert get_encoder({}).name == "resnet18"  # dict-level fallback unchanged
+
+
+@pytest.mark.slow
+def test_dinov2_get_encoder_registry():
+    encoder = get_encoder({"embedding": {"model": "dinov2_registers_small"}})
+    assert isinstance(encoder, Dinov2RegistersEncoder)
+    assert encoder.name == "dinov2_registers_small"
+    assert encoder.dimension == 384
+    assert encoder.version == "facebook/dinov2-with-registers-small"
+
+
+@pytest.mark.slow
+def test_dinov2_encode_output_properties():
+    encoder = Dinov2RegistersEncoder()
+    vec = encoder.encode(tiny_rgb_image())
+    assert vec.shape == (384,)
+    assert vec.dtype == np.float32
+    assert abs(float(np.linalg.norm(vec)) - 1.0) < 1e-4
+
+
+@pytest.mark.slow
+def test_dinov2_accepts_all_input_types(tmp_path):
+    encoder = Dinov2RegistersEncoder()
+    arr = tiny_rgb_image()
+    img = Image.fromarray(arr)
+    path = tmp_path / "img.png"
+    img.save(path)
+
+    v_arr = encoder.encode(arr)
+    v_img = encoder.encode(img)
+    v_path = encoder.encode(str(path))
+    for v in (v_arr, v_img, v_path):
+        np.testing.assert_allclose(v, v_arr, rtol=1e-5, atol=1e-5)
+
+
+@pytest.mark.slow
+def test_dinov2_batch_encode_matches_sequential():
+    encoder = Dinov2RegistersEncoder()
+    images = [tiny_rgb_image(), tiny_rgb_image() + 5]
+    batch = encoder.batch_encode(images)
+    assert batch.shape == (2, 384)
     for row, img in zip(batch, images):
         single = encoder.encode(img)
         np.testing.assert_allclose(row, single, rtol=1e-3, atol=1e-4)

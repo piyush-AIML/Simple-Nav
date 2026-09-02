@@ -1,4 +1,4 @@
 {
-  "model": "resnet18",
-  "dimension": 512
+  "model": "dinov2_registers_small",
+  "dimension": 384
 }

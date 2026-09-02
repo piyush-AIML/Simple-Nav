@@ -145,6 +145,21 @@ class LocalizationTracker:
             self.bundle.place_names.get(str(place_id), f"Place_{place_id}")
             if place_id is not None else "Unrecognized"
         )
+        # planner v3 §8: per-candidate term breakdown for the UI — the data
+        # was always on each ScoredCandidate, it was just never exposed
+        term_breakdown = [
+            {
+                "place_id": c.place_id,
+                "place_name": self.bundle.place_names.get(
+                    str(c.place_id), f"Place_{c.place_id}"),
+                "total": round(float(c.total), 4),
+                "visual_term": round(float(c.visual_term), 4),
+                "semantic_term": round(float(c.semantic_term), 4),
+                "temporal_term": round(float(c.temporal_term), 4),
+                "graph_term": round(float(c.graph_term), 4),
+            }
+            for c in scored[:3]
+        ]
         result = {
             "place_id": place_id,
             "place_name": place_name,
@@ -158,6 +173,7 @@ class LocalizationTracker:
             "confidence_level": confidence_level,
             "unknown_mass": float(estimate.unknown_mass),
             "mode": self._mode,
+            "term_breakdown": term_breakdown,
         }
         self._log_decision(result, estimate, retrieval, loc)
         return result

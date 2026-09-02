@@ -2,12 +2,12 @@
   "map_id": "college_env_v1",
   "building_id": "college",
   "floor_id": "floor_1",
-  "encoder": "resnet18",
-  "encoder_version": "torchvision_imagenet",
-  "embedding_dimension": 512,
+  "encoder": "dinov2_registers_small",
+  "encoder_version": "facebook/dinov2-with-registers-small",
+  "embedding_dimension": 384,
   "observation_count": 301,
-  "place_count": 5,
-  "edge_count": 4,
-  "created_at": "2026-09-02T02:41:38",
-  "hash": "c556052452071263"
+  "place_count": 8,
+  "edge_count": 7,
+  "created_at": "2026-09-02T05:49:27",
+  "hash": "b6fbc1d255857f12"
 }

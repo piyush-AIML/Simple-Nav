@@ -1,0 +1,132 @@
+{
+  "old_encoder": "resnet18",
+  "new_encoder": "dinov2_registers_small",
+  "method": "percentile-matching on the pairwise same-place/different-place similarity distributions from encoder_comparison.json; likelihood_temperature via same-place std ratio",
+  "thresholds": [
+    {
+      "section": "mapping",
+      "key": "merge_visual_threshold",
+      "distribution": "different",
+      "old_value": 0.75,
+      "percentile": 0.1677,
+      "new_value": 0.4253,
+      "method": "percentile 0.1677",
+      "note": "v3 \u00a75 list: reconciliation merge gate (cross-area similarity)"
+    },
+    {
+      "section": "mapping",
+      "key": "merge_visual_extra_threshold",
+      "distribution": "different",
+      "old_value": 0.92,
+      "percentile": 0.9609,
+      "new_value": 0.8346,
+      "method": "percentile 0.9609",
+      "note": "v3 \u00a75 list: near-identical merge when both lack landmarks"
+    },
+    {
+      "section": "mapping",
+      "key": "duplicate_similarity_threshold",
+      "distribution": "same",
+      "old_value": 0.9,
+      "percentile": 0.4758,
+      "new_value": 0.7909,
+      "method": "percentile 0.4758",
+      "note": "graph_validator duplicate-place gate (same physical place re-seen)"
+    },
+    {
+      "section": "navigation",
+      "key": "confidence_threshold",
+      "distribution": "same",
+      "old_value": 0.4,
+      "percentile": 0.0,
+      "new_value": 0.2512,
+      "method": "floor-shift (-0.1488)",
+      "note": "v3 \u00a75 list: legacy LiveTracker/PlaceIndex query acceptance"
+    },
+    {
+      "section": "localization",
+      "key": "tracking_threshold",
+      "distribution": "same",
+      "old_value": 0.5,
+      "percentile": 0.0,
+      "new_value": 0.4256,
+      "method": "floor-shift (-0.0744)",
+      "note": "v3 \u00a75 list: state machine strong-tracking gate (blended total)"
+    },
+    {
+      "section": "localization",
+      "key": "lost_threshold",
+      "distribution": "same",
+      "old_value": 0.2,
+      "percentile": 0.0,
+      "new_value": 0.1256,
+      "method": "floor-shift (-0.0744)",
+      "note": "v3 \u00a75 list: LOST gate (blended total)"
+    },
+    {
+      "section": "localization",
+      "key": "high_score",
+      "distribution": "same",
+      "old_value": 0.6,
+      "percentile": 0.0,
+      "new_value": 0.5256,
+      "method": "floor-shift (-0.0744)",
+      "note": "v3 \u00a75 list: confidence HIGH gate (blended total)"
+    },
+    {
+      "section": "localization",
+      "key": "low_score",
+      "distribution": "same",
+      "old_value": 0.3,
+      "percentile": 0.0,
+      "new_value": 0.2256,
+      "method": "floor-shift (-0.0744)",
+      "note": "v3 \u00a75 list: confidence LOW gate (blended total)"
+    },
+    {
+      "section": "localization",
+      "key": "reacquired_threshold",
+      "distribution": "same",
+      "old_value": 0.5,
+      "percentile": 0.0,
+      "new_value": 0.4256,
+      "method": "floor-shift (-0.0744)",
+      "note": "same family as tracking_threshold (blended total)"
+    },
+    {
+      "section": "localization",
+      "key": "arrived_threshold",
+      "distribution": "same",
+      "old_value": 0.6,
+      "percentile": 0.0,
+      "new_value": 0.5256,
+      "method": "floor-shift (-0.0744)",
+      "note": "same family as tracking_threshold (blended total)"
+    },
+    {
+      "section": "localization",
+      "key": "recovery_threshold",
+      "distribution": "same",
+      "old_value": 0.45,
+      "percentile": 0.0,
+      "new_value": 0.3756,
+      "method": "floor-shift (-0.0744)",
+      "note": "same family as tracking_threshold (blended total)"
+    },
+    {
+      "section": "localization",
+      "key": "transition_threshold",
+      "distribution": "same",
+      "old_value": 0.65,
+      "percentile": 0.0016,
+      "new_value": 0.5756,
+      "method": "floor-shift (-0.0744)",
+      "note": "posterior stabilization gate (same scale family)"
+    }
+  ],
+  "likelihood_temperature": {
+    "old_value": 0.1,
+    "new_value": 0.2811,
+    "std_ratio": 2.8105
+  }
+}

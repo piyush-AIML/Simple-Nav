@@ -23,6 +23,7 @@ def good_config(tmp_path) -> dict:
             "vlm_quantization": "bf16",
             "vlm_enabled": True,
         },
+        "embedding": {"model": "resnet18"},
         "localization": {
             "w_visual": 0.5, "w_semantic": 0.25,
             "w_temporal": 0.15, "w_graph": 0.1,
@@ -56,6 +57,26 @@ def test_lfm2_int4_is_forbidden(monkeypatch):
     cfg["perception"]["vlm_quantization"] = "4bit"
     issues = validate_config(cfg)
     assert any("4bit" in m and lvl == "error" for lvl, m in issues)
+
+
+def test_unknown_embedding_model_is_error(monkeypatch):
+    from src import utils
+
+    monkeypatch.setattr(utils, "project_root", lambda: Path("/mnt/c/PS/projects/simplenav"))
+    cfg = good_config(None)
+    cfg["embedding"]["model"] = "vit_banana"
+    issues = validate_config(cfg)
+    assert any("embedding.model" in m and lvl == "error" for lvl, m in issues)
+
+
+def test_registered_embedding_model_is_ok(monkeypatch):
+    from src import utils
+
+    monkeypatch.setattr(utils, "project_root", lambda: Path("/mnt/c/PS/projects/simplenav"))
+    cfg = good_config(None)
+    cfg["embedding"]["model"] = "resnet18"
+    issues = validate_config(cfg)
+    assert not any("embedding" in m and lvl == "error" for lvl, m in issues)
 
 
 def test_bad_weights_are_errors(monkeypatch):

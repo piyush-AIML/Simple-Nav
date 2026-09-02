@@ -89,6 +89,27 @@ def test_manifest_hash_and_fields(tmp_path):
     assert manifest["observation_count"] == 3
 
 
+def test_manifest_and_encoder_json_agree_on_non_default_encoder(tmp_path):
+    """Planner v3 §6 acceptance: manifest.json and vector_index/encoder.json
+    must both record the encoder that actually produced the vectors — here a
+    non-default name — and stay in sync with each other."""
+    store = make_store(tmp_path)
+    target = write_map(
+        tmp_path / "maps", map_id="m4", building_id="b", floor_id="f",
+        encoder_name="dinov2_registers_small", encoder_version="dinov2-v1",
+        embedding_dimension=3,
+        store=store, places=make_places(), graph=make_graph(),
+    )
+    with open(target / "manifest.json") as f:
+        manifest = json.load(f)
+    assert manifest["encoder"] == "dinov2_registers_small"
+    assert manifest["encoder_version"] == "dinov2-v1"
+    with open(target / "vector_index" / "encoder.json") as f:
+        encoder_meta = json.load(f)
+    assert encoder_meta["model"] == manifest["encoder"]
+    assert encoder_meta["dimension"] == manifest["embedding_dimension"]
+
+
 def test_to_place_index_bridge(tmp_path):
     store = make_store(tmp_path)
     target = write_map(
